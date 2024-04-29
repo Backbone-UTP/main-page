@@ -6,7 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  constructor() {
-    window.location.href = 'https://www.instagram.com/backboneutp/';
-  }
+  constructor() {}
 }
