@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// Variables (you can move these to a separate _variables.scss file)
+$primary: #ffd426; // Vibrant Yellow
+$secondary: #4267ff; // Complementary Blue
+$dark: #333333; // Dark Grey for contrast
+$text: #333333; // Dark Grey for readability
+$border: #cccccc; // Light Grey for subtle borders
+$theme-light: #fff9e6; // Light Yellow for background themes
+$body: #ffffff; // White for main body background
