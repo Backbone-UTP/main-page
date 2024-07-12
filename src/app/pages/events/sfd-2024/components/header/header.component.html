@@ -1,0 +1,26 @@
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+  <img
+    src="assets/images/SFDlogo-banner.webp"
+    alt="SFD 2024"
+    class="h-8 object-cover"
+  />
+  <hr class="border h-4 rounded-md mx-2 border-gray-200 dark:border-gray-700" />
+  <nav
+    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+  >
+    <a
+      *ngFor="let link of navItems"
+      class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+      [attr.aria-label]="link.label"
+      [href]="link.url"
+    >
+      {{ link.title }}
+    </a>
+    <hr
+      class="border h-4 rounded-md mx-2 border-gray-200 dark:border-gray-700"
+    />
+    <app-theme-toggle></app-theme-toggle>
+  </nav>
+</header>
