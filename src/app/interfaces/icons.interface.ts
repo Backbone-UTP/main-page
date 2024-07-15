@@ -5,4 +5,6 @@ export type Icon =
   | 'search'
   | 'group'
   | 'code'
-  | 'art';
+  | 'art'
+  | 'github'
+  | 'linkedin';
