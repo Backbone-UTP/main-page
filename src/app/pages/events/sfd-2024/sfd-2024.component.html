@@ -1,2 +1,12 @@
 <app-sfd-header [navItems]="headerLinks"></app-sfd-header>
 <app-sfd-hero></app-sfd-hero>
+
+<p class="text-center font-semibold">El evento inicia en:</p>
+<section class="my-5 bg-primary py-5 text-center">
+  <app-countdown
+    [targetDate]="countdownDate"
+    [className]="
+      'text-2xl md:text-3xl font-bold leading-tighter tracking-tighter my-4 font-heading text-gray-100 dark:text-gray-700'
+    "
+  ></app-countdown>
+</section>
