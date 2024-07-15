@@ -4,3 +4,15 @@
     @apply text-yellow-500 dark:text-yellow-400;
   }
 }
+
+nav {
+  animation: nav-shadown 1s linear both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+}
+
+@keyframes nav-shadown {
+  to {
+    @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
+  }
+}
