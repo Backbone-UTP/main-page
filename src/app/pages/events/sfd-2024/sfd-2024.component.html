@@ -18,4 +18,23 @@
       [features]="aboutFeatures"
     ></app-features>
   </section>
+
+  <section class="flex flex-col gap-2 my-20">
+    <h2
+      class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl w-full text-center"
+    >
+      Organizadores
+    </h2>
+    <div
+      class="flex sm:flex-row flex-col sm:items-start items-stretch justify-center py-5 gap-5 mx-auto"
+    >
+      <app-profile-card
+        *ngFor="let person of staff"
+        [name]="person.name"
+        [role]="person.role"
+        [image]="person.image"
+        [links]="person.links"
+      ></app-profile-card>
+    </div>
+  </section>
 </main>

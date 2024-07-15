@@ -6,6 +6,9 @@ import { CountdownComponent } from 'src/app/shared/components/countdown/countdow
 import { features } from 'src/assets/content/sfd-features';
 import { FeaturesComponent } from './components/features/features.component';
 import { Feature } from 'src/app/interfaces/features.interface';
+import { ProfileCardComponent } from '../../../shared/components/profile-card/profile-card.component';
+import { staff } from 'src/assets/content/sfd.people';
+import { NgFor } from '@angular/common';
 @Component({
   selector: 'app-sfd-2024',
   standalone: true,
@@ -14,6 +17,8 @@ import { Feature } from 'src/app/interfaces/features.interface';
     SFDHeaderComponent,
     CountdownComponent,
     FeaturesComponent,
+    ProfileCardComponent,
+    NgFor,
   ],
   templateUrl: './sfd-2024.component.html',
   styleUrl: './sfd-2024.component.scss',
@@ -50,4 +55,6 @@ export class SFD2024Component {
     'Es un evento donde se celebra el software libre y de código abierto. Apoyado por semilleros pertenecientes de la Facultad de Ingenierías, donde se espera dar a conocer el gran ecosistema de investigadores que la universidad está formando. Este año, las charlas y talleres se enfocarán en cuatro temáticas';
 
   aboutFeatures: Feature[] = features;
+
+  staff = staff;
 }
