@@ -15,6 +15,7 @@ import { NgFor } from '@angular/common';
 import { TimelineComponent } from '../../../shared/components/timeline/timeline.component';
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
+import { SectionRightComponent } from './components/section-right/section-right.component';
 @Component({
   selector: 'app-sfd-2024',
   standalone: true,
@@ -27,6 +28,7 @@ import { Logo } from 'src/app/shared/interfaces/logo.interface';
     NgFor,
     TimelineComponent,
     LogosListComponent,
+    SectionRightComponent,
   ],
   templateUrl: './sfd-2024.component.html',
   styleUrl: './sfd-2024.component.scss',
@@ -36,22 +38,26 @@ export class SFD2024Component {
     {
       title: 'Qué es',
       label: 'about',
-      url: '/events/software-freedom-day-2024/#about',
+      url: '/events/software-freedom-day-2024/',
+      fragment: 'about',
     },
     {
       title: 'Agenda',
       label: 'agenda',
-      url: '/events/software-freedom-day-2024/#agenda',
+      url: '/events/software-freedom-day-2024/',
+      fragment: 'agenda',
     },
     {
       title: 'Patrocinadores',
       label: 'sponsors',
-      url: '/events/software-freedom-day-2024/#sponsors',
+      url: '/events/software-freedom-day-2024/',
+      fragment: 'sponsors',
     },
     {
       title: 'Registro',
       label: 'register',
-      url: '/events/software-freedom-day-2024/#register',
+      url: '/events/software-freedom-day-2024/',
+      fragment: 'register',
     },
   ];
 
@@ -66,7 +72,7 @@ export class SFD2024Component {
 
   staff = staff;
 
-  agenda: TimelineEvent[] = agenda;
+  sfdAgenda: TimelineEvent[] = agenda;
 
   supporters: Logo[] = supporters;
 }
