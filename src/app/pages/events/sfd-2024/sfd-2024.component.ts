@@ -16,6 +16,8 @@ import { TimelineComponent } from '../../../shared/components/timeline/timeline.
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
 import { SectionRightComponent } from './components/section-right/section-right.component';
+import { footerLinks, headerLinks } from 'src/assets/content/sfd-links';
+import { FooterComponent } from './components/footer/footer.component';
 @Component({
   selector: 'app-sfd-2024',
   standalone: true,
@@ -29,37 +31,15 @@ import { SectionRightComponent } from './components/section-right/section-right.
     TimelineComponent,
     LogosListComponent,
     SectionRightComponent,
+    FooterComponent,
   ],
   templateUrl: './sfd-2024.component.html',
   styleUrl: './sfd-2024.component.scss',
 })
 export class SFD2024Component {
-  headerLinks: Header[] = [
-    {
-      title: 'Qué es',
-      label: 'about',
-      url: '/events/software-freedom-day-2024/',
-      fragment: 'about',
-    },
-    {
-      title: 'Agenda',
-      label: 'agenda',
-      url: '/events/software-freedom-day-2024/',
-      fragment: 'agenda',
-    },
-    {
-      title: 'Patrocinadores',
-      label: 'sponsors',
-      url: '/events/software-freedom-day-2024/',
-      fragment: 'sponsors',
-    },
-    {
-      title: 'Registro',
-      label: 'register',
-      url: '/events/software-freedom-day-2024/',
-      fragment: 'register',
-    },
-  ];
+  headerLinks = headerLinks;
+
+  footerLinks = footerLinks;
 
   // Date to countdown to oct 8th, 2024 at 08:00:00
   countdownDate = new Date('2024-10-08T08:00:00Z').toDateString();
