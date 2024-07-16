@@ -10,7 +10,7 @@ export const staff = [
         name: 'linkedin' as Icon,
         url: 'https://www.linkedin.com/in/paula-a-castro/',
       },
-      { name: 'github' as Icon, url: 'https://www.twitter.com' },
+      { name: 'github' as Icon, url: 'https://github.com/paulacastro1' },
     ],
   },
   {
