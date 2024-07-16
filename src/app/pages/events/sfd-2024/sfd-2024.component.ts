@@ -18,6 +18,7 @@ import { Logo } from 'src/app/shared/interfaces/logo.interface';
 import { SectionRightComponent } from './components/section-right/section-right.component';
 import { footerLinks, headerLinks } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
+import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 @Component({
   selector: 'app-sfd-2024',
   standalone: true,
@@ -32,6 +33,7 @@ import { FooterComponent } from './components/footer/footer.component';
     LogosListComponent,
     SectionRightComponent,
     FooterComponent,
+    CallToActionComponent,
   ],
   templateUrl: './sfd-2024.component.html',
   styleUrl: './sfd-2024.component.scss',
@@ -45,9 +47,9 @@ export class SFD2024Component {
 
   countdownDate = new Date('2024-10-08T08:00:00-05:00').toDateString();
 
-  aboutTitle = '¿Qué es Software Freedom Day 2024?';
+  aboutTitle = '¿Qué es el Software Freedom Day 2024?';
   aboutSubTitle =
-    'Es un evento donde se celebra el software libre y de código abierto. Apoyado por semilleros pertenecientes de la Facultad de Ingenierías, donde se espera dar a conocer el gran ecosistema de investigadores que la universidad está formando. Este año, las charlas y talleres se enfocarán en cuatro temáticas';
+    'Es un evento donde se celebra el software libre y de código abierto. Apoyado por semilleros pertenecientes a la Facultad de Ingenierías, donde se dará a conocer el gran ecosistema de investigadores que la universidad está formando. Este año, las charlas y talleres se enfocarán en cuatro temáticas';
 
   aboutFeatures: Feature[] = features;
 

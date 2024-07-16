@@ -10,11 +10,11 @@
       class="hidden h-8 object-cover md:inline-block"
     />
     <hr
-      class="border h-4 rounded-md mx-2 border-gray-200 dark:border-gray-700 hidden md:inline-block"
+      class="border h-4 rounded-md md:mx-2 mx-0.5 border-gray-200 dark:border-gray-700 hidden md:inline-block"
     />
     <a
       *ngFor="let link of navItems"
-      class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
+      class="relative block md:px-2 px-0.5 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
       [attr.aria-label]="link.label"
       [routerLink]="link.url"
       [fragment]="link.fragment"
@@ -22,7 +22,7 @@
       {{ link.title }}
     </a>
     <hr
-      class="border h-4 rounded-md mx-2 border-gray-200 dark:border-gray-700"
+      class="border h-4 rounded-md md:mx-2 mx-0.5 border-gray-200 dark:border-gray-700"
     />
     <app-theme-toggle></app-theme-toggle>
   </nav>

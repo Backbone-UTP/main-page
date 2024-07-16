@@ -15,16 +15,16 @@ export const headerLinks: Header[] = [
     fragment: 'agenda',
   },
   {
+    title: 'Invitan',
+    label: 'supporters',
+    url: '/events/software-freedom-day-2024/',
+    fragment: 'supporters',
+  },
+  {
     title: 'Patrocinadores',
     label: 'sponsors',
     url: '/events/software-freedom-day-2024/',
     fragment: 'sponsors',
-  },
-  {
-    title: 'Registro',
-    label: 'register',
-    url: '/events/software-freedom-day-2024/',
-    fragment: 'register',
   },
 ];
 
