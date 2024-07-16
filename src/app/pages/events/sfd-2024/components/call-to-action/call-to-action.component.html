@@ -1,0 +1,27 @@
+<section
+  class="relative mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 flex items-center flex-col gap-1"
+>
+  <!-- Hero Section Heading -->
+  <div class="mx-auto py-5 max-w-xl text-center">
+    <h2
+      class="block text-balance text-4xl font-bold leading-tight tracking-tight text-neutral-800 dark:text-neutral-200 md:text-5xl lg:text-6xl"
+    >
+      {{ title }}
+    </h2>
+  </div>
+  <!-- Hero Section Sub-heading -->
+  <div *ngIf="subTitle" class="mx-auto pb-5 max-w-3xl text-center">
+    <p class="text-pretty text-lg text-neutral-600 dark:text-neutral-400">
+      {{ subTitle }}
+    </p>
+  </div>
+
+  <div *ngIf="buttonProps">
+    <app-button
+      [variant]="buttonProps.variant"
+      [text]="buttonProps.text"
+      [href]="buttonProps.href"
+      [target]="buttonProps.target"
+    ></app-button>
+  </div>
+</section>
