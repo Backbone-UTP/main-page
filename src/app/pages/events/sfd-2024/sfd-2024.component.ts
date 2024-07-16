@@ -10,9 +10,11 @@ import {
   TimelineEvent,
 } from 'src/app/shared/interfaces/features.interface';
 import { ProfileCardComponent } from '../../../shared/components/profile-card/profile-card.component';
-import { staff } from 'src/assets/content/sfd.people';
+import { staff, supporters } from 'src/assets/content/sfd.people';
 import { NgFor } from '@angular/common';
 import { TimelineComponent } from '../../../shared/components/timeline/timeline.component';
+import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
+import { Logo } from 'src/app/shared/interfaces/logo.interface';
 @Component({
   selector: 'app-sfd-2024',
   standalone: true,
@@ -24,6 +26,7 @@ import { TimelineComponent } from '../../../shared/components/timeline/timeline.
     ProfileCardComponent,
     NgFor,
     TimelineComponent,
+    LogosListComponent,
   ],
   templateUrl: './sfd-2024.component.html',
   styleUrl: './sfd-2024.component.scss',
@@ -64,4 +67,6 @@ export class SFD2024Component {
   staff = staff;
 
   agenda: TimelineEvent[] = agenda;
+
+  supporters: Logo[] = supporters;
 }

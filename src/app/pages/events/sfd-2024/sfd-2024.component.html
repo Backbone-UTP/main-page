@@ -37,7 +37,7 @@
       ></app-profile-card>
     </div>
   </section>
-  <section class="flex flex-col gap-2 py-20">
+  <section class="flex flex-col gap-2 py-20" id="agenda">
     <h2
       class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl w-full text-center"
     >
@@ -50,5 +50,12 @@
       detalles de las charlas.
     </p>
     <app-timeline [timelineItems]="agenda"></app-timeline>
+  </section>
+  <section class="flex flex-col gap-2 py-20">
+    <app-logos-list
+      [title]="'Apoyan'"
+      subtitle="Estas organizaciones apoyan en la organización del evento"
+      [logos]="supporters"
+    ></app-logos-list>
   </section>
 </main>
