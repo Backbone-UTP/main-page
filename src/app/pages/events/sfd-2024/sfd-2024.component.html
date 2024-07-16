@@ -19,7 +19,7 @@
     ></app-features>
   </section>
 
-  <section class="flex flex-col gap-2 my-20">
+  <section class="flex flex-col gap-2 py-20">
     <h2
       class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl w-full text-center"
     >
@@ -36,5 +36,19 @@
         [links]="person.links"
       ></app-profile-card>
     </div>
+  </section>
+  <section class="flex flex-col gap-2 py-20">
+    <h2
+      class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl w-full text-center"
+    >
+      Agenda
+    </h2>
+    <p
+      class="text-pretty text-neutral-700 dark:text-neutral-400 text-center text-sm"
+    >
+      La agenda pueden estar sujeta a cambios a medida que se confirman los
+      detalles de las charlas.
+    </p>
+    <app-timeline [timelineItems]="agenda"></app-timeline>
   </section>
 </main>
