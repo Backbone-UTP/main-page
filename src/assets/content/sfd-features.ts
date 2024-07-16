@@ -1,4 +1,7 @@
-import { Feature, TimelineEvent } from 'src/app/interfaces/features.interface';
+import {
+  Feature,
+  TimelineEvent,
+} from 'src/app/shared/interfaces/features.interface';
 
 export const features: Feature[] = [
   {

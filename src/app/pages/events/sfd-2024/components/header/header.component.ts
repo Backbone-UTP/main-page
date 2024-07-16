@@ -9,7 +9,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { ThemeToggleComponent } from '../../../../../shared/components/theme-toogle/theme.toggle.component';
-import { Header } from 'src/app/interfaces/header.interface';
+import { Header } from 'src/app/shared/interfaces/header.interface';
 
 @Component({
   selector: 'app-sfd-header',

@@ -1,4 +1,4 @@
-import { Icon } from 'src/app/interfaces/icons.interface';
+import { Icon } from 'src/app/shared/interfaces/icons.interface';
 
 export const staff = [
   {

@@ -1,7 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { IconComponent } from '../../../../../shared/components/icons/icons.component';
-import { Feature } from 'src/app/interfaces/features.interface';
+import { Feature } from 'src/app/shared/interfaces/features.interface';
 import { IconsBlockComponent } from '../../../../../shared/components/icons-block/icons-block.component';
 
 @Component({

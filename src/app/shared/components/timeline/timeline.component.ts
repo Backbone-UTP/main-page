@@ -1,7 +1,7 @@
 // timeline.component.ts
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { TimelineEvent } from 'src/app/interfaces/features.interface';
+import { TimelineEvent } from 'src/app/shared/interfaces/features.interface';
 
 @Component({
   selector: 'app-timeline',

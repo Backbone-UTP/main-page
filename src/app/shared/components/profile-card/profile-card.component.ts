@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { IconComponent } from '../icons/icons.component';
 import { NgFor } from '@angular/common';
-import { Icon } from 'src/app/interfaces/icons.interface';
+import { Icon } from 'src/app/shared/interfaces/icons.interface';
 
 @Component({
   selector: 'app-profile-card',

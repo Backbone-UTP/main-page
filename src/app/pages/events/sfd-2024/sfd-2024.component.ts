@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { SFD2024HeroComponent } from './components/hero/hero.component';
 import { SFDHeaderComponent } from './components/header/header.component';
-import { Header } from 'src/app/interfaces/header.interface';
+import { Header } from 'src/app/shared/interfaces/header.interface';
 import { CountdownComponent } from 'src/app/shared/components/countdown/countdown.component';
 import { agenda, features } from 'src/assets/content/sfd-features';
 import { FeaturesComponent } from './components/features/features.component';
-import { Feature, TimelineEvent } from 'src/app/interfaces/features.interface';
+import {
+  Feature,
+  TimelineEvent,
+} from 'src/app/shared/interfaces/features.interface';
 import { ProfileCardComponent } from '../../../shared/components/profile-card/profile-card.component';
 import { staff } from 'src/assets/content/sfd.people';
 import { NgFor } from '@angular/common';

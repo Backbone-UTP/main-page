@@ -1,6 +1,6 @@
 import { NgSwitch, NgSwitchCase } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { Icon } from 'src/app/interfaces/icons.interface';
+import { Icon } from 'src/app/shared/interfaces/icons.interface';
 
 @Component({
   selector: 'app-icon',
