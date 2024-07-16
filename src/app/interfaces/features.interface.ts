@@ -5,3 +5,9 @@ export interface Feature {
   content: string;
   svg: Icon;
 }
+
+export interface TimelineEvent {
+  flag: string;
+  time: string;
+  description: string;
+}
