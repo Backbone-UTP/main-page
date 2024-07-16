@@ -1,4 +1,5 @@
 import { Icon } from 'src/app/shared/interfaces/icons.interface';
+import { Logo } from 'src/app/shared/interfaces/logo.interface';
 
 export const staff = [
   {
@@ -33,5 +34,32 @@ export const staff = [
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/djkde' },
       { name: 'github' as Icon, url: 'https://github.com/Djkde01' },
     ],
+  },
+];
+
+export const supporters: Logo[] = [
+  {
+    name: 'SONAR ISC',
+    url: 'https://academia.utp.edu.co/sonar-isc/',
+    image: '/assets/images/sonar.png',
+    alt: 'Logo de SONAR ISC',
+  },
+  {
+    name: 'SNEIA',
+    url: 'https://academia.utp.edu.co/sonar-isc/ ',
+    image: '/assets/images/sneia.png',
+    alt: 'Logo de SNEIA',
+  },
+  {
+    name: 'SIRIUS',
+    url: 'https://sirius.utp.edu.co/ ',
+    image: '/assets/images/sirius.svg',
+    alt: 'Logo de SIRIUS',
+  },
+  {
+    name: 'SAND',
+    url: 'https://cidt.utp.edu.co/blog-cidt/sand-semillero-de-investigacion-en-analisis-de-datos/',
+    image: '/assets/images/sand.png',
+    alt: 'Logo de SAND',
   },
 ];
