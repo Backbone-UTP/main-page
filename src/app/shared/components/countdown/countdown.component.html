@@ -1,8 +1,41 @@
-<div
-  *ngIf="days + hours + minutes + seconds > 0; else timeUp"
-  [class]="className"
->
-  {{ days | number : "2.0-0" }} : {{ hours | number : "2.0-0" }} :
-  {{ minutes | number : "2.0-0" }} : {{ seconds | number : "2.0-0" }}
+<div [class]="className" class="flex justify-center items-end space-x-4">
+  <ng-container *ngIf="days + hours + minutes + seconds > 0; else timeUp">
+    <div class="flex flex-col items-center">
+      <span class="text-sm mb-1">Días</span>
+      <span class="text-2xl font-bold">{{ days | number : "2.0-0" }}</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <span class="text-sm mb-1">Horas</span>
+      <span class="text-2xl font-bold">{{ hours | number : "2.0-0" }}</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <span class="text-sm mb-1">Minutos</span>
+      <span class="text-2xl font-bold">{{ minutes | number : "2.0-0" }}</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <span class="text-sm mb-1">Segundos</span>
+      <span class="text-2xl font-bold">{{ seconds | number : "2.0-0" }}</span>
+    </div>
+  </ng-container>
 </div>
-<ng-template #timeUp [class]="className">00 : 00 : 00 : 00</ng-template>
+
+<ng-template #timeUp>
+  <div [class]="className" class="flex justify-center items-end space-x-4">
+    <div class="flex flex-col items-center">
+      <span class="text-sm mb-1">Days</span>
+      <span class="text-2xl font-bold">00</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <span class="text-sm mb-1">Hours</span>
+      <span class="text-2xl font-bold">00</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <span class="text-sm mb-1">Minutes</span>
+      <span class="text-2xl font-bold">00</span>
+    </div>
+    <div class="flex flex-col items-center">
+      <span class="text-sm mb-1">Seconds</span>
+      <span class="text-2xl font-bold">00</span>
+    </div>
+  </div>
+</ng-template>
