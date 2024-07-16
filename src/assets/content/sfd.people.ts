@@ -35,6 +35,18 @@ export const staff = [
       { name: 'github' as Icon, url: 'https://github.com/Djkde01' },
     ],
   },
+  {
+    name: 'Jose F. Duarte',
+    role: 'Est. Ing. Sistemas, GitHub Campus Expert',
+    image: '/assets/images/staff_3.jpeg',
+    links: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/josefeldc/',
+      },
+      { name: 'github' as Icon, url: 'https://github.com/josefdc' },
+    ],
+  },
 ];
 
 export const supporters: Logo[] = [
