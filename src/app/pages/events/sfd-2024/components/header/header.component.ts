@@ -10,11 +10,12 @@ import {
 } from '@angular/core';
 import { ThemeToggleComponent } from '../../../../../shared/components/theme-toogle/theme.toggle.component';
 import { Header } from 'src/app/shared/interfaces/header.interface';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sfd-header',
   standalone: true,
-  imports: [NgFor, ThemeToggleComponent],
+  imports: [NgFor, ThemeToggleComponent, RouterLink],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
@@ -26,11 +27,21 @@ export class SFDHeaderComponent implements OnInit {
 
   constructor(
     private el: ElementRef<HTMLElement>,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private route: ActivatedRoute
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.initIntersectionObserver();
+
+    this.route.fragment.subscribe((fragment) => {
+      if (fragment) {
+        const element = document.getElementById(fragment);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
   }
 
   ngAfterViewInit(): void {

@@ -16,7 +16,8 @@
       *ngFor="let link of navItems"
       class="relative block px-2 py-2 transition hover:text-yellow-500 dark:hover:text-yellow-400"
       [attr.aria-label]="link.label"
-      [href]="link.url"
+      [routerLink]="link.url"
+      [fragment]="link.fragment"
     >
       {{ link.title }}
     </a>
