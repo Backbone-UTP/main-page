@@ -1,0 +1,16 @@
+.timeline {
+  @apply relative w-auto mx-auto mt-5 p-4 list-none;
+  &:before {
+    @apply absolute left-1/2 top-0 block w-1.5 h-full bg-gray-500;
+    content: " ";
+    margin-left: -1.5px;
+    background: linear-gradient(
+      to bottom,
+      rgba(80, 80, 80, 0) 0%,
+      rgb(80, 80, 80) 8%,
+      rgb(80, 80, 80) 92%,
+      rgba(80, 80, 80, 0) 100%
+    );
+    z-index: 5;
+  }
+}
