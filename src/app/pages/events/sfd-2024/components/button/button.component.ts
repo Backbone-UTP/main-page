@@ -21,6 +21,7 @@ export class ButtonComponent {
   @Input() className: string = '';
   @Input() target: string = '';
   @Input() text: string = '';
+  @Input() href: string = '';
 
   variants: Variants = {
     primary: 'btn-primary',
