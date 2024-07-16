@@ -7,4 +7,7 @@ export type Icon =
   | 'code'
   | 'art'
   | 'github'
-  | 'linkedin';
+  | 'linkedin'
+  | 'instagram'
+  | 'youtube'
+  | 'backbone';
