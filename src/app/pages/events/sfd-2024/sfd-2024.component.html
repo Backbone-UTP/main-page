@@ -50,7 +50,6 @@
       detalles de las charlas.
     </p>
     <app-timeline [timelineItems]="sfdAgenda"></app-timeline>
- 
   </section>
   <section class="flex flex-col gap-2 py-20" id="supporters">
     <app-logos-list
@@ -59,19 +58,5 @@
       [logos]="supporters"
     ></app-logos-list>
   </section>
-
-  <app-section-right
-    id="sponsors"
-    [title]="'Patrocinadores'"
-    [description]="
-      'Ayúdanos a hacer de este evento algo increíble, conviértete en patrocinador y apoya la comunidad de software libre.'
-    "
-    [buttonProps]="{
-      variant: 'primary',
-      text: 'Conviértete en patrocinador',
-      href: 'https://wa.me/573105293217?text=Hola%2C%20me%20gustaría%20ser%20patrocinador%20del%20evento%20SFD%202024',
-      target: '_blank',
-    }"
-  ></app-section-right>
 </main>
 <app-footer [socialLinks]="footerLinks"></app-footer>

@@ -37,38 +37,64 @@ export const agenda: TimelineEvent[] = [
     flag: 'Steven Mejia',
   },
   {
-    description: 'Desarrollo de video juegos con software libre',
+    description: 'Creación de juegos videos con herramientas libres',
     time: '09:00 - 10:00',
     flag: 'Jacques Duflos',
   },
   {
-    description: 'Introducción a Rust: Programación con seguridad y rendimiento',
+    description:
+      'Introducción a Rust: Programación con Seguridad y Rendimiento',
     time: '10:00 - 10:30',
-    flag: 'Jesús D. Mena',
+    flag: 'Jesús David Mena Rivera',
   },
   {
-    description: 'Taller: Cómo hacer un bot de whatsapp',
+    description: 'La versión Open Source de un chatbot de whatsapp.',
     time: '10:30 - 11:00',
     flag: 'Nicolás Osorio',
   },
   {
-    description: 'Taller: Cámara hiperespectral open source',
+    description:
+      'Explicación, implementación y calibración de una cámara hiperespectral open source de bajo coste',
     time: '11:00 - 12:00',
-    flag: 'Sebastián C. Cruz',
+    flag: 'Sebastián Camilo Cruz',
   },
   {
-    description: 'Presentación proyecto videojuego',
-    time: '14:00 - 14:30',
+    description: '',
+    time: '12:00 - 02:00',
+    flag: 'Break Time',
+  },
+  {
+    description: 'Open source en la industria del videojuego',
+    time: '02:00 - 02:30',
     flag: 'Ana Beltrán, Cristhian Grajales',
   },
   {
-    description: 'El Cubo de Rubik y el Open Source: Soluciones Simples para Problemas Complejos',
-    time: '14:30 - 15:00',
-    flag: 'José F. Duarte',
+    description:
+      'El Cubo de Rubik y el Open Source: Soluciones Simples para Problemas Complejos',
+    time: '02:30 - 03:00',
+    flag: 'Jose Felipe Duarte',
   },
+
   {
     description: 'Cómo y por qué hacer proyectos Open Source',
-    time: '15:00 - 15:30',
+    time: '03:00 - 03:30',
     flag: 'Andrés Prieto',
+  },
+  {
+    description: '',
+    time: '03:30 - 04:00',
+    flag: 'Por Anunciar',
+  },
+  {
+    description:
+      'Software libre e IAs: lo que deberías saber y no te dicen si quieres hacer negocios.',
+    time: '04:00 - 05:00',
+    flag: 'Carlos Andrés López',
+  },
+  {
+    description:
+      'El Opensource en los espacios académicos: Conversatorio con líderes de semilleros de investigación',
+    time: '05:00 - 06:00',
+    flag: 'SONAR ISC - Semillero de Investigación',
   },
 ];
