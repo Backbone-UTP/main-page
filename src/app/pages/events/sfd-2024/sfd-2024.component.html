@@ -8,79 +8,49 @@
       [targetDate]="countdownDate"
       [className]="
         'text-2xl md:text-3xl font-bold leading-tighter tracking-tighter my-4 font-heading text-gray-100 dark:text-gray-700'
-      "
-    ></app-countdown>
+      "></app-countdown>
   </section>
   <section id="about">
     <app-features
       [title]="aboutTitle"
       [subtitle]="aboutSubTitle"
-      [features]="aboutFeatures"
-    ></app-features>
+      [features]="aboutFeatures"></app-features>
   </section>
 
   <section class="flex flex-col gap-2 py-20">
     <h2
-      class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl w-full text-center"
-    >
+      class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl w-full text-center">
       Organizadores
     </h2>
     <div
-      class="flex sm:flex-row flex-col sm:items-start items-stretch justify-center py-5 gap-5 mx-auto"
-    >
+      class="flex sm:flex-row flex-col sm:items-start items-stretch justify-center py-5 gap-5 mx-auto">
       <app-profile-card
         *ngFor="let person of staff"
         [name]="person.name"
         [role]="person.role"
         [image]="person.image"
-        [links]="person.links"
-      ></app-profile-card>
+        [links]="person.links"></app-profile-card>
     </div>
   </section>
   <section class="flex flex-col gap-2 py-20" id="agenda">
     <h2
-      class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl w-full text-center"
-    >
+      class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl w-full text-center">
       Agenda
     </h2>
     <p
-      class="text-pretty text-neutral-700 dark:text-neutral-400 text-center text-sm"
-    >
+      class="text-pretty text-neutral-700 dark:text-neutral-400 text-center text-sm">
       La agenda pueden estar sujeta a cambios a medida que se confirman los
       detalles de las charlas.
     </p>
     <app-timeline [timelineItems]="sfdAgenda"></app-timeline>
-    <app-call-to-action
-      title="¿Tienes algo que compartir?"
-      subTitle="¡Tenemos un espacio para ti! Envíanos tu charla y forma parte del SFD 2024."
-      [buttonProps]="{
-      variant: 'primary',
-      text: 'Postular charla',
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSf67DFNLFWO1sWfG5DmvDSscNGbzGWw5VmyrTMNUMb0TfT4GA/viewform',
-      target: '_blank',
-    }"
-    ></app-call-to-action>
+
   </section>
   <section class="flex flex-col gap-2 py-20" id="supporters">
     <app-logos-list
       [title]="'Invitan'"
       subtitle="Estas organizaciones apoyan en la organización del evento"
-      [logos]="supporters"
-    ></app-logos-list>
+      [logos]="supporters"></app-logos-list>
   </section>
 
-  <app-section-right
-    id="sponsors"
-    [title]="'Patrocinadores'"
-    [description]="
-      'Ayúdanos a hacer de este evento algo increíble, conviértete en patrocinador y apoya la comunidad de software libre.'
-    "
-    [buttonProps]="{
-      variant: 'primary',
-      text: 'Conviértete en patrocinador',
-      href: 'https://wa.me/573105293217?text=Hola%2C%20me%20gustaría%20ser%20patrocinador%20del%20evento%20SFD%202024',
-      target: '_blank',
-    }"
-  ></app-section-right>
 </main>
 <app-footer [socialLinks]="footerLinks"></app-footer>
