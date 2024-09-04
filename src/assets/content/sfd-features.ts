@@ -78,11 +78,6 @@ export const agenda: TimelineEvent[] = [
     flag: 'Andrés Prieto',
   },
   {
-    description: '',
-    time: '03:30 - 04:00',
-    flag: 'Por Anunciar',
-  },
-  {
     description: 'Software libre e IAs: lo que deberías saber y no te dicen si quieres hacer negocios.',
     time: '04:00 - 05:00',
     flag: 'Carlos Andrés López',
