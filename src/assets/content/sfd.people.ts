@@ -53,25 +53,49 @@ export const supporters: Logo[] = [
   {
     name: 'SONAR ISC',
     url: 'https://academia.utp.edu.co/sonar-isc/',
-    image: '/assets/images/sonar.png',
+    image: './assets/images/support/sonar.png',
     alt: 'Logo de SONAR ISC',
   },
   {
     name: 'SNEIA',
     url: 'https://academia.utp.edu.co/sonar-isc/ ',
-    image: '/assets/images/sneia.png',
+    image: '/assets/images/support/sneia.png',
     alt: 'Logo de SNEIA',
   },
   {
     name: 'SIRIUS',
     url: 'https://sirius.utp.edu.co/ ',
-    image: '/assets/images/sirius.svg',
+    image: '/assets/images/support/sirius.png',
     alt: 'Logo de SIRIUS',
+  },
+  {
+    name: 'FOREST',
+    url: 'https://cidt.utp.edu.co/blog-cidt/sand-semillero-de-investigacion-en-analisis-de-datos/',
+    image: '/assets/images/support/forest.png',
+    alt: 'Logo de SAND',
   },
   {
     name: 'SAND',
     url: 'https://cidt.utp.edu.co/blog-cidt/sand-semillero-de-investigacion-en-analisis-de-datos/',
-    image: '/assets/images/sand.png',
+    image: '/assets/images/support/dff.png',
+    alt: 'Logo de SAND',
+  },
+  {
+    name: 'SAND',
+    url: 'https://cidt.utp.edu.co/blog-cidt/sand-semillero-de-investigacion-en-analisis-de-datos/',
+    image: '/assets/images/support/facultad.png',
+    alt: 'Logo de SAND',
+  },
+  {
+    name: 'SAND',
+    url: 'https://cidt.utp.edu.co/blog-cidt/sand-semillero-de-investigacion-en-analisis-de-datos/',
+    image: '/assets/images/support/siv.jpg',
+    alt: 'Logo de SAND',
+  },
+  {
+    name: 'SAND',
+    url: 'https://cidt.utp.edu.co/blog-cidt/sand-semillero-de-investigacion-en-analisis-de-datos/',
+    image: '/assets/images/support/ubuntu.jpg',
     alt: 'Logo de SAND',
   },
 ];
