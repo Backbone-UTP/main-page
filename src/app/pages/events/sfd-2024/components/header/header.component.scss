@@ -13,6 +13,6 @@ nav {
 
 @keyframes nav-shadown {
   to {
-    @apply shadow-lg ring-1 backdrop-blur dark:bg-gray-800/90 bg-white/50 ring-white/10;
+    @apply shadow-lg ring-1 backdrop-blur ring-white/10 bg-white/70 dark:bg-gray-800/90 dark:text-fuchsia-500;
   }
 }

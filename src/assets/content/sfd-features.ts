@@ -42,7 +42,8 @@ export const agenda: TimelineEvent[] = [
     flag: 'Jacques Duflos',
   },
   {
-    description: 'Introducción a Rust: Programación con Seguridad y Rendimiento',
+    description:
+      'Introducción a Rust: Programación con Seguridad y Rendimiento',
     time: '10:00 - 10:30',
     flag: 'Jesús David Mena Rivera',
   },
@@ -52,7 +53,8 @@ export const agenda: TimelineEvent[] = [
     flag: 'Nicolás Osorio',
   },
   {
-    description: 'Explicación, implementación y calibración de una cámara hiperespectral open source de bajo coste',
+    description:
+      'Explicación, implementación y calibración de una cámara hiperespectral open source de bajo coste',
     time: '11:00 - 12:00',
     flag: 'Sebastián Camilo Cruz',
   },
@@ -67,7 +69,8 @@ export const agenda: TimelineEvent[] = [
     flag: 'Ana Beltrán, Cristhian Grajales',
   },
   {
-    description: 'El Cubo de Rubik y el Open Source: Soluciones Simples para Problemas Complejos',
+    description:
+      'El Cubo de Rubik y el Open Source: Soluciones Simples para Problemas Complejos',
     time: '02:30 - 03:00',
     flag: 'Jose Felipe Duarte',
   },
@@ -78,17 +81,14 @@ export const agenda: TimelineEvent[] = [
     flag: 'Andrés Prieto',
   },
   {
-    description: '',
-    time: '03:30 - 04:00',
-    flag: 'Por Anunciar',
-  },
-  {
-    description: 'Software libre e IAs: lo que deberías saber y no te dicen si quieres hacer negocios.',
+    description:
+      'Software libre e IAs: lo que deberías saber y no te dicen si quieres hacer negocios.',
     time: '04:00 - 05:00',
     flag: 'Carlos Andrés López',
   },
   {
-    description: 'El Opensource en los espacios académicos: Conversatorio con líderes de semilleros de investigación',
+    description:
+      'El Opensource en los espacios académicos: Conversatorio con líderes de semilleros de investigación',
     time: '05:00 - 06:00',
     flag: 'SONAR ISC - Semillero de Investigación',
   },
