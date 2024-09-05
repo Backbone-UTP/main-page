@@ -4,6 +4,7 @@ import { Component, inject, Input, OnInit } from '@angular/core';
 import { TimelineEvent } from 'src/app/shared/interfaces/features.interface';
 import {MatDialog} from '@angular/material/dialog';
 import { CardPresentationComponent } from 'src/app/pages/events/sfd-2024/components/card-presentation/card-presentation.component';
+import { ScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-timeline',
@@ -26,7 +27,6 @@ export class TimelineComponent implements OnInit {
     if(item.talk == '') return ;
     this.dialog.open(CardPresentationComponent, {
       data: item,
-      autoFocus: false,
       panelClass: 'm-10',
       maxWidth: '800px',
       maxHeight: '900px',
