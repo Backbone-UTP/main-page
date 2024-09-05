@@ -7,7 +7,8 @@ export interface Feature {
 }
 
 export interface TimelineEvent {
-  flag: string;
+  name: string;
   time: string;
   description: string;
+  talk: string;
 }
