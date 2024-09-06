@@ -29,7 +29,7 @@ export class TimelineComponent implements OnInit {
       data: item,
       panelClass: 'm-10',
       maxWidth: '800px',
-      maxHeight: '900px',
+      maxHeight: '700px',
     });
   }
 }
