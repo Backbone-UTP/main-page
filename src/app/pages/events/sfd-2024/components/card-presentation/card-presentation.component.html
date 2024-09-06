@@ -28,7 +28,20 @@
         </div>
         <div
             class="size-auto z-20 m-12 mt-6 md:mt-0  aspect-square bg-primary">
-            <img class="z-20" src="{{data.img}}" alt>
+            @if (loading) {
+            <div
+                class=" relative h-full flex items-center justify-center align-middle ">
+                <ngx-loading
+                    [show]="loading"
+                    [config]="{
+                    animationType: ngxLoadingAnimationTypes.rectangleBounce,
+                    primaryColour: primaryColour,
+                    backdropBorderRadius: '3px'}"
+                    [template]="loadingTemplate"></ngx-loading>
+            </div>
+            }
+            <img [hidden]="loading" (load)="imageLoaded()" class="z-20"
+                src="{{data.img}}" alt>
         </div>
 
     </div>
@@ -44,11 +57,39 @@
         </div>
         <div
             class="size-auto z-20 m-6 mt-6 pt-6 md:mt-0  aspect-square bg-primary">
-            <img class="z-20" src="{{data.aditional[1].img}}" alt>
+            <!-- <img class="z-20" src="{{data.aditional[1].img}}" alt> -->
+            @if (loading) {
+            <div
+                class=" relative h-full flex items-center justify-center align-middle ">
+                <ngx-loading
+                    [show]="loading"
+                    [config]="{
+                        animationType: ngxLoadingAnimationTypes.rectangleBounce,
+                        primaryColour: primaryColour,
+                        backdropBorderRadius: '3px'}"
+                    [template]="loadingTemplate"></ngx-loading>
+            </div>
+            }
+            <img [hidden]="loading" (load)="imageLoaded()" class="z-20"
+                src="{{data.aditional[1].img}}" alt>
         </div>
         <div
             class="size-auto z-20 m-6 mt-6 pt-6 md:mt-0  aspect-square bg-primary">
-            <img class="z-20" src="{{data.aditional[0].img}}" alt>
+            <!-- <img class="z-20" src="{{data.aditional[0].img}}" alt> -->
+            @if (loading2) {
+            <div
+                class=" relative h-full flex items-center justify-center align-middle ">
+                <ngx-loading
+                    [show]="loading2"
+                    [config]="{
+                            animationType: ngxLoadingAnimationTypes.rectangleBounce,
+                            primaryColour: primaryColour,
+                            backdropBorderRadius: '3px'}"
+                    [template]="loadingTemplate"></ngx-loading>
+            </div>
+            }
+            <img [hidden]="loading2" (load)="imageLoaded2()" class="z-20"
+                src="{{data.aditional[0].img}}" alt>
         </div>
         <div class="col-span-1">
             <h2
@@ -63,13 +104,11 @@
     <div
         class="absolute top-0 -right-[30%] w-[40%] aspect-square m-0">
 
+        <!-- @for (item of [0,1,2,3,4,5,6,7,8,9,10]; track $index) {
         <div
-            class="w-[20%] aspect-square rounded-full border-4 border-[#cab9b6] absolute opacity-10"
-            style="
-              transform: translate(-50%, -50%);
-              ">
+            class="w-[{{20 + 30*$index}}%] aspect-square rounded-full border-4 border-[#cab9b6] absolute opacity-10 [transform:_translate(-50%,_-50%)]">
         </div>
-
+        } -->
         <div
             class="w-[50%] aspect-square rounded-full border-4 border-[#cab9b6] absolute opacity-10"
             style="
