@@ -40,7 +40,7 @@ export const agenda: TimelineEvent[] = [
   },
   {
     name: 'Jacques Duflos',
-    description: '',
+    description: "Ingeniero mecánico, profesor de tecnología con cuatro años de experiencia, desarrollador de videojuegos en las plataformas Itch.io y Newgrounds. Artista gráfico para el juego Santa's Impossible Mission",
     talk: 'GODOT4: Creación de vídeojuegos con herramientas libres',
     time: '09:00 - 10:00',
     img: "/assets/images/speakers/Jacques Duflos.png"
