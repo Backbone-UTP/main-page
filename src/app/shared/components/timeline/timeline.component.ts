@@ -23,7 +23,7 @@ export class TimelineComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openMondal(item: any){
+  openModal(item: any){
     if(item.talk == '') return ;
     this.dialog.open(CardPresentationComponent, {
       data: item,
