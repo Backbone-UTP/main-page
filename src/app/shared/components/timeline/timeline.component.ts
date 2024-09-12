@@ -3,7 +3,7 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { TimelineEvent } from 'src/app/shared/interfaces/features.interface';
 import {MatDialog} from '@angular/material/dialog';
-import { CardPresentationComponent } from 'src/app/pages/events/sfd-2024/components/presentation/card-presentation/card-presentation.component';
+import { CardPresentationComponent } from 'src/app/pages/events/sfd-2024/components/card-presentation/card-presentation.component';
 import { ScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 
 @Component({

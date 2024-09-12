@@ -101,17 +101,9 @@
 
     <div
         class="absolute top-0 -right-[30%] w-[40%] aspect-square m-0">
-
-        <!-- doesn't work with the for in production but work in local jeje -->
-        <!-- @for (item of [0,1,2,3,4,5,6,7,8,9,10]; track $index) {
-        <div
-            class="w-[{{20 + (30*$index)}}%] aspect-square rounded-full border-4 border-[#cab9b6] absolute opacity-10 [transform:_translate(-git@github.com:Backbone-UTP/main-page.git50%,_-50%)]">
-        </div>https://backboneutp.com/events/software-freedom-day-2024
-        } -->
-
-        <presentation-growing-circles
+        <growing-circles
           [nCircles]="nCircles"
         >
-        </presentation-growing-circles>
+        </growing-circles>
     </div>
 </div>
