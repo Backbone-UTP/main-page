@@ -9,5 +9,8 @@ import { Component, Input } from '@angular/core';
 })
 export class GrowingCirclesComponent {
   @Input()
-  public nCircles: number[] = [];
+  public circles: number[] = [];
+
+  @Input()
+  public circlesColor: string = '';
 }

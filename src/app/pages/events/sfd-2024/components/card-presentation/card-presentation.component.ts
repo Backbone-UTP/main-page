@@ -24,7 +24,8 @@ export class CardPresentationComponent {
   public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
   public primaryColour = '#ffffff';
   public loadingTemplate!: TemplateRef<any>;
-  public nCircles = Array(9).fill(0).map((_, index) => 50 + index * 30);
+  public circles = Array(9).fill(0).map((_, index) => 50 + index * 30);
+  public circlesColor = '#cab9b6';
 
   imageLoaded(){
     this.loading = false;
