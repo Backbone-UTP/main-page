@@ -108,6 +108,13 @@ export const agenda: TimelineEvent[] = [
     img: "/assets/images/speakers/Andrés Prieto.png"
   },
   {
+    name: 'Mariana Cortés Rueda',
+    description: 'Es comunicadora de profesión y actualmente se dedica a la documentación técnica (tech writer), después de haber estudiado y ejercido como programadora frontend. Ella se ha propuesto ayudar a crear puentes entre desarrolladores o ingenieros, ejecutivos, y usuarios por medio de comunicaciones efectivas.',
+    talk: '10 tips para cambiar tu mundo documentando en Open Source',
+    time: '03:30 - 04:00',
+    img: ""
+  },
+  {
     name: 'Carlos Andrés López',
     description: 'Ingeniero de Sistemas y Computación, con maestría en ingeniería de sistemas de la UTP, actualmente es Ingeniero de Datos en Subrik. Fue docente en pregrado y posgrado en la UTP, está especializado en ciencia de datos y big data, áreas en las que continúa desarrollándose y aplicando su conocimiento.',
     talk: 'Software libre e IAs: lo que deberías saber y no te dicen si quieres hacer negocios.',
