@@ -132,7 +132,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@BackBoneUTP](https://www.instagram.com/backboneutp/)
+Instagram - [@BackBoneUTP](https://www.instagram.com/backboneutp/)
 
 Project Link: [backboneutp.com](https://backboneutp.com)
 
