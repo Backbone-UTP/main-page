@@ -21,13 +21,14 @@ const routes: Routes = [
   },
   {
     path: 'main',
-    component: MainComponent,
-    loadChildren: () =>
-      import('./pages/main/main.module').then((m) => m.MainModule),
+    redirectTo: 'events/software-freedom-day-2024',
+    // component: MainComponent,
+    // loadChildren: () =>
+    //   import('./pages/main/main.module').then((m) => m.MainModule),
   },
   {
     path: '',
-    redirectTo: '/main',
+    redirectTo: 'events/software-freedom-day-2024',
     pathMatch: 'full',
   },
 ];
