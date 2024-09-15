@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ButtonComponent } from '../button/button.component';
+import { IconComponent } from '../../../../../shared/components/icons/icons.component';
 
 @Component({
   selector: 'app-sfd-hero',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, IconComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
