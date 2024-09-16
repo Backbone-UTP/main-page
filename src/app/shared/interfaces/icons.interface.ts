@@ -10,4 +10,5 @@ export type Icon =
   | 'linkedin'
   | 'instagram'
   | 'youtube'
-  | 'backbone';
+  | 'backbone-logo'
+  | 'github-logo';
