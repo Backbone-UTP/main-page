@@ -37,7 +37,7 @@
     <ul>
       <li
         *ngFor="let theme of themes"
-        class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 rounded-sm"
+        class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 dark:text-gray-200 rounded-sm"
         (click)="selectTheme(theme.toLowerCase())"
       >
         {{ theme }}
