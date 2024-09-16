@@ -19,13 +19,7 @@ export const headerLinks: Header[] = [
     label: 'supporters',
     url: '/events/software-freedom-day-2024/',
     fragment: 'supporters',
-  },
-  {
-    title: 'Patrocinadores',
-    label: 'sponsors',
-    url: '/events/software-freedom-day-2024/',
-    fragment: 'sponsors',
-  },
+  }
 ];
 
 export const footerLinks: Footer[] = [
