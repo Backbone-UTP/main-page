@@ -1,9 +1,9 @@
 <div
-    class="bg-[#0F172A] py-8 px-7 text-white relative overflow-x-hidden ">
+    class="bg-[#E5E7EB]  dark:bg-[#0F172A] py-8 px-7 text-black dark:text-white relative overflow-x-hidden ">
 
     <div class="flex justify-between md:items-center items-start">
         <h1
-            class="font-bold text-2xl md:text-3xl text-white">
+            class="font-bold text-2xl md:text-3xl text-black dark:text-white">
             {{data.talk}}
         </h1>
         <mat-dialog-actions>
@@ -55,7 +55,6 @@
         </div>
         <div
             class="size-auto z-20 m-6 mt-6 pt-6 md:mt-0  aspect-square bg-primary">
-            <!-- <img class="z-20" src="{{data.aditional[1].img}}" alt> -->
             @if (loading) {
             <div
                 class=" relative h-full flex items-center justify-center align-middle ">
@@ -73,7 +72,6 @@
         </div>
         <div
             class="size-auto z-20 m-6 mt-6 pt-6 md:mt-0  aspect-square bg-primary">
-            <!-- <img class="z-20" src="{{data.aditional[0].img}}" alt> -->
             @if (loading2) {
             <div
                 class=" relative h-full flex items-center justify-center align-middle ">
@@ -102,9 +100,8 @@
     <div
         class="absolute top-0 -right-[30%] w-[40%] aspect-square m-0">
         <growing-circles
-          [circles]="circles"
-          [circlesColor]="circlesColor"
-        >
+            [circles]="circles"
+            [circleStyle]="circlesStyle">
         </growing-circles>
     </div>
 </div>
