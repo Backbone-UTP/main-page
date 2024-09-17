@@ -94,7 +94,7 @@ export const agenda: TimelineEvent[] = [
       {
         name: 'Ana Beltrán',
         description:
-          'Desarrollador de videojuegos con 6 años de experiencia, especializado en crear entornos inmersivas para PC, Realidad Virtual y dispositivos móviles. Instructor de cursos en línea sobre desarrollo con Unity y Unreal Engine 5, compartiendo conocimiento y pasión por la industria.',
+          'Una artista por excelencia con amor por la tecnología; su enfoque es el mundo 3D y la generación de contenidos digitales. Entre sus aficiones están la creación de personajes, motion graphics y edición de vídeo; es miembro del semillero de juegos SIV, FLISoL y Forest Software Community; por profesión es ingeniera de sistemas y diseñadora 3D con participaciones en otras áreas como marketing.',
         img: '/assets/images/speakers/Ana Beltrán.png',
       },
     ],
