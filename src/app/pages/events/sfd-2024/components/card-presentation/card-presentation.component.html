@@ -26,11 +26,11 @@
         </div>
         <div
             class="size-auto z-20 m-12 mt-6 md:mt-0  aspect-square bg-primary">
-            @if (loading) {
+            @if (loading_primaryCardImage) {
             <div
                 class=" relative h-full flex items-center justify-center align-middle ">
                 <ngx-loading
-                    [show]="loading"
+                    [show]="loading_primaryCardImage"
                     [config]="{
                     animationType: ngxLoadingAnimationTypes.rectangleBounce,
                     primaryColour: primaryColour,
@@ -38,7 +38,7 @@
                     [template]="loadingTemplate"></ngx-loading>
             </div>
             }
-            <img [hidden]="loading" (load)="imageLoaded()" class="z-20"
+            <img [hidden]="loading_primaryCardImage" (load)="loaded_primaryCardImage()" class="z-20"
                 src="{{data.img}}" alt>
         </div>
 
@@ -55,11 +55,11 @@
         </div>
         <div
             class="size-auto z-20 m-6 mt-6 pt-6 md:mt-0  aspect-square bg-primary">
-            @if (loading) {
+            @if (loading_primaryCardImage) {
             <div
                 class=" relative h-full flex items-center justify-center align-middle ">
                 <ngx-loading
-                    [show]="loading"
+                    [show]="loading_primaryCardImage"
                     [config]="{
                         animationType: ngxLoadingAnimationTypes.rectangleBounce,
                         primaryColour: primaryColour,
@@ -67,16 +67,16 @@
                     [template]="loadingTemplate"></ngx-loading>
             </div>
             }
-            <img [hidden]="loading" (load)="imageLoaded()" class="z-20"
+            <img [hidden]="loading_primaryCardImage" (load)="loaded_primaryCardImage()" class="z-20"
                 src="{{data.aditional[1].img}}" alt>
         </div>
         <div
             class="size-auto z-20 m-6 mt-6 pt-6 md:mt-0  aspect-square bg-primary">
-            @if (loading2) {
+            @if (loading_secondaryCardImage) {
             <div
                 class=" relative h-full flex items-center justify-center align-middle ">
                 <ngx-loading
-                    [show]="loading2"
+                    [show]="loading_secondaryCardImage"
                     [config]="{
                             animationType: ngxLoadingAnimationTypes.rectangleBounce,
                             primaryColour: primaryColour,
@@ -84,7 +84,7 @@
                     [template]="loadingTemplate"></ngx-loading>
             </div>
             }
-            <img [hidden]="loading2" (load)="imageLoaded2()" class="z-20"
+            <img [hidden]="loading_secondaryCardImage" (load)="loaded_secondaryCardImage()" class="z-20"
                 src="{{data.aditional[0].img}}" alt>
         </div>
         <div class="col-span-1">
