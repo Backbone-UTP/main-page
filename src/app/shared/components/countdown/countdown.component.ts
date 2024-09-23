@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./countdown.component.scss'],
 })
 export class CountdownComponent implements OnInit {
-  @Input() targetDate: string = '2022-12-31T23:59:59';
+  @Input() targetDate: string = '';
   @Input() className: string = '';
 
   days: number = 0;
