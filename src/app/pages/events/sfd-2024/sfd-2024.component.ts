@@ -43,9 +43,9 @@ export class SFD2024Component {
 
   footerLinks = footerLinks;
 
-  // Date to countdown to oct 8th, 2024 at 08:00:00 UTC-5
+  // Date to countdown to oct 10th, 2024 at 08:00:00 UTC-5
 
-  countdownDate = new Date('2024-10-08T08:00:00-05:00').toDateString();
+  countdownDate = new Date('2024-10-10T08:00:00-05:00').toString();
 
   aboutTitle = '¿Qué es el Software Freedom Day 2024?';
   aboutSubTitle =
