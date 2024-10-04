@@ -4,7 +4,9 @@
     class="grid grid-cols-2 md:grid-cols-4 gap-10">
     <div
       class="relative pb-12 md:col-span-2 text-right space-x-4 justify-self-end md:w-64 mx-2">
-      <div class=" hover:scale-110 duration-700 transition-transform cursor-pointer sticky top-0" *ngIf="i % 2 == 0" (click)="openModal(item)">
+      <div
+        class=" hover:scale-105 duration-700 transition-transform cursor-pointer sticky top-0"
+        *ngIf="i % 2 == 0" (click)="openModal(item)">
         <h3 class=" text-lg md:text-xl font-bold text-primary">
           {{ item.name }}
         </h3>
@@ -12,30 +14,32 @@
           class="font-semibold text-lg md:text-xl text-gray-600 dark:text-white">
           {{ item.talk }}
         </h4>
-        <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">{{
-          item.time
-          }}</time>
+        <time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">
+          {{ item.time }}</time>
       </div>
     </div>
     <div
       class=" relative md:mx-12 mx-2 pb-12 before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-black/20 dark:before:border-white/15 before:content-['']">
+      <span
+        class="text-primary -left-[42px] absolute rounded-full text-5xl">&bull;</span>
       <div class="relative pb-12 space-x-4 md:col-span-2 md:w-64 ">
-        <div class="sticky top-0" *ngIf="i % 2 != 0" (click)="openModal(item)">
-          <span
-            class="text-primary -left-[42px] absolute rounded-full text-5xl">&bull;</span>
-          <div class="hover:scale-110 duration-700 transition-transform cursor-pointer">
+        <div
+          class="hover:scale-105 duration-700 transition-transform cursor-pointer">
+          <div class="sticky top-0" *ngIf="i % 2 != 0"
+            (click)="openModal(item)">
 
-          <h3
-            class=" text-lg md:text-xl font-bold text-primary">
-            {{ item.name }}
-          </h3>
-          <h4
-            class="font-semibold text-lg md:text-xl text-gray-600 dark:text-white">
-            {{ item.talk }}
-          </h4>
-          <time
-            class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">{{
-            item.time }}</time>
+            <h3
+              class=" text-lg md:text-xl font-bold text-primary">
+              {{ item.name }}
+            </h3>
+            <h4
+              class="font-semibold text-lg md:text-xl text-gray-600 dark:text-white">
+              {{ item.talk }}
+            </h4>
+            <time
+              class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80">
+              {{ item.time }}
+            </time>
           </div>
 
         </div>
