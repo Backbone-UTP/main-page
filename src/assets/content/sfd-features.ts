@@ -122,7 +122,7 @@ export const agenda: TimelineEvent[] = [
       'Es comunicadora de profesión y actualmente se dedica a la documentación técnica (tech writer), después de haber estudiado y ejercido como programadora frontend. Ella se ha propuesto ayudar a crear puentes entre desarrolladores o ingenieros, ejecutivos, y usuarios por medio de comunicaciones efectivas.',
     talk: '10 tips para cambiar tu mundo documentando en Open Source',
     time: '03:30 - 04:00',
-    img: '/assets/images/speakers/mariana-cortes.webp',
+    img: '/assets/images/speakers/Mariana Cortés Rueda.png',
   },
   {
     name: 'Carlos Andrés López',
