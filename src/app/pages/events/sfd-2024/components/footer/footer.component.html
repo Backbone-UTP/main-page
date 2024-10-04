@@ -5,25 +5,18 @@
     <div
       class="flex flex-col items-start md:flex-row md:items-center justify-between gap-2"
     >
-      <app-icon
-        iconName="backbone-logo"
-        [properties]="{
-          id: 'footer-logo',
-          class:
-            'size-16 text-primary-500 dark:text-primary-400 transition-all duration-300 ease-in-out'
-        }"
-      ></app-icon>
-      <p class="text-sm text-neutral-600 dark:text-neutral-400">
+      <p class="text-sm text-neutral-600 dark:text-neutral-400 flex flex-col items-start sm:flex-row sm:items-center">
         Diseñado y desarrollado por
-        <a
-          class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
-          href="https://linkedin.com/in/djkde"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Djkde</a
-        >.
+        <a href="https://github.com/Backbone-UTP" target="_blank" rel="noreferrer" class="inline-flex items-center sm:ml-2">
+          <app-icon
+            iconName="backbone-logo"
+            [properties]="{
+              id: 'footer-logo',
+              class: 'w-20 text-primary-500 dark:text-primary-400 transition-all duration-300 ease-in-out'
+            }"
+          ></app-icon>.
+        </a>
       </p>
-      <p></p>
       <p class="text-sm text-neutral-600 dark:text-neutral-400">
         Al asistir a este evento, aceptas nuestro
         <a
