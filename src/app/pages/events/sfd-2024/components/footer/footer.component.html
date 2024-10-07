@@ -1,27 +1,19 @@
 <footer
-  class="w-full bg-neutral-300 dark:bg-neutral-900 py-6 mt-12 px-4 shadow-sm"
->
+  class="w-full bg-neutral-300 dark:bg-neutral-900 py-6 mt-12 px-4 shadow-sm">
   <div class="flex items-center justify-between gap-y-0">
     <div
-      class="flex flex-col items-start md:flex-row md:items-center justify-between gap-2"
-    >
+      class="flex flex-col items-start md:flex-row md:items-center justify-between gap-2">
       <app-icon
         iconName="backbone-logo"
         [properties]="{
           id: 'footer-logo',
           class:
             'size-16 text-primary-500 dark:text-primary-400 transition-all duration-300 ease-in-out'
-        }"
-      ></app-icon>
+        }"></app-icon>
       <p class="text-sm text-neutral-600 dark:text-neutral-400">
         Diseñado y desarrollado por
-        <a
-          class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
-          href="https://linkedin.com/in/djkde"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Djkde</a
-        >.
+
+        BackBone
       </p>
       <p></p>
       <p class="text-sm text-neutral-600 dark:text-neutral-400">
@@ -30,17 +22,14 @@
           class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
           href="https://github.com/Backbone-UTP/.github/blob/main/CODE_OF_CONDUCT.md"
           target="_blank"
-          rel="noopener noreferrer"
-          >Código de conducta</a
-        >
+          rel="noopener noreferrer">Código de conducta</a>
       </p>
     </div>
 
     <!-- Social Brands -->
     <div class="flex items-center justify-between">
       <div *ngFor="let link of socialLinks">
-        <app-footer-link [url]="link.url"
-          ><app-icon [iconName]="link.name" />
+        <app-footer-link [url]="link.url"><app-icon [iconName]="link.name" />
         </app-footer-link>
       </div>
     </div>
