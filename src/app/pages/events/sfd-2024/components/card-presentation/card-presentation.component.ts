@@ -27,20 +27,20 @@ export class CardPresentationComponent {
   readonly data = inject<TimelineEvent>(MAT_DIALOG_DATA);
   readonly dialogRef = inject(MatDialogRef<CardPresentationComponent>);
 
-  loading: boolean = true;
-  loading2: boolean = true;
+  loading_primaryCardImage: boolean = true;
+  loading_secondaryCardImage: boolean = true;
   public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
   public primaryColour = '#ffffff';
   public loadingTemplate!: TemplateRef<any>;
   public circles = Array(9).fill(0).map((_, index) => 50 + index * 30);
   public circlesStyle = 'border-[#424242] dark:border-[#cab9b6]';
 
-  imageLoaded() {
-    this.loading = false;
+  loaded_primaryCardImage() {
+    this.loading_primaryCardImage = false;
   }
 
-  imageLoaded2() {
-    this.loading2 = false;
+  loaded_secondaryCardImage() {
+    this.loading_secondaryCardImage = false;
   }
 
   closeModal() {
