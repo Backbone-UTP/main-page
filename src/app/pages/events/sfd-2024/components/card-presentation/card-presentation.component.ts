@@ -31,7 +31,7 @@ export class CardPresentationComponent {
   loading2: boolean = true;
   public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
   public primaryColour = '#ffffff';
-  public loadingTemplate!: TemplateRef<any>;
+  public loadingTemplate!: TemplateRef<Element>;
   public circles = Array(9).fill(0).map((_, index) => 50 + index * 30);
   public circlesStyle = 'border-[#424242] dark:border-[#cab9b6]';
 
