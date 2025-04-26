@@ -7,6 +7,7 @@ import {
   MatDialogModule,
   MatDialogRef,
 } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TimelineEvent } from 'src/app/shared/interfaces/features.interface';
 import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
 import { GrowingCirclesComponent } from '../growing-circles/growing-circles.component';
@@ -18,6 +19,7 @@ import { GrowingCirclesComponent } from '../growing-circles/growing-circles.comp
     MatIconModule,
     MatDialogModule,
     NgxLoadingModule,
+    MatProgressSpinnerModule,
     GrowingCirclesComponent,
   ],
   templateUrl: './card-presentation.component.html',
