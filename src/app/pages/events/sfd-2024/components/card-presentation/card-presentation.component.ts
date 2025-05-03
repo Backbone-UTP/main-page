@@ -27,8 +27,8 @@ export class CardPresentationComponent {
   readonly data = inject<TimelineEvent>(MAT_DIALOG_DATA);
   readonly dialogRef = inject(MatDialogRef<CardPresentationComponent>);
 
-  loading: boolean = true;
-  loading2: boolean = true;
+  loading = true;
+  loading2 = true;
   public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
   public primaryColour = '#ffffff';
   public loadingTemplate!: TemplateRef<any>;

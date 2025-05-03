@@ -11,8 +11,8 @@ import { NgFor, NgIf } from '@angular/common';
 })
 export class LogosListComponent implements OnInit {
   @Input() logos: Logo[] = [];
-  @Input() title: string = '';
-  @Input() subtitle: string = '';
+  @Input() title = '';
+  @Input() subtitle = '';
   constructor() {}
 
   ngOnInit(): void {
