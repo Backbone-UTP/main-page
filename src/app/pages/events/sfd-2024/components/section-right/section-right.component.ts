@@ -10,8 +10,8 @@ import { NgIf } from '@angular/common';
   imports: [ButtonComponent, NgIf],
 })
 export class SectionRightComponent {
-  @Input() title: string = '';
-  @Input() description: string = '';
+  @Input() title = '';
+  @Input() description = '';
   @Input() buttonProps: {
     text: string;
     variant: string;

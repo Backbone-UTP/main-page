@@ -7,8 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./icons-block.component.scss'],
 })
 export class IconsBlockComponent implements OnInit {
-  @Input() heading: string = '';
-  @Input() content: string = '';
+  @Input() heading = '';
+  @Input() content = '';
   constructor() {}
 
   ngOnInit(): void {

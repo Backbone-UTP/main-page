@@ -13,8 +13,8 @@ import { IconsBlockComponent } from '../../../../../shared/components/icons-bloc
 })
 export class FeaturesComponent implements OnInit {
   @Input() features: Feature[] = [];
-  @Input() title: string = '';
-  @Input() subtitle: string = '';
+  @Input() title = '';
+  @Input() subtitle = '';
   constructor() {}
 
   ngOnInit(): void {
