@@ -1,5 +1,6 @@
 import { Component, inject, TemplateRef } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { ButtonComponent } from '../button/button.component';
 import {
   MAT_DIALOG_DATA,
   MatDialogModule,
@@ -17,6 +18,7 @@ import { GrowingCirclesComponent } from '../growing-circles/growing-circles.comp
     MatDialogModule,
     NgxLoadingModule,
     GrowingCirclesComponent,
+    ButtonComponent,
   ],
   templateUrl: './card-presentation.component.html',
   styleUrl: './card-presentation.component.scss',
@@ -29,7 +31,7 @@ export class CardPresentationComponent {
   loading2 = true;
   public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
   public primaryColour = '#ffffff';
-  public loadingTemplate!: TemplateRef<any>;
+  public loadingTemplate!: TemplateRef<Element>;
   public circles = Array(9).fill(0).map((_, index) => 50 + index * 30);
   public circlesStyle = 'border-[#424242] dark:border-[#cab9b6]';
 
