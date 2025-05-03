@@ -46,6 +46,7 @@ export const agenda: TimelineEvent[] = [
     talk: 'GODOT4: Creación de vídeojuegos con herramientas libres',
     time: '09:00 - 10:00',
     img: '/assets/images/speakers/Jacques Duflos.png',
+    link: 'https://www.youtube.com/live/NJoeUs4pkZE?si=eyE-bdPWypoOItpC&t=530',
   },
   {
     name: 'David Mena',
@@ -54,6 +55,7 @@ export const agenda: TimelineEvent[] = [
     talk: 'Introducción a Rust: Programación con Seguridad y Rendimiento',
     time: '10:00 - 10:30',
     img: '/assets/images/speakers/Jesús David Mena Rivera.png',
+    link: 'https://www.youtube.com/live/NJoeUs4pkZE?si=M-LHbCAViQtyycGS&t=4310',
   },
   {
     name: 'Nicolás Osorio',
@@ -62,6 +64,7 @@ export const agenda: TimelineEvent[] = [
     talk: 'La versión Open Source de un chatbot de whatsapp.',
     time: '10:30 - 11:00',
     img: '/assets/images/speakers/Nicolás Osorio.png',
+    link: 'https://www.youtube.com/live/NJoeUs4pkZE?si=N2PZuc2of-CfiwAE&t=6227',
   },
   {
     name: 'Sebastián Camilo Cruz',
@@ -84,6 +87,7 @@ export const agenda: TimelineEvent[] = [
     talk: 'Open source en la industria del videojuego',
     time: '02:00 - 02:30',
     img: '',
+    link: 'https://www.youtube.com/live/5_qyNXwqpE8?si=QX0E0m1lqrj842na&t=144',
     aditional: [
       {
         name: 'Cristhian Grajales',
@@ -106,6 +110,7 @@ export const agenda: TimelineEvent[] = [
     talk: 'El Cubo de Rubik y el Open Source: Soluciones Simples para Problemas Complejos',
     time: '02:30 - 03:00',
     img: '/assets/images/speakers/Jose Felipe Duarte.png',
+    link: 'https://www.youtube.com/live/5_qyNXwqpE8?si=KjfsKQELvq9gygLx&t=1652',
   },
 
   {
@@ -115,6 +120,7 @@ export const agenda: TimelineEvent[] = [
     talk: 'Cómo y por qué hacer proyectos Open Source',
     time: '03:00 - 03:30',
     img: '/assets/images/speakers/Andrés Prieto.png',
+    link: 'https://www.youtube.com/live/5_qyNXwqpE8?si=3i1sZKvItaK0Z3-s&t=2786',
   },
   {
     name: 'Mariana Cortés Rueda',
@@ -123,6 +129,7 @@ export const agenda: TimelineEvent[] = [
     talk: '10 tips para cambiar tu mundo documentando en Open Source',
     time: '03:30 - 04:00',
     img: '/assets/images/speakers/mariana-cortes.webp',
+    link: 'https://www.youtube.com/live/5_qyNXwqpE8?si=wdhu50ry8Exoyzfq&t=5034',
   },
   {
     name: 'Carlos Andrés López',
@@ -131,6 +138,7 @@ export const agenda: TimelineEvent[] = [
     talk: 'Software libre e IAs: lo que deberías saber y no te dicen si quieres hacer negocios.',
     time: '04:00 - 05:00',
     img: '/assets/images/speakers/Carlos Andrés López.png',
+    link: 'https://www.youtube.com/live/5_qyNXwqpE8?si=aOkFaHRVD1KRRq-W&t=7533',
   },
   {
     name: 'SONAR ISC - Semillero de Investigación',
@@ -139,5 +147,6 @@ export const agenda: TimelineEvent[] = [
     talk: 'El Opensource en los espacios académicos: Conversatorio con líderes de semilleros de investigación',
     time: '05:00 - 06:00',
     img: '/assets/images/speakers/SONAR ISC.png',
+    link: 'https://www.youtube.com/live/5_qyNXwqpE8?si=H32txjRd591tXZyh&t=10235',
   },
 ];

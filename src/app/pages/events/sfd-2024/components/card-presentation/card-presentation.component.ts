@@ -1,5 +1,6 @@
 import { Component, inject, TemplateRef } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { ButtonComponent } from '../button/button.component';
 import { MatButtonModule } from '@angular/material/button';
 import {
   MAT_DIALOG_DATA,
@@ -19,6 +20,7 @@ import { GrowingCirclesComponent } from '../growing-circles/growing-circles.comp
     MatDialogModule,
     NgxLoadingModule,
     GrowingCirclesComponent,
+    ButtonComponent,
   ],
   templateUrl: './card-presentation.component.html',
   styleUrl: './card-presentation.component.scss',
