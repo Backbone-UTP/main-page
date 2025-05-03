@@ -1,5 +1,5 @@
 <div
-    class="bg-[#E5E7EB]  dark:bg-[#0F172A] py-8 px-7 text-black dark:text-white relative overflow-x-hidden ">
+    class="bg-[#E5E7EB] dark:bg-[#0F172A] py-8 px-7 text-black dark:text-white relative overflow-x-hidden ">
 
     <div class="flex justify-between md:items-center items-start">
         <h1
@@ -25,17 +25,14 @@
             <h3 class="z-20">{{data.description}}</h3>
         </div>
         <div
-            class="size-auto z-20 m-12 mt-6 md:mt-0  aspect-square bg-primary">
+            class="size-auto z-20 m-12 mt-6 md:mt-0 aspect-square bg-primary">
             @if (loading) {
             <div
-                class=" relative h-full flex items-center justify-center align-middle ">
-                <ngx-loading
-                    [show]="loading"
-                    [config]="{
-                    animationType: ngxLoadingAnimationTypes.rectangleBounce,
-                    primaryColour: primaryColour,
-                    backdropBorderRadius: '3px'}"
-                    [template]="loadingTemplate"></ngx-loading>
+                class="relative h-full flex items-center justify-center align-middle">
+                <mat-progress-spinner
+                    mode="indeterminate"
+                    color="primary">
+                </mat-progress-spinner>
             </div>
             }
             <img [hidden]="loading" (load)="imageLoaded()" class="z-20"
@@ -51,37 +48,30 @@
             <h2
                 class="font-semibold text-lg md:text-xl mb-3 z-20">{{data.aditional[1].name}}</h2>
             <h3 class="z-20">{{data.aditional[1].description}}</h3>
-
         </div>
         <div
-            class="size-auto z-20 m-6 mt-6 pt-6 md:mt-0  aspect-square bg-primary">
+            class="size-auto z-20 m-6 mt-6 pt-6 md:mt-0 aspect-square bg-primary">
             @if (loading) {
             <div
-                class=" relative h-full flex items-center justify-center align-middle ">
-                <ngx-loading
-                    [show]="loading"
-                    [config]="{
-                        animationType: ngxLoadingAnimationTypes.rectangleBounce,
-                        primaryColour: primaryColour,
-                        backdropBorderRadius: '3px'}"
-                    [template]="loadingTemplate"></ngx-loading>
+                class="relative h-full flex items-center justify-center align-middle">
+                <mat-progress-spinner
+                    mode="indeterminate"
+                    color="primary">
+                </mat-progress-spinner>
             </div>
             }
             <img [hidden]="loading" (load)="imageLoaded()" class="z-20"
                 src="{{data.aditional[1].img}}" alt>
         </div>
         <div
-            class="size-auto z-20 m-6 mt-6 pt-6 md:mt-0  aspect-square bg-primary">
+            class="size-auto z-20 m-6 mt-6 pt-6 md:mt-0 aspect-square bg-primary">
             @if (loading2) {
             <div
-                class=" relative h-full flex items-center justify-center align-middle ">
-                <ngx-loading
-                    [show]="loading2"
-                    [config]="{
-                            animationType: ngxLoadingAnimationTypes.rectangleBounce,
-                            primaryColour: primaryColour,
-                            backdropBorderRadius: '3px'}"
-                    [template]="loadingTemplate"></ngx-loading>
+                class="relative h-full flex items-center justify-center align-middle">
+                <mat-progress-spinner
+                    mode="indeterminate"
+                    color="primary">
+                </mat-progress-spinner>
             </div>
             }
             <img [hidden]="loading2" (load)="imageLoaded2()" class="z-20"
@@ -91,7 +81,6 @@
             <h2
                 class="font-semibold text-lg md:text-xl mb-3 z-20">{{data.aditional[0].name}}</h2>
             <h3 class="z-20">{{data.aditional[0].description}}</h3>
-
         </div>
 
     </div>

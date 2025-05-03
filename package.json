@@ -24,7 +24,6 @@
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
     "husky": "^9.1.7",
-    "ngx-loading": "^17.0.0",
     "node-sass": "^9.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
