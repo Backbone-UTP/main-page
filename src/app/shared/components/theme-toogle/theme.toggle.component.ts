@@ -48,7 +48,7 @@ export class ThemeToggleComponent {
   }
 
   @HostListener('document:click', ['$event'])
-  closeThemesMenu(event: Event): void {
+  closeThemesMenu(): void {
     const themesMenu = document.getElementById('themes-menu');
     themesMenu?.classList.remove('open');
   }

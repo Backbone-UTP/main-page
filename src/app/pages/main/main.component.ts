@@ -10,5 +10,7 @@ export class MainComponent implements OnInit {
     window.location.href = 'https://www.instagram.com/backboneutp/';
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // do nothing
+  }
 }

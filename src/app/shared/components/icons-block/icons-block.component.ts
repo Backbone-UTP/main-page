@@ -9,9 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class IconsBlockComponent implements OnInit {
   @Input() heading = '';
   @Input() content = '';
-  constructor() {}
+  constructor() {
+    // do nothing
+  }
 
   ngOnInit(): void {
-    // Initialization code goes here
+    // do nothing
   }
 }

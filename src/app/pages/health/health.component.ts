@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./health.component.scss'],
 })
 export class HealthComponent implements OnInit {
-  constructor() {}
+  constructor() {
+    // do nothing
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // do nothing
+  }
 }

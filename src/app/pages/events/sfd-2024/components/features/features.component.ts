@@ -15,9 +15,11 @@ export class FeaturesComponent implements OnInit {
   @Input() features: Feature[] = [];
   @Input() title = '';
   @Input() subtitle = '';
-  constructor() {}
+  constructor() {
+    // do nothing
+  }
 
   ngOnInit(): void {
-    // Initialization code here
+    // do nothing
   }
 }
