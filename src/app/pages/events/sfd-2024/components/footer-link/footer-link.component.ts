@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./footer-link.component.scss'],
 })
 export class FooterLinkComponent {
-  @Input() url: string = '';
+  @Input() url = '';
 }

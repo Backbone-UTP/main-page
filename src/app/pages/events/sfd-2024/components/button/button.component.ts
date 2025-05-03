@@ -1,13 +1,13 @@
 import { NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
-type Variants = {
+interface Variants {
   primary: string;
   secondary: string;
   tertiary: string;
   link: string;
   [key: string]: string;
-};
+}
 
 @Component({
   selector: 'app-button',
@@ -17,11 +17,11 @@ type Variants = {
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-  @Input() variant: string = 'secondary';
-  @Input() className: string = '';
-  @Input() target: string = '';
-  @Input() text: string = '';
-  @Input() href: string = '';
+  @Input() variant = 'secondary';
+  @Input() className = '';
+  @Input() target = '';
+  @Input() text = '';
+  @Input() href = '';
 
   variants: Variants = {
     primary: 'btn-primary',

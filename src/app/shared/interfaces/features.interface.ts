@@ -12,5 +12,6 @@ export interface TimelineEvent {
   description: string;
   talk: string;
   img: string;
+  link?: string;  
   aditional?: {name: string, description: string, img: string}[];
 }
