@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { SFD2024HeroComponent } from './components/hero/hero.component';
 import { SFDHeaderComponent } from './components/header/header.component';
-import { Header } from 'src/app/shared/interfaces/header.interface';
 import { CountdownComponent } from 'src/app/shared/components/countdown/countdown.component';
 import { agenda, features } from 'src/assets/content/sfd-features';
 import { FeaturesComponent } from './components/features/features.component';

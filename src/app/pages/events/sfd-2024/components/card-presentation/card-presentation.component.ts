@@ -1,10 +1,8 @@
 import { Component, inject, TemplateRef } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { ButtonComponent } from '../button/button.component';
-import { MatButtonModule } from '@angular/material/button';
 import {
   MAT_DIALOG_DATA,
-  MatDialog,
   MatDialogModule,
   MatDialogRef,
 } from '@angular/material/dialog';

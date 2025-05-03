@@ -13,5 +13,7 @@ export class IconComponent {
   @Input() iconName: Icon = 'system';
   @Input() properties: { id: string; class: string } = { id: '', class: '' };
 
-  constructor() {}
+  constructor() {
+    // do nothing
+  }
 }

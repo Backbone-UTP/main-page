@@ -13,9 +13,11 @@ export class LogosListComponent implements OnInit {
   @Input() logos: Logo[] = [];
   @Input() title = '';
   @Input() subtitle = '';
-  constructor() {}
+  constructor() {
+    // do nothing
+  }
 
   ngOnInit(): void {
-    // Initialization code goes here
+    // do nothing
   }
 }

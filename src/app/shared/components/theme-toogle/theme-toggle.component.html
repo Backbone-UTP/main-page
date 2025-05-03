@@ -38,7 +38,10 @@
       <li
         *ngFor="let theme of themes"
         class="themes-menu-option px-2 py-1.5 cursor-default hover:bg-neutral-400/40 dark:hover:bg-gray-500/50 dark:text-gray-200 rounded-sm"
+        role="button"
+        aria-disabled="true"
         (click)="selectTheme(theme.toLowerCase())"
+        (keydown.enter)="selectTheme(theme.toLowerCase())"
       >
         {{ theme }}
       </li>
