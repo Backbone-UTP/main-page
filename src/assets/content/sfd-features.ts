@@ -67,14 +67,6 @@ export const agenda: TimelineEvent[] = [
     link: 'https://www.youtube.com/live/NJoeUs4pkZE?si=N2PZuc2of-CfiwAE&t=6227',
   },
   {
-    name: 'Sebastián Camilo Cruz',
-    description:
-      'Es un entusiasta del EdTech y defensor de la realidad aumentada y proyectos de hardware para fomentar la creatividad y el trabajo en equipo. Miembro del semillero de robótica educativa de la USCO, ha impactado a más de 500 niños. Se especializa en videojuegos con Unity, desarrollo web y explora blockchain para soluciones sociales.',
-    talk: 'Explicación, implementación y calibración de una cámara hiperespectral open source de bajo coste',
-    time: '11:00 - 12:00',
-    img: '/assets/images/speakers/Sebastián Camilo Cruz.png',
-  },
-  {
     name: 'Break Time',
     description: '',
     talk: '',
