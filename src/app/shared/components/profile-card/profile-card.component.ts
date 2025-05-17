@@ -15,4 +15,5 @@ export class ProfileCardComponent {
   @Input() role: string = '';
   @Input() image: string = '';
   @Input() links: LinkItem[] = [];
+  
 }
