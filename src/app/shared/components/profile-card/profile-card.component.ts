@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { IconComponent } from '../icons/icons.component';
 import { NgFor } from '@angular/common';
-import { Icon } from 'src/app/shared/interfaces/icons.interface';
+import { LinkItem } from 'src/app/shared/interfaces/link-item.interface';
 
 @Component({
   selector: 'app-profile-card',
@@ -11,8 +11,9 @@ import { Icon } from 'src/app/shared/interfaces/icons.interface';
   styleUrls: ['./profile-card.component.scss'],
 })
 export class ProfileCardComponent {
-  @Input() name = '';
-  @Input() role = '';
-  @Input() image = '';
-  @Input() links: { name: Icon; url: string }[] = [];
+  @Input() name: string = '';
+  @Input() role: string = '';
+  @Input() image: string = '';
+  @Input() links: LinkItem[] = [];
+  
 }
