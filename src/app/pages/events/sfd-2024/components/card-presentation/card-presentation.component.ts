@@ -8,8 +8,8 @@ import {
   MatDialogModule,
   MatDialogRef,
 } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TimelineEvent } from 'src/app/shared/interfaces/features.interface';
-import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
 import { GrowingCirclesComponent } from '../growing-circles/growing-circles.component';
 
 @Component({
@@ -18,7 +18,7 @@ import { GrowingCirclesComponent } from '../growing-circles/growing-circles.comp
   imports: [
     MatIconModule,
     MatDialogModule,
-    NgxLoadingModule,
+    MatProgressSpinnerModule,
     GrowingCirclesComponent,
     ButtonComponent,
   ],
@@ -29,9 +29,8 @@ export class CardPresentationComponent {
   readonly data = inject<TimelineEvent>(MAT_DIALOG_DATA);
   readonly dialogRef = inject(MatDialogRef<CardPresentationComponent>);
 
-  loading = true;
-  loading2 = true;
-  public ngxLoadingAnimationTypes = ngxLoadingAnimationTypes;
+  loading: boolean = true;
+  loading2: boolean = true;
   public primaryColour = '#ffffff';
   public loadingTemplate!: TemplateRef<Element>;
   public circles = Array(9).fill(0).map((_, index) => 50 + index * 30);
