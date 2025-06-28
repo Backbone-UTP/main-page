@@ -1,5 +1,5 @@
 // timeline.component.ts
-import { NgClass, NgFor, NgIf } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { Component, inject, Input, OnInit } from '@angular/core';
 import { TimelineEvent } from 'src/app/shared/interfaces/features.interface';
 import {MatDialog} from '@angular/material/dialog';
@@ -8,7 +8,7 @@ import { ScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 
 @Component({
     selector: 'app-timeline',
-    imports: [NgFor, NgClass, NgIf],
+    imports: [NgClass],
     templateUrl: './timeline.component.html',
     styleUrls: ['./timeline.component.scss']
 })

@@ -1,10 +1,10 @@
-import { NgFor, NgIf } from '@angular/common';
+
 import { Component, HostListener } from '@angular/core';
 import { IconComponent } from '../icons/icons.component';
 
 @Component({
     selector: 'app-theme-toggle',
-    imports: [NgFor, NgIf, IconComponent],
+    imports: [IconComponent],
     templateUrl: './theme-toggle.component.html',
     styleUrls: ['./theme-toggle.component.scss']
 })

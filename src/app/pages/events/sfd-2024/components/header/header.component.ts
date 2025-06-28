@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+
 import {
   Component,
   ElementRef,
@@ -14,7 +14,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-sfd-header',
-    imports: [NgFor, ThemeToggleComponent, RouterLink],
+    imports: [ThemeToggleComponent, RouterLink],
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss']
 })

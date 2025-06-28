@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Logo } from '../../interfaces/logo.interface';
-import { NgFor, NgIf } from '@angular/common';
+
 
 @Component({
     selector: 'app-logos-list',
-    imports: [NgIf, NgFor],
+    imports: [],
     templateUrl: './logos-list.component.html',
     styleUrls: ['./logos-list.component.scss']
 })

@@ -10,7 +10,7 @@ import {
 } from 'src/app/shared/interfaces/features.interface';
 import { ProfileCardComponent } from '../../../shared/components/profile-card/profile-card.component';
 import { staff, supporters } from 'src/assets/content/sfd.people';
-import { NgFor } from '@angular/common';
+
 import { TimelineComponent } from '../../../shared/components/timeline/timeline.component';
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
@@ -22,18 +22,17 @@ import { ButtonComponent } from "./components/button/button.component";
 @Component({
     selector: 'app-sfd-2024',
     imports: [
-        SFD2024HeroComponent,
-        SFDHeaderComponent,
-        FeaturesComponent,
-        ProfileCardComponent,
-        NgFor,
-        TimelineComponent,
-        LogosListComponent,
-        SectionRightComponent,
-        FooterComponent,
-        CallToActionComponent,
-        ButtonComponent
-    ],
+    SFD2024HeroComponent,
+    SFDHeaderComponent,
+    FeaturesComponent,
+    ProfileCardComponent,
+    TimelineComponent,
+    LogosListComponent,
+    SectionRightComponent,
+    FooterComponent,
+    CallToActionComponent,
+    ButtonComponent
+],
     templateUrl: './sfd-2024.component.html',
     styleUrl: './sfd-2024.component.scss'
 })
