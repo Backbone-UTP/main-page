@@ -3,11 +3,10 @@ import { Component, HostListener } from '@angular/core';
 import { IconComponent } from '../icons/icons.component';
 
 @Component({
-  selector: 'app-theme-toggle',
-  standalone: true,
-  imports: [NgFor, NgIf, IconComponent],
-  templateUrl: './theme-toggle.component.html',
-  styleUrls: ['./theme-toggle.component.scss'],
+    selector: 'app-theme-toggle',
+    imports: [NgFor, NgIf, IconComponent],
+    templateUrl: './theme-toggle.component.html',
+    styleUrls: ['./theme-toggle.component.scss']
 })
 export class ThemeToggleComponent {
   themes = ['light', 'dark', 'system'];

@@ -20,23 +20,22 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { ButtonComponent } from "./components/button/button.component";
 @Component({
-  selector: 'app-sfd-2024',
-  standalone: true,
-  imports: [
-    SFD2024HeroComponent,
-    SFDHeaderComponent,
-    FeaturesComponent,
-    ProfileCardComponent,
-    NgFor,
-    TimelineComponent,
-    LogosListComponent,
-    SectionRightComponent,
-    FooterComponent,
-    CallToActionComponent,
-    ButtonComponent
-],
-  templateUrl: './sfd-2024.component.html',
-  styleUrl: './sfd-2024.component.scss',
+    selector: 'app-sfd-2024',
+    imports: [
+        SFD2024HeroComponent,
+        SFDHeaderComponent,
+        FeaturesComponent,
+        ProfileCardComponent,
+        NgFor,
+        TimelineComponent,
+        LogosListComponent,
+        SectionRightComponent,
+        FooterComponent,
+        CallToActionComponent,
+        ButtonComponent
+    ],
+    templateUrl: './sfd-2024.component.html',
+    styleUrl: './sfd-2024.component.scss'
 })
 export class SFD2024Component {
   headerLinks = headerLinks;

@@ -13,17 +13,16 @@ import { TimelineEvent } from 'src/app/shared/interfaces/features.interface';
 import { GrowingCirclesComponent } from '../growing-circles/growing-circles.component';
 
 @Component({
-  selector: 'app-card-presentation',
-  standalone: true,
-  imports: [
-    MatIconModule,
-    MatDialogModule,
-    MatProgressSpinnerModule,
-    GrowingCirclesComponent,
-    ButtonComponent,
-  ],
-  templateUrl: './card-presentation.component.html',
-  styleUrl: './card-presentation.component.scss',
+    selector: 'app-card-presentation',
+    imports: [
+        MatIconModule,
+        MatDialogModule,
+        MatProgressSpinnerModule,
+        GrowingCirclesComponent,
+        ButtonComponent,
+    ],
+    templateUrl: './card-presentation.component.html',
+    styleUrl: './card-presentation.component.scss'
 })
 export class CardPresentationComponent {
   readonly data = inject<TimelineEvent>(MAT_DIALOG_DATA);

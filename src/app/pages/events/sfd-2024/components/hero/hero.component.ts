@@ -4,11 +4,10 @@ import { ButtonComponent } from '../button/button.component';
 import { IconComponent } from '../../../../../shared/components/icons/icons.component';
 
 @Component({
-  selector: 'app-sfd-hero',
-  standalone: true,
-  imports: [ButtonComponent, IconComponent],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss',
+    selector: 'app-sfd-hero',
+    imports: [ButtonComponent, IconComponent],
+    templateUrl: './hero.component.html',
+    styleUrl: './hero.component.scss'
 })
 export class SFD2024HeroComponent {
   @Input() banner: any;

@@ -5,11 +5,10 @@ import { Feature } from 'src/app/shared/interfaces/features.interface';
 import { IconsBlockComponent } from '../../../../../shared/components/icons-block/icons-block.component';
 
 @Component({
-  selector: 'app-features',
-  standalone: true,
-  imports: [NgFor, NgIf, IconComponent, IconsBlockComponent],
-  templateUrl: './features.component.html',
-  styleUrls: ['./features.component.scss'],
+    selector: 'app-features',
+    imports: [NgFor, NgIf, IconComponent, IconsBlockComponent],
+    templateUrl: './features.component.html',
+    styleUrls: ['./features.component.scss']
 })
 export class FeaturesComponent implements OnInit {
   @Input() features: Feature[] = [];

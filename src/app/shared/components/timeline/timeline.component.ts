@@ -7,11 +7,10 @@ import { CardPresentationComponent } from 'src/app/pages/events/sfd-2024/compone
 import { ScrollStrategy, ScrollStrategyOptions } from '@angular/cdk/overlay';
 
 @Component({
-  selector: 'app-timeline',
-  standalone: true,
-  imports: [NgFor, NgClass, NgIf],
-  templateUrl: './timeline.component.html',
-  styleUrls: ['./timeline.component.scss'],
+    selector: 'app-timeline',
+    imports: [NgFor, NgClass, NgIf],
+    templateUrl: './timeline.component.html',
+    styleUrls: ['./timeline.component.scss']
 })
 export class TimelineComponent implements OnInit {
   @Input() timelineItems: TimelineEvent[] = [];

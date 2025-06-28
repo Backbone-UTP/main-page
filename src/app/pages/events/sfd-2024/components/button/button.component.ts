@@ -10,11 +10,10 @@ interface Variants {
 }
 
 @Component({
-  selector: 'app-button',
-  standalone: true,
-  imports: [NgClass],
-  templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss'],
+    selector: 'app-button',
+    imports: [NgClass],
+    templateUrl: './button.component.html',
+    styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent {
   @Input() variant = 'secondary';

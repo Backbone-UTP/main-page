@@ -6,11 +6,10 @@ import { Icon } from 'src/app/shared/interfaces/icons.interface';
 import { Footer } from 'src/app/shared/interfaces/footer.interface';
 
 @Component({
-  selector: 'app-footer',
-  standalone: true,
-  imports: [NgFor, FooterLinkComponent, IconComponent],
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss'],
+    selector: 'app-footer',
+    imports: [NgFor, FooterLinkComponent, IconComponent],
+    templateUrl: './footer.component.html',
+    styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
   @Input() socialLinks: Footer[] = [];

@@ -4,11 +4,10 @@ import { NgFor } from '@angular/common';
 import { LinkItem } from 'src/app/shared/interfaces/link-item.interface';
 
 @Component({
-  selector: 'app-profile-card',
-  standalone: true,
-  imports: [IconComponent, NgFor],
-  templateUrl: './profile-card.component.html',
-  styleUrls: ['./profile-card.component.scss'],
+    selector: 'app-profile-card',
+    imports: [IconComponent, NgFor],
+    templateUrl: './profile-card.component.html',
+    styleUrls: ['./profile-card.component.scss']
 })
 export class ProfileCardComponent {
   @Input() name: string = '';

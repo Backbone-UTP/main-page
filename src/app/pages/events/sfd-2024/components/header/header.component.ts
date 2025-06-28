@@ -13,11 +13,10 @@ import { Header } from 'src/app/shared/interfaces/header.interface';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-sfd-header',
-  standalone: true,
-  imports: [NgFor, ThemeToggleComponent, RouterLink],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+    selector: 'app-sfd-header',
+    imports: [NgFor, ThemeToggleComponent, RouterLink],
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss']
 })
 export class SFDHeaderComponent implements OnInit, AfterViewInit {
   @Input() navItems: Header[] = [];
