@@ -8,21 +8,10 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 
-// Tu componente
-import { ProjectsComponent } from './shared/components/projects-cards/projects.component';
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    ProjectsComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatCardModule,
-    MatButtonModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, MatCardModule, MatButtonModule],
   providers: [provideAnimationsAsync()],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

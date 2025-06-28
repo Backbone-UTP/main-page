@@ -25,8 +25,9 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'events/software-freedom-day-2024',
-    pathMatch: 'full',
+    component: MainComponent,
+    loadChildren: () =>
+      import('./pages/main/main.module').then((m) => m.MainModule),
   },
 ];
 
