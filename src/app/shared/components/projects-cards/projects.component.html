@@ -1,0 +1,15 @@
+<mat-card class="project-card">
+  <div class="image-container">
+    <img mat-card-image [src]="imageUrl" alt="{{ title }}" />
+    <span class="status-badge">{{ status }}</span>
+  </div>
+
+  <mat-card-content>
+    <h2 class="project-title">{{ title }}</h2>
+    <p class="project-description">{{ description }}</p>
+  </mat-card-content>
+
+  <mat-card-actions *ngIf="link">
+    <a mat-button color="primary" [href]="link" target="_blank">Ver Proyecto</a>
+  </mat-card-actions>
+</mat-card>
