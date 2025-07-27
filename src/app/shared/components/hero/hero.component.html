@@ -2,11 +2,11 @@
     <div class = "text-white/90 max-w-full">
         <h1 [innerHTML] = "spacesTitle" class = "text-[3rem] font-extrabold mb-4 leading-[1.2]"></h1>
         <p [innerHTML] = "spacesSubtitle" class = "text-[1.2rem] leading-[1.6] mb-6"></p>
-        <button class = "bg-[#fdd835] text-black font-semibold tet-base rounded-full px-6 py-3 cursor-pointer transition-colors duration-300 hover:bg-[#fbc12d80]">
+        <button class = "bg-[#fdd835] text-black font-semibold text-base rounded-full px-6 py-3 cursor-pointer transition-colors duration-300 hover:bg-[#fbc12d80] ">
             {{ctaText}}
         </button>
     </div>
-    <div class = "mt6 sm:mt-0">
-        <img [src] = "imageUrl" alt = "Hero Image" class = "max-w-[400px] rounded-xl"/>
+    <div class = "mt-8 lg:mt-0">
+        <img [src] = "imageUrl" alt = "Hero Image" class = "rounded-xl max-w-[300px] lg:max-w-[400px]"/>
     </div>
 </section>
