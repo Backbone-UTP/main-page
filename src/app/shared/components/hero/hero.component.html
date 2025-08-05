@@ -1,12 +1,12 @@
-<section class = "flex justify-around items-center bg-[#05061e] p-[4rem_3rem_3rem_3rem] flex-wrap">
-    <div class = "text-white/90 max-w-full">
-        <h1 [innerHTML] = "spacesTitle" class = "text-[3rem] font-extrabold mb-4 leading-[1.2]"></h1>
-        <p [innerHTML] = "spacesSubtitle" class = "text-[1.2rem] leading-[1.6] mb-6"></p>
-        <button class = "bg-[#fdd835] text-black font-semibold text-base rounded-full px-6 py-3 cursor-pointer transition-colors duration-300 hover:bg-[#fbc12d80] ">
-            {{ctaText}}
-        </button>
+<div class = "flex flex-col w-[960px] h-[512px] bg-[#07012A]">
+    <div class = "py-[85px] inline-flex items-start justify-between">
+        <div class="pl-4 w-[522px] gap-[15px]"> 
+            <h1 [innerHTML] = "spacesTitle" style = "font-family: 'Inter', sans-serif;" class = " mb-3 font-black text-5xl leading-[60px] tracking-[-1px] text-[#FFFFFF]"></h1>
+            <p [innerHTML] = "spacesSubtitle" style = "font-family: 'Inter', sans-serif;" class = "mb-4 font-normal text-base leading-[24px] text-[#FFFFFF]"></p>
+            <button style = "font-family: 'Inter', sans-serif;" class = "px-[18px] py-[12px] bg-[#FAC738] font-bold text-base rounded-3xl leading-[24px] text-[#241F0F] cursor-pointer transition-colors duration-300 hover:bg-[#fbc12d80] hover:text-[#FFFFFF] ">
+                {{ctaText}}
+            </button>                
+        </div> 
+        <img [src] = "imageUrl" alt = "Hero Image" class = "w-[438px] h-[328px] rounded-xl"/>
     </div>
-    <div class = "mt-8 lg:mt-0">
-        <img [src] = "imageUrl" alt = "Hero Image" class = "rounded-xl max-w-[300px] lg:max-w-[400px]"/>
-    </div>
-</section>
+</div>

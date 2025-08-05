@@ -4,13 +4,14 @@ import { Component } from "@angular/core";
     selector: 'app-hero',
     templateUrl: './hero.component.html',
     styleUrls: ['./hero.component.scss'],
+
 })
 
 export class HeroComponent{
     spacesTitle = '';
     spacesSubtitle = '';
-    title = 'Semillero y\nComunidad\nBackbbone';
-    subTitle = 'Somos una comunidad y semillero de investigación dedicado\na fomentar el aprendizaje, colaboración y la innovación en\ntecnología.';
+    title = 'Semillero y\nComunidad\nBackbone';
+    subTitle = 'Somos una comunidad y semillero de investigación dedicado a\nfomentar el aprendizaje, colaboración y la innovación en\ntecnología.';
 
     constructor(){
         this.spacesTitle = this.title.replace(/\n/g, '<br>');
