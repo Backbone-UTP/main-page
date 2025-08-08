@@ -1,0 +1,28 @@
+<div class = "flex flex-col items-center justify-center pt-5 pb-5 pr-40 pl-40 bg-[#05061e]" >
+    <div class="pt-3 pb-3 pl-4 pr-4 h-[242px] w-[960px]">
+        <img [src]="project.imageUrl"  alt="Project Image" class=" h-[218px] w-[928px] rounded-xl" />
+    </div>
+    <div class="w-[960px] h-[105px] pt-4 pb-4 pr-4 pl-4 ">
+        <div class="w-[928px] h-[73px]">
+            <div class="w-[928px] h-[40px] flex items-center justify-between flex-wrap gap-3 mb-4">
+                <h2 style = "font-family: 'Inter', sans-serif;" class = "w-[290px] text-[32px] font-bold text-white leading-10"> {{ project.title }} </h2> 
+                <span style = "font-family: 'Inter', sans-serif;" class="inline-flex items-center justify-center text-base rounded-2xl h-[32px] px-4"
+                    [ngClass]="{'bg-green-900 text-gray-200 ': project.status === 'Finalizado', 'bg-[#002EA2] text-white': project.status === 'En Desarrollo',}">
+                    {{ project.status }}
+                </span>
+            </div>
+            <h3 style = "font-family: 'Inter', sans-serif;" class = "h-[21px] w-[519px] font-normal text-[#BAB29C] text-sm leading-[21px]"> {{ project.tech }} </h3>
+        </div>
+    </div>
+    <div class="w-[960px] h-[112px] pt-1 pr-4 pb-3 pl-4">
+        <p style = "font-family: 'Inter', sans-serif;" class="w-[928px] h-[96px] font-normal text-base leading-[24px] text-white">{{ project.description }}</p>
+    </div>
+    <div class="w-[960px] h-[64px] pt-3 pb-3 pr-4 pl-4 flex gap-4">
+        <a [href]="project.repoLink" target="_blank" style = "font-family: 'Inter', sans-serif;" class="inline-flex items-center justify-center w-[132px] h-[40px] max-w-[480px] min-w-[84px] rounded-[20px] px-4 text-black text-sm font-bold leading-[21px] bg-[#FABF24] hover:text-white hover:bg-[#3B3626]">
+            Código Fuente
+        </a>
+        <a *ngIf="project.liveLink" [href]="project.liveLink" target="_blank" style = "font-family: 'Inter', sans-serif;" class="inline-flex items-center justify-center w-[178px] h-[40px] max-w-[480px] min-w-[84px] rounded-[20px] px-4 text-black text-sm font-bold leading-[21px] bg-[#FABF24] hover:text-white hover:bg-[#3B3626]">
+            Proyecto Desplegado
+        </a>
+    </div>
+</div> 
