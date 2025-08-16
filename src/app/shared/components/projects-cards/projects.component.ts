@@ -1,8 +1,14 @@
 import { Component, Input } from '@angular/core';
+import {
+  MatCard,
+  MatCardActions,
+  MatCardContent,
+} from '@angular/material/card';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
+  imports: [MatCard, MatCardContent, MatCardActions],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
