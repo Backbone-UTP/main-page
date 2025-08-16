@@ -1,20 +1,17 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Logo } from '../../interfaces/logo.interface';
 
-
 @Component({
-    selector: 'app-logos-list',
-    imports: [],
-    templateUrl: './logos-list.component.html',
-    styleUrls: ['./logos-list.component.scss']
+  selector: 'app-logos-list',
+  imports: [],
+  templateUrl: './logos-list.component.html',
+  styleUrls: ['./logos-list.component.scss'],
 })
-export class LogosListComponent implements OnInit {
+export class LogosListComponent {
   @Input() logos: Logo[] = [];
   @Input() title = '';
   @Input() subtitle = '';
-  constructor() {}
-
-  ngOnInit(): void {
-    // Initialization code goes here
+  constructor() {
+    // Constructor logic if needed
   }
 }

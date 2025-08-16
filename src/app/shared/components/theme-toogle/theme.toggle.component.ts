@@ -1,12 +1,11 @@
-
 import { Component, HostListener } from '@angular/core';
 import { IconComponent } from '../icons/icons.component';
 
 @Component({
-    selector: 'app-theme-toggle',
-    imports: [IconComponent],
-    templateUrl: './theme-toggle.component.html',
-    styleUrls: ['./theme-toggle.component.scss']
+  selector: 'app-theme-toggle',
+  imports: [IconComponent],
+  templateUrl: './theme-toggle.component.html',
+  styleUrls: ['./theme-toggle.component.scss'],
 })
 export class ThemeToggleComponent {
   themes = ['light', 'dark', 'system'];
@@ -48,6 +47,7 @@ export class ThemeToggleComponent {
 
   @HostListener('document:click', ['$event'])
   closeThemesMenu(event: Event): void {
+    console.log(event); // For debug only
     const themesMenu = document.getElementById('themes-menu');
     themesMenu?.classList.remove('open');
   }

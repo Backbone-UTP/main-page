@@ -1,10 +1,10 @@
-import { DecimalPipe, NgIf } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
 import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-countdown',
   standalone: true,
-  imports: [NgIf, DecimalPipe],
+  imports: [DecimalPipe],
   templateUrl: './countdown.component.html',
   styleUrls: ['./countdown.component.scss'],
 })
@@ -16,7 +16,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
   hours = 0;
   minutes = 0;
   seconds = 0;
-  private countdownInterval: any;
+  private countdownInterval: NodeJS.Timeout | undefined;
 
   ngOnInit(): void {
     this.updateCountdown();

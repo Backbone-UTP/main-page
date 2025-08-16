@@ -10,9 +10,9 @@ import { LinkItem } from 'src/app/shared/interfaces/link-item.interface';
     styleUrls: ['./profile-card.component.scss']
 })
 export class ProfileCardComponent {
-  @Input() name: string = '';
-  @Input() role: string = '';
-  @Input() image: string = '';
+  @Input() name = '';
+  @Input() role = '';
+  @Input() image = '';
   @Input() links: LinkItem[] = [];
   
 }

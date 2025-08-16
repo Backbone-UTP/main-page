@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { SFD2024HeroComponent } from './components/hero/hero.component';
 import { SFDHeaderComponent } from './components/header/header.component';
-import { Header } from 'src/app/shared/interfaces/header.interface';
 import { agenda, features } from 'src/assets/content/sfd-features';
 import { FeaturesComponent } from './components/features/features.component';
 import {
@@ -14,27 +13,24 @@ import { staff, supporters } from 'src/assets/content/sfd.people';
 import { TimelineComponent } from '../../../shared/components/timeline/timeline.component';
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
-import { SectionRightComponent } from './components/section-right/section-right.component';
 import { footerLinks, headerLinks } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
-import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
-import { ButtonComponent } from "./components/button/button.component";
+import { ButtonComponent } from './components/button/button.component';
 @Component({
-    selector: 'app-sfd-2024',
-    imports: [
+  selector: 'app-sfd-2024',
+  standalone: true,
+  imports: [
     SFD2024HeroComponent,
     SFDHeaderComponent,
     FeaturesComponent,
     ProfileCardComponent,
     TimelineComponent,
     LogosListComponent,
-    SectionRightComponent,
     FooterComponent,
-    CallToActionComponent,
-    ButtonComponent
-],
-    templateUrl: './sfd-2024.component.html',
-    styleUrl: './sfd-2024.component.scss'
+    ButtonComponent,
+  ],
+  templateUrl: './sfd-2024.component.html',
+  styleUrl: './sfd-2024.component.scss',
 })
 export class SFD2024Component {
   headerLinks = headerLinks;
