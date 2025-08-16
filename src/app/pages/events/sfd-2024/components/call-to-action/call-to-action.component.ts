@@ -10,8 +10,8 @@ import { ButtonComponent } from '../button/button.component';
   styleUrls: ['./call-to-action.component.scss'],
 })
 export class CallToActionComponent {
-  @Input() title: string = '';
-  @Input() subTitle: string = '';
+  @Input() title = '';
+  @Input() subTitle = '';
   @Input() buttonProps: {
     text: string;
     variant: string;
