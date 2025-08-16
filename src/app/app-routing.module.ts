@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HealthComponent } from './pages/health/health.component';
-import { MainComponent } from './pages/main/main.component';
 import { SFD2024Component } from './pages/events/sfd-2024/sfd-2024.component';
 
 const routes: Routes = [

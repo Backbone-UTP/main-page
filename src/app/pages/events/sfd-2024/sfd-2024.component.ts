@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { SFD2024HeroComponent } from './components/hero/hero.component';
 import { SFDHeaderComponent } from './components/header/header.component';
 import { Header } from 'src/app/shared/interfaces/header.interface';
-import { CountdownComponent } from 'src/app/shared/components/countdown/countdown.component';
 import { agenda, features } from 'src/assets/content/sfd-features';
 import { FeaturesComponent } from './components/features/features.component';
 import {
@@ -19,13 +18,13 @@ import { SectionRightComponent } from './components/section-right/section-right.
 import { footerLinks, headerLinks } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
+import { ButtonComponent } from "./components/button/button.component";
 @Component({
   selector: 'app-sfd-2024',
   standalone: true,
   imports: [
     SFD2024HeroComponent,
     SFDHeaderComponent,
-    CountdownComponent,
     FeaturesComponent,
     ProfileCardComponent,
     NgFor,
@@ -34,7 +33,8 @@ import { CallToActionComponent } from './components/call-to-action/call-to-actio
     SectionRightComponent,
     FooterComponent,
     CallToActionComponent,
-  ],
+    ButtonComponent
+],
   templateUrl: './sfd-2024.component.html',
   styleUrl: './sfd-2024.component.scss',
 })
@@ -43,9 +43,9 @@ export class SFD2024Component {
 
   footerLinks = footerLinks;
 
-  // Date to countdown to oct 8th, 2024 at 08:00:00 UTC-5
+  // Date to countdown to oct 10th, 2024 at 08:00:00 UTC-5
 
-  countdownDate = new Date('2024-10-08T08:00:00-05:00').toDateString();
+  countdownDate = new Date('2024-10-10T08:00:00-05:00').toString();
 
   aboutTitle = '¿Qué es el Software Freedom Day 2024?';
   aboutSubTitle =

@@ -6,7 +6,7 @@ import {
   Input,
   OnInit,
   Renderer2,
-  ViewChild,
+  ViewChild, AfterViewInit,
 } from '@angular/core';
 import { ThemeToggleComponent } from '../../../../../shared/components/theme-toogle/theme.toggle.component';
 import { Header } from 'src/app/shared/interfaces/header.interface';
@@ -19,7 +19,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class SFDHeaderComponent implements OnInit {
+export class SFDHeaderComponent implements OnInit, AfterViewInit {
   @Input() navItems: Header[] = [];
 
   @ViewChild('nav', { static: true }) nav!: ElementRef<HTMLElement>; // Use non-null assertion operator or handle potential null

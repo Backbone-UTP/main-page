@@ -1,5 +1,5 @@
 import { DecimalPipe, NgIf } from '@angular/common';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-countdown',
@@ -8,14 +8,14 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './countdown.component.html',
   styleUrls: ['./countdown.component.scss'],
 })
-export class CountdownComponent implements OnInit {
-  @Input() targetDate: string = '2022-12-31T23:59:59';
-  @Input() className: string = '';
+export class CountdownComponent implements OnInit, OnDestroy {
+  @Input() targetDate = '';
+  @Input() className = '';
 
-  days: number = 0;
-  hours: number = 0;
-  minutes: number = 0;
-  seconds: number = 0;
+  days = 0;
+  hours = 0;
+  minutes = 0;
+  seconds = 0;
   private countdownInterval: any;
 
   ngOnInit(): void {

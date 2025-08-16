@@ -12,6 +12,6 @@ export class GrowingCirclesComponent {
   public circles: number[] = [];
 
   @Input()
-  public circleStyle: string = '';
+  public circleStyle = '';
 
 }
