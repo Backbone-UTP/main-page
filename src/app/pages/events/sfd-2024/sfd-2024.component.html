@@ -11,20 +11,20 @@
       className="bg-white dark:bg-slate-900"
       [text]="'Jornada AM'"
       [href]="'https://www.youtube.com/watch?v=NJoeUs4pkZE'"
-      ></app-button>
+    ></app-button>
 
-      <app-button
+    <app-button
       variant="secondary"
       target="_blank"
       className="bg-white dark:bg-slate-900"
       [text]="'Jornada PM'"
-      [href]="'https://www.youtube.com/watch?v=5_qyNXwqpE8'"></app-button>
+    [href]="'https://www.youtube.com/watch?v=5_qyNXwqpE8'"></app-button>
   </section>
   <section id="about">
     <app-features
       [title]="aboutTitle"
       [subtitle]="aboutSubTitle"
-      [features]="aboutFeatures"></app-features>
+    [features]="aboutFeatures"></app-features>
   </section>
 
   <section class="flex flex-col gap-2 py-20">
@@ -34,12 +34,13 @@
     </h2>
     <div
       class="flex sm:flex-row flex-col sm:items-start items-stretch justify-center py-5 gap-5 mx-auto">
-      <app-profile-card
-        *ngFor="let person of staff"
-        [name]="person.name"
-        [role]="person.role"
-        [image]="person.image"
+      @for (person of staff; track person) {
+        <app-profile-card
+          [name]="person.name"
+          [role]="person.role"
+          [image]="person.image"
         [links]="person.links"></app-profile-card>
+      }
     </div>
   </section>
   <section class="flex flex-col gap-2 py-20" id="agenda">
@@ -58,7 +59,7 @@
     <app-logos-list
       [title]="'Invitan'"
       subtitle="Estas organizaciones también hacen posible el evento"
-      [logos]="supporters"></app-logos-list>
+    [logos]="supporters"></app-logos-list>
   </section>
 </main>
 <app-footer [socialLinks]="footerLinks"></app-footer>
