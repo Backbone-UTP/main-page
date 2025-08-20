@@ -1,0 +1,62 @@
+.project-card {
+  max-width: 400px;
+  margin: 16px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border: 1px solid #e0e0e0;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .image-container {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .status-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background-color: #22c55e; 
+      color: white;
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      border-radius: 12px;
+      font-weight: 600;
+    }
+  }
+
+  mat-card-content {
+    padding: 16px;
+
+    .project-title {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    .project-description {
+      color: #666;
+      margin-top: 4px;
+      margin-bottom: 0;
+    }
+  }
+
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 8px 16px 16px;
+
+    a {
+      font-weight: 600;
+    }
+  }
+}
