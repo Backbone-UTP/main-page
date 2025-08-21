@@ -4,7 +4,7 @@ import { Logo } from 'src/app/shared/interfaces/logo.interface';
 export const staff = [
   {
     name: 'Paula A. Castro',
-    role: 'Ing. Sistemas, Integrations Developer',
+    role: 'Líder Organización',
     image: '/assets/images/staff_1.jpeg',
     links: [
       {
@@ -16,7 +16,7 @@ export const staff = [
   },
   {
     name: 'Jhon A. Gaviria',
-    role: 'Ing. Sistemas, Backend Developer',
+    role: 'Coordinación y Desarrollo Web',
     image: '/assets/images/staff_2.jpeg',
     links: [
       {
@@ -28,7 +28,7 @@ export const staff = [
   },
   {
     name: 'Sergio Estrella',
-    role: 'Est. Ing. Sistemas, Fullstack Developer',
+    role: 'Streaming y Lead Desarrollo Web',
     image: '/assets/images/staff_0.jpeg',
     links: [
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/djkde' },
@@ -37,7 +37,7 @@ export const staff = [
   },
   {
     name: 'Jose F. Duarte',
-    role: 'Est. Ing. Sistemas, GitHub Campus Expert',
+    role: 'Promotor',
     image: '/assets/images/staff_3.jpeg',
     links: [
       {
@@ -45,6 +45,30 @@ export const staff = [
         url: 'https://www.linkedin.com/in/josefeldc/',
       },
       { name: 'github' as Icon, url: 'https://github.com/josefdc' },
+    ],
+  },
+  {
+    name: 'Juan A. Pérez',
+    role: 'Logística',
+    image: '/assets/images/staff_4.jpeg',
+    links: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/mega-barto',
+      },
+      { name: 'github' as Icon, url: 'https://github.com/Mega-Barto' },
+    ],
+  },
+  {
+    name: 'Juan D. Álvarez',
+    role: 'Streaming y Desarrollo Web',
+    image: '/assets/images/staff_5.jpeg',
+    links: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/juan-david-alvarez-mej%C3%ADa-070a14294/',
+      },
+      { name: 'github' as Icon, url: 'https://github.com/seqenenra08' },
     ],
   },
 ];
