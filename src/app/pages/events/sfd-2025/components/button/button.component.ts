@@ -10,9 +10,9 @@ interface Variants {
 }
 
 @Component({
-  selector: 'app-button',
+  selector: 'app-button', 
   standalone: true,
-  imports: [NgClass],
+  // imports: [NgClass],
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
 })

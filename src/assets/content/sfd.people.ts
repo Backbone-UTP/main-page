@@ -51,28 +51,10 @@ export const staff = [
 
 export const supporters: Logo[] = [
   {
-    name: 'SONAR ISC',
-    url: 'https://academia.utp.edu.co/sonar-isc/',
-    image: './assets/images/support/sonar.png',
-    alt: 'Logo de SONAR ISC',
-  },
-  {
-    name: 'SNEIA',
-    url: 'https://academia.utp.edu.co/sneia/',
-    image: '/assets/images/support/sneia.png',
-    alt: 'Logo de SNEIA',
-  },
-  {
     name: 'SIRIUS',
     url: 'https://sirius.utp.edu.co/ ',
     image: '/assets/images/support/sirius.png',
     alt: 'Logo de SIRIUS',
-  },
-  {
-    name: 'FOREST',
-    url: 'https://www.linkedin.com/company/forest-software-community/',
-    image: '/assets/images/support/forest.png',
-    alt: 'Logo de FOREST',
   },
   {
     name: 'DFF',
@@ -85,12 +67,6 @@ export const supporters: Logo[] = [
     url: 'https://ingenierias.utp.edu.co',
     image: '/assets/images/support/facultad.png',
     alt: 'Logo de Facultad',
-  },
-  {
-    name: 'SIV',
-    url: 'https://comunicaciones.utp.edu.co/60517/facultades/fomentando-la-innovacion-y-la-creatividad-semillero-de-desarrollo-de-videojuegos-y-gamificacion/',
-    image: '/assets/images/support/siv.jpg',
-    alt: 'Logo de SIV',
   },
   {
     name: 'Ubuntu Colombia',

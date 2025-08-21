@@ -30,9 +30,9 @@ import { ButtonComponent } from "./components/button/button.component";
     NgFor,
     TimelineComponent,
     LogosListComponent,
-    SectionRightComponent,
+    // SectionRightComponent,
     FooterComponent,
-    CallToActionComponent,
+    // CallToActionComponent,
     ButtonComponent
 ],
   templateUrl: './sfd-2025.component.html',
