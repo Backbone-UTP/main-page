@@ -5,19 +5,19 @@ export const headerLinks: Header[] = [
   {
     title: 'Qué es',
     label: 'about',
-    url: '/events/software-freedom-day-2024/',
+    url: '/events/software-freedom-day-2025/',
     fragment: 'about',
   },
   {
     title: 'Agenda',
     label: 'agenda',
-    url: '/events/software-freedom-day-2024/',
-    fragment: 'agenda',
+    url: '/events/software-freedom-day-2025/',
+    fragment: '',
   },
   {
     title: 'Invitan',
     label: 'supporters',
-    url: '/events/software-freedom-day-2024/',
+    url: '/events/software-freedom-day-2025/',
     fragment: 'supporters',
   }
 ];
