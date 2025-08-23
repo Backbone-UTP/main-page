@@ -12,8 +12,8 @@
     <hr
       class="border h-4 rounded-md md:mx-2 mx-0.5 border-gray-200 dark:border-gray-700"
     />
+    @for (link of navItems; track link) {
     <a
-      *ngFor="let link of navItems"
       class="relative block md:px-2 px-1 py-2 transition hover:scale-125"
       [attr.aria-label]="link.label"
       [routerLink]="link.url"
@@ -21,6 +21,7 @@
     >
       {{ link.title }}
     </a>
+    }
     <hr
       class="border h-4 rounded-md md:mx-2 mx-0.5 border-gray-200 dark:border-gray-700"
     />
