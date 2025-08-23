@@ -8,7 +8,7 @@ import {
   TimelineEvent,
 } from 'src/app/shared/interfaces/features.interface';
 import { ProfileCardComponent } from '../../../shared/components/profile-card/profile-card.component';
-import { staff, supporters } from 'src/assets/content/sfd.people';
+import { staff2024, supporters2024 } from 'src/assets/content/sfd.people';
 
 import { TimelineComponent } from '../../../shared/components/timeline/timeline.component';
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
@@ -47,9 +47,9 @@ export class SFD2024Component {
 
   aboutFeatures: Feature[] = features;
 
-  staff = staff;
+  staff = staff2024;
 
   sfdAgenda: TimelineEvent[] = agenda;
 
-  supporters: Logo[] = supporters;
+  supporters: Logo[] = supporters2024;
 }
