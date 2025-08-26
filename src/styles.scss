@@ -10,6 +10,9 @@
   --bg-1: rgba(255, 255, 255, 0.9);
   --bg-2: rgba(255, 207, 181, 0.12);
   --bg-3: rgba(255, 240, 232, 0.12);
+
+  /* Gallery fade effect colors */
+  --gallery-bg: #f8fafc;
 }
 
 /* Paleta base (tema oscuro) */
@@ -21,6 +24,9 @@
   --bg-1: rgba(255, 255, 255, 0);
   --bg-2: rgba(255, 106, 39, 0.4);
   --bg-3: rgba(249, 189, 30, 0.4);
+
+  /* Gallery fade effect colors for dark theme */
+  --gallery-bg-dark: #0b1220;
 }
 
 @layer utilities {
