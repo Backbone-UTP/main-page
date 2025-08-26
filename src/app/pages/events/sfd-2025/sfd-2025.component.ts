@@ -15,7 +15,7 @@ import { footerLinks, headerLinks } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
 import { ButtonComponent } from './components/button/button.component';
 @Component({
-  selector: 'app-sfd-2024',
+  selector: 'app-sfd-2025',
   standalone: true,
   imports: [
     SFD2025HeroComponent,
