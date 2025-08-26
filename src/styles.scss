@@ -2,6 +2,25 @@
 @use "tailwindcss/components";
 @use "tailwindcss/utilities";
 
+/* Paleta base (tema claro) */
+:root {
+  --bg-solid: #f8fafc; /* slate-50-ish */
+  --bg-0: rgba(217, 216, 255, 0.5);
+  --bg-1: rgba(255, 255, 255, 0.9);
+  --bg-2: rgba(255, 207, 181, 0.12);
+  --bg-3: rgba(255, 240, 232, 0.12);
+}
+
+/* Paleta base (tema oscuro) */
+:root.dark,
+.dark {
+  --bg-solid: #0b1220; /* fondo oscuro */
+  --bg-0: rgba(120, 119, 198, 0.3);
+  --bg-1: rgba(255, 255, 255, 0);
+  --bg-2: rgba(255, 207, 181, 0.1);
+  --bg-3: rgba(249, 127, 60, 0.25);
+}
+
 @layer utilities {
   .bg-page {
     background-color: var(--aw-color-bg-page);
@@ -17,6 +36,29 @@
   }
   .text-muted {
     color: var(--aw-color-text-muted);
+  }
+
+  .bg-sfd-2024 {
+    background-color: var(--bg-solid);
+    background-image: radial-gradient(
+      80% 80% at 50% -20%,
+      var(--bg-0),
+      var(--bg-1)
+    );
+    background-attachment: fixed; /* efecto “papel pintado” */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bg-sfd-2025 {
+    background-color: var(--bg-solid);
+    background-image: radial-gradient(
+      80% 80% at 50% -20%,
+      var(--bg-2),
+      var(--bg-3)
+    );
+    background-attachment: fixed; /* efecto “papel pintado” */
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
