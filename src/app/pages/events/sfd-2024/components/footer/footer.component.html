@@ -1,20 +1,27 @@
-<footer
-  class="w-full bg-neutral-300 dark:bg-neutral-900 py-6 mt-12 px-4 shadow-sm"
-  >
+<footer class="w-full bg-neutral-300 dark:bg-neutral-900 py-6 px-4 shadow-sm">
   <div class="flex items-center justify-between gap-y-0">
     <div
       class="flex flex-col items-start md:flex-row md:items-center justify-between gap-2"
+    >
+      <p
+        class="text-sm text-neutral-600 dark:text-neutral-400 flex flex-col items-start sm:flex-row sm:items-center"
       >
-      <p class="text-sm text-neutral-600 dark:text-neutral-400 flex flex-col items-start sm:flex-row sm:items-center">
         Diseñado y desarrollado por
-        <a href="https://github.com/Backbone-UTP" target="_blank" rel="noreferrer" class="inline-flex items-center sm:ml-2">
+        <a
+          href="https://github.com/Backbone-UTP"
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center sm:ml-2"
+        >
           <app-icon
             iconName="backbone-logo"
             [properties]="{
               id: 'footer-logo',
-              class: 'w-20 text-primary-500 dark:text-primary-400 transition-all duration-300 ease-in-out'
+              class:
+                'w-20 text-primary-500 dark:text-primary-400 transition-all duration-300 ease-in-out'
             }"
-          ></app-icon>.
+          ></app-icon
+          >.
         </a>
       </p>
       <p class="text-sm text-neutral-600 dark:text-neutral-400">
@@ -25,19 +32,19 @@
           target="_blank"
           rel="noopener noreferrer"
           >Código de conducta</a
-          >
-        </p>
-      </div>
-
-      <!-- Social Brands -->
-      <div class="flex items-center justify-between">
-        @for (link of socialLinks; track link) {
-          <div>
-            <app-footer-link [url]="link.url"
-              ><app-icon [iconName]="link.name" />
-            </app-footer-link>
-          </div>
-        }
-      </div>
+        >
+      </p>
     </div>
-  </footer>
+
+    <!-- Social Brands -->
+    <div class="flex items-center justify-between">
+      @for (link of socialLinks; track link) {
+      <div>
+        <app-footer-link [url]="link.url"
+          ><app-icon [iconName]="link.name" />
+        </app-footer-link>
+      </div>
+      }
+    </div>
+  </div>
+</footer>
