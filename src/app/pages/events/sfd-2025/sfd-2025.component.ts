@@ -14,6 +14,8 @@ import { Logo } from 'src/app/shared/interfaces/logo.interface';
 import { footerLinks, headerLinks } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
 import { ButtonComponent } from './components/button/button.component';
+import { GalleryComponent } from '../../../shared/components/gallery/gallery.component';
+import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
 @Component({
   selector: 'app-sfd-2025',
   standalone: true,
@@ -25,6 +27,7 @@ import { ButtonComponent } from './components/button/button.component';
     LogosListComponent,
     FooterComponent,
     ButtonComponent,
+    GalleryComponent,
   ],
   templateUrl: './sfd-2025.component.html',
   styleUrl: './sfd-2025.component.scss',
@@ -49,4 +52,6 @@ export class SFD2025Component {
   sfdAgenda: TimelineEvent[] = agenda;
 
   supporters: Logo[] = supporters2025;
+
+  galleryImages = sfdGalleryImages;
 }
