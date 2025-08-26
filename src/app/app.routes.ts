@@ -14,12 +14,19 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'events/software-freedom-day-2025',
+    loadComponent: () =>
+      import('./pages/events/sfd-2025/sfd-2025.component').then(
+        (m) => m.SFD2025Component
+      ),
+  },
+  {
     path: 'main',
-    redirectTo: 'events/software-freedom-day-2024',
+    redirectTo: 'events/software-freedom-day-2025',
   },
   {
     path: '',
-    redirectTo: 'events/software-freedom-day-2024',
+    redirectTo: 'events/software-freedom-day-2025',
     pathMatch: 'full',
   },
 ];
