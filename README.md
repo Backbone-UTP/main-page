@@ -16,6 +16,12 @@
     ·
     <a href="https://github.com/Backbone-UTP/main-page/issues/new">Request Feature</a>
   </p>
+  <hr />
+  <p align="center">
+    Detailed documentation <br /><br />
+    <a href="https://deepwiki.com/Backbone-UTP/main-page"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+  </p>
+  <hr/>
 </div>
 
 
