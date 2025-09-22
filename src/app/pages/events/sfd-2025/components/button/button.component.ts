@@ -24,9 +24,9 @@ export class ButtonComponent {
   @Input() href = '';
 
   variants: Variants = {
-    primary: 'btn-primary',
-    secondary: 'btn-secondary',
-    tertiary: 'btn btn-tertiary',
+    primary: 'btn-primary-2025',
+    secondary: 'btn-secondary-2025',
+    tertiary: 'btn-2025 btn-tertiary-2025',
     link: 'cursor-pointer hover:text-primary',
   };
 

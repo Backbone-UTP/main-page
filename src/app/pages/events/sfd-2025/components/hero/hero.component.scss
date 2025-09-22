@@ -1,11 +1,8 @@
 .hero {
-  span {
-    @apply text-primary drop-shadow-md;
-  }
   h6 {
-    @apply text-sm font-semibold;
+    @apply text-sm font-semibold lg:text-xs xl:text-sm;
   }
   hr {
-    @apply border border-primary h-2 rounded;
+    @apply border border-white h-3 rounded;
   }
 }
