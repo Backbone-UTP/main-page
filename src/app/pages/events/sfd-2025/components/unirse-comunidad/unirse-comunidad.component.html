@@ -1,13 +1,19 @@
-<section class="banner-container">
-    <div class="banner-content">
-        <h2 class="banner-title">
-            <span class="text-yellow">Sé parte de nuestro</span><br>
-            <span class="text-orange"> Semillero y</span>
+
+<section class="bg-[#1C1313] pt-[40px] pr-[20px] flex justify-center items-center text-center flex-col">
+    <div class="flex flex-col gap-[20px] h-147 w-656">
+        <h2 class="font-[Open Sans] font-[800] italic text-[44px] leading-[64px]">
+            <span class="text-[#ffc107]">Sé parte de nuestro</span><br>
+            <span class="text-[#ff8c00]"> Semillero y</span>
             <span class="text-white"> Comunidad</span>
         </h2>
-        <div class="banner-details">
-            <img src="../../../../../../assets/images/logo-backbone.png" alt="Backbone Logo" class="logo" />
-            <button class="join-button">Únete a la comunidad</button>
+        <div class="flex items-center text-center gap-[20px]">
+            <app-icon iconName="backbone-logo" [properties]="{ id: 'backbone-logo', class: 'md:w-60 w-40 transition-all duration-300 ease-in-out text-gray-700 dark:text-gray-200' }">
+            </app-icon>
+                <!-- <app-icon [iconProperties]="{ id: 'backbone-logo', class: 'logo' }"></app-icon> -->
+            <button class="bg-[#ff8c00] text-white py-[12px] px-[24px] border-none w-[238px] h-[56px] rounded-[20px] cursor-pointer
+            text-[1.15rem] font-semibold italic font-[Open Sans] transition-colors duration-300 ease-in-out hover:bg-[#b36312]">Únete a la Comunidad</button>
         </div>
     </div>
 </section>
+
+<!--w-221px h-24px-->

@@ -20,6 +20,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { ButtonComponent } from "./components/button/button.component";
 import { UnirseComunidadComponent } from './components/unirse-comunidad/unirse-comunidad.component';
+import { IconComponent } from '../../../shared/components/icons/icons.component';
 
 @Component({
   selector: 'app-sfd-2024',
@@ -36,7 +37,8 @@ import { UnirseComunidadComponent } from './components/unirse-comunidad/unirse-c
     FooterComponent,
     // CallToActionComponent,
     ButtonComponent,
-    UnirseComunidadComponent
+    UnirseComunidadComponent,
+    IconComponent
 ],
   templateUrl: './sfd-2025.component.html',
   styleUrl: './sfd-2025.component.scss',
