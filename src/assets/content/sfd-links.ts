@@ -3,6 +3,27 @@ import { Header } from 'src/app/shared/interfaces/header.interface';
 
 export const headerLinks: Header[] = [
   {
+    title: 'Qué es',
+    label: 'about',
+    url: '/events/software-freedom-day-2025/',
+    fragment: 'about',
+  },
+  {
+    title: 'Agenda',
+    label: 'agenda',
+    url: '/events/software-freedom-day-2025/',
+    fragment: '',
+  },
+  {
+    title: 'Invitan',
+    label: 'supporters',
+    url: '/events/software-freedom-day-2025/',
+    fragment: 'supporters',
+  }
+];
+
+export const headerLinks25: Header[] = [
+  {
     title: 'Sobre el Evento',
     label: 'about',
     url: '/events/software-freedom-day-2025/',

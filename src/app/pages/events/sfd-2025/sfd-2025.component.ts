@@ -15,7 +15,7 @@ import { TimelineComponent } from '../../../shared/components/timeline/timeline.
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
 import { SectionRightComponent } from './components/section-right/section-right.component';
-import { footerLinks, headerLinks } from 'src/assets/content/sfd-links';
+import { footerLinks, headerLinks, headerLinks25 } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { ButtonComponent } from "./components/button/button.component";
@@ -39,7 +39,7 @@ import { ButtonComponent } from "./components/button/button.component";
   styleUrl: './sfd-2025.component.scss',
 })
 export class SFD2025Component {
-  headerLinks = headerLinks;
+  headerLinks = headerLinks25;
 
   footerLinks = footerLinks;
 
