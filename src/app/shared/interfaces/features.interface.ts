@@ -9,9 +9,9 @@ export interface Feature {
 export interface TimelineEvent {
   name: string;
   time: string;
-  description: string;
+  description?: string;
   talk: string;
-  img: string;
+  img?: string;
   link?: string;  
   aditional?: {name: string, description: string, img: string}[];
 }

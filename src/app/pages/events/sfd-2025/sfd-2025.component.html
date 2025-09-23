@@ -35,18 +35,23 @@
         [links]="person.links"></app-profile-card>
     </div>
   </section>
-  <!-- <section class="flex flex-col gap-2 py-20" id="agenda">
-    <h2
-      class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl w-full text-center">
-      Agenda
-    </h2>
-    <p
+  <section class="flex flex-col gap-2 py-20 " id="agenda">
+    <div class="flex items-center gap-8 px-8 bg-[#231515] h-24">
+      <img  
+        src="assets/images/patch_small.png" 
+        alt="SFD 2025" class="h-12"
+      >
+      <h2 class="text-balance text-2xl font-bold text-neutral-200 md:text-3xl w-full">
+        AGENDA
+      </h2>
+    </div>
+    <!-- <p
       class="text-pretty text-neutral-700 dark:text-neutral-400 text-center text-sm">
       La agenda pueden estar sujeta a cambios a medida que se confirman los
       detalles de las charlas.
-    </p>
+    </p> -->
     <app-timeline [timelineItems]="sfdAgenda"></app-timeline>
-  </section> -->
+  </section>
   <section class="flex flex-col gap-2 py-20" id="supporters">
     <app-logos-list
       [title]="'Invitan'"

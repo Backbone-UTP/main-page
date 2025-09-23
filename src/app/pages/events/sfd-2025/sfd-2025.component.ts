@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { SFD2025HeroComponent } from './components/hero/hero.component';
 import { SFDHeaderComponent } from './components/header/header.component';
 import { Header } from 'src/app/shared/interfaces/header.interface';
-import { agenda, features } from 'src/assets/content/sfd-features';
+import { agenda, agenda25, features } from 'src/assets/content/sfd-features';
 import { FeaturesComponent } from './components/features/features.component';
 import {
   Feature,
@@ -11,7 +11,7 @@ import {
 import { ProfileCardComponent } from '../../../shared/components/profile-card/profile-card.component';
 import { staff2025, supporters2025 } from 'src/assets/content/sfd.people';
 import { NgFor } from '@angular/common';
-import { TimelineComponent } from '../../../shared/components/timeline/timeline.component';
+import { TimelineComponent } from '../sfd-2025/components/timeline/timeline.component';
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
 import { SectionRightComponent } from './components/section-right/section-right.component';
@@ -55,7 +55,7 @@ export class SFD2025Component {
 
   staff = staff2025;
 
-  sfdAgenda: TimelineEvent[] = agenda;
+  sfdAgenda: TimelineEvent[] = agenda25;
 
   supporters: Logo[] = supporters2025;
 }
