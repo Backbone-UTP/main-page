@@ -1,0 +1,77 @@
+/* unirse-comunidad.component.scss */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap');
+
+/* Colores principales */
+$dark-gray: #1C1313;
+$yellow: #ffc107;
+$orange: #ff8c00;
+$hover-orange: #ff7f00;
+
+.banner-container {
+  background-color: $dark-gray;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.banner-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 64px;
+  line-height: 84px;
+  
+  .text-yellow {
+    color: $yellow;
+  }
+  
+  .text-orange {
+    color: $orange;
+  }
+
+  .text-white {
+    color: white;
+  }
+}
+
+.banner-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 281px;
+  height: 44px;
+}
+
+.join-button {
+  background-color: $orange;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  width: 248px;
+  height: 66px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-style: italic;
+  font-family: 'Open Sans', sans-serif;
+  transition: background-color 0.3s ease;
+  
+  &:hover {
+    background-color: $hover-orange;
+  }
+}
