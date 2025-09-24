@@ -58,4 +58,13 @@ export class SFD2025Component {
   sfdAgenda: TimelineEvent[] = agenda;
 
   supporters: Logo[] = supporters2025;
+
+  constructor() {
+    this.enableDarkMode();
+  }
+
+  enableDarkMode(): void {
+    localStorage.setItem('theme', 'dark');
+    document.documentElement.classList.add('dark');
+  }
 }
