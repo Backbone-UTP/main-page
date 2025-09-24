@@ -1,0 +1,21 @@
+<section id="speakers">
+    <div class="flex justify-start items-center gap-8 w-full bg-[#231515] shadow-sm shadow-black p-4 rounded-md mb-20">
+        <img src="assets/images/sfd-patch.png" alt="asdad" class="h-14"/>
+        <h2
+            class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl text-center">
+            Ponentes
+        </h2>
+    </div>
+    <div
+        class="flex flex-col justify-center items-center gap-10 mt-6">
+        <app-speaker-card
+            class="w-10/12 flex justify-center items-center"
+            *ngFor="let speaker of speakers; let i = index"
+            [name]="speaker.name"
+            [role]="speaker.role"
+            [image]="speaker.img"
+            [description]="speaker.description"
+            [index]="i">
+        </app-speaker-card>
+    </div>
+</section>

@@ -1,0 +1,11 @@
+<div class="bg-[#180e0e] w-11/12 p-6 rounded-lg shadow-lg shadow-black flex items-center flex-col gap-4 md:flex-row lg:gap-6 lg:w-full" [ngClass]="{'lg:flex-row-reverse lg:justify-between': index % 2 !== 0}">
+
+  <img class="h-56 min-w-56 rounded-lg lg:h-40 lg:min-w-40 xl:h-48 xl:min-w-48 object-cover object-top" 
+    [src]="image" alt="Speaker picture"
+  />
+    <div class="flex flex-col items-center lg:items-start">
+        <h3 class="text-primary font-sans text-xl font-extrabold text-center md:text-left md:w-11/12 lg:text-2xl xl:text-3xl">{{ name }}</h3>
+        <p class="text-[#93C5FD] font-mono font-bold text-sm text-center mb-2 md:text-left md:w-11/12 lg:text-base xl:text-lg">{{ role }}</p>
+        <p class="speaker-description font-sans text-center md:w-11/12 md:text-left lg:w-full text-xs lg:text-sm xl:text-base">{{ description }}</p>
+    </div>
+</div>
