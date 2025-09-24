@@ -1,17 +1,22 @@
 
-<section class="bg-[#1C1313] pt-[40px] pr-[20px] flex justify-center items-center text-center flex-col">
+<section class="p-12 flex justify-center items-center text-center flex-col">
     <div class="flex flex-col gap-[20px] h-147 w-656">
         <h2 class="font-[Open Sans] font-[800] italic text-[44px] leading-[64px]">
             <span class="text-[#ffc107]">Sé parte de nuestro</span><br>
-            <span class="text-[#ff8c00]"> Semillero y</span>
+            <span class="text-[#FF6A27]"> Semillero y</span>
             <span class="text-white"> Comunidad</span>
         </h2>
         <div class="flex items-center text-center gap-[20px]">
             <app-icon iconName="backbone-logo" [properties]="{ id: 'backbone-logo', class: 'md:w-60 w-40 transition-all duration-300 ease-in-out text-gray-700 dark:text-gray-200' }">
             </app-icon>
-                <!-- <app-icon [iconProperties]="{ id: 'backbone-logo', class: 'logo' }"></app-icon> -->
-            <button class="bg-[#ff8c00] text-white py-[12px] px-[24px] border-none w-[238px] h-[56px] rounded-[20px] cursor-pointer
-            text-[1.15rem] font-semibold italic font-[Open Sans] transition-colors duration-300 ease-in-out hover:bg-[#b36312]">Únete a la Comunidad</button>
+
+            <app-button
+            variant="primary"
+            target="_blank"
+            className="bg-[#FF6A27] border border-[#FF6A27] hover:bg-[#e67600] hover:border-[#e67600] text-white"
+            [text]="'Unirse a la comunidad'"
+            href="#"
+        ></app-button>
         </div>
     </div>
 </section>
