@@ -19,8 +19,9 @@ import { footerLinks, headerLinks, headerLinks25 } from 'src/assets/content/sfd-
 import { FooterComponent } from './components/footer/footer.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { ButtonComponent } from "./components/button/button.component";
+import { IconComponent } from '../../../shared/components/icons/icons.component';
 @Component({
-  selector: 'app-sfd-2024',
+  selector: 'app-sfd-2025',
   standalone: true,
   imports: [
     SFD2025HeroComponent,
@@ -33,7 +34,8 @@ import { ButtonComponent } from "./components/button/button.component";
     // SectionRightComponent,
     FooterComponent,
     // CallToActionComponent,
-    ButtonComponent
+    ButtonComponent,
+    IconComponent
 ],
   templateUrl: './sfd-2025.component.html',
   styleUrl: './sfd-2025.component.scss',
