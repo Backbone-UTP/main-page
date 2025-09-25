@@ -119,6 +119,27 @@ export const staff2025 = [
       { name: 'github' as Icon, url: 'https://github.com/seqenenra08' },
     ],
   },
+  {
+    name: 'Nohora C. Cardozo',
+    role: 'Diseño UX y Desarrollo Web',
+    image: '/assets/images/staff_6.jpg',
+    links: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/nohora-cardozo-6b9101328/',
+      },
+      { name: 'github' as Icon, url: 'https://github.com/notnohora' },
+    ],
+  },
+  {
+    name: 'Luisa Bañol',
+    role: 'Publicidad y Diseño',
+    image: '/assets/images/staff_0.jpeg',
+    links: [
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/djkde' },
+      { name: 'github' as Icon, url: 'https://github.com/Djkde01' },
+    ],
+  }
 ];
 
 export const supporters2024: Logo[] = [
