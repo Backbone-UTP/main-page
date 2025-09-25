@@ -197,4 +197,16 @@ export const supporters2025: Logo[] = [
     image: '/assets/images/support/ubuntu.jpg',
     alt: 'Logo de Ubuntu',
   },
+  {
+    name: 'ASE UTP',
+    url: 'https://egresados.utp.edu.co/',
+    image: '/assets/images/support/aseutp.png',
+    alt: 'Logo de ASE UTP',
+  },
+  {
+    name: 'QA Conf',
+    url: 'https://www.qaconf.co/',
+    image: '/assets/images/support/conf.png',
+    alt: 'Logo de QA Conf',
+  },
 ];
