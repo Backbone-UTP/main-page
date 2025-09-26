@@ -19,6 +19,8 @@ import { footerLinks, headerLinks } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { ButtonComponent } from "./components/button/button.component";
+import {SpeakersComponent} from "./components/speakers/speakers.component";
+
 @Component({
   selector: 'app-sfd-2024',
   standalone: true,
@@ -34,6 +36,7 @@ import { ButtonComponent } from "./components/button/button.component";
     FooterComponent,
     // CallToActionComponent,
     ButtonComponent
+    ,SpeakersComponent
 ],
   templateUrl: './sfd-2025.component.html',
   styleUrl: './sfd-2025.component.scss',
