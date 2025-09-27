@@ -1,58 +1,70 @@
-<section class="pt-10 pb-10 md:pb-25 md:pt-5 hero px-1">
+<section class="pt-10 pb-10 hero px-1">
   <div
-    class="text-center my-10 md:my-16 max-w-5xl mx-auto flex flex-col items-center justify-center">
-    <div class="flex items-center justify-center gap-4 my-8">
-      <!-- Load GitHub & Backbone svg logos-->
+    class="text-start my-10 flex flex-col items-center justify-center gap-10 md:gap-5 md:my-5 lg:flex-row lg:gap-20 lg:my-20 2xl:gap-40">
+    <h1
+      class="font-extrabold text-[40px] md:text-5xl lg:text-4xl xl:text-6xl leading-none md:text-left m-0 p-0">
+      <span
+        class="block text-white font-orbitron text-[0.995em] md:text-[2.85rem] lg:text-4xl xl:text-6xl">
+        CELEBRA CON
+      </span>
 
       <app-icon
         iconName="backbone-logo"
         [properties]="{
           id: 'backbone-logo',
-          class:
-            'md:w-60 w-40 transition-all duration-300 ease-in-out text-gray-700 dark:text-gray-200'
+          class: 'inline my-1 h-[44px] w-auto md:h-[50px] lg:h-[36px] xl:h-[60px]'
         }">
       </app-icon>
-      <!-- <hr />
-      <app-icon
-        iconName="github-logo"
-        [properties]="{
-          id: 'github-logo',
-          class:
-            'md:w-32 w-24 transition-all duration-300 ease-in-out text-gray-700 dark:text-gray-200'
-        }">
-      </app-icon> -->
-    </div>
-    <h1
-      class="text-5xl md:text-6xl font-bold tracking-tight mb-4 font-heading dark:text-gray-200">
-      El evento más importante del<br>
+
       <span
-        class="[text-shadow:_rgb(1,_1,_1)_1px_0_10px] dark:[text-shadow:_unset]">
-        software libre
+        class="block  text-[#ff6a27] font-montserrat tracking-tighter font-superblack text-[1.05em] md:text-[1em] ">
+        EL EVENTO MÁS
       </span>
-      y el
+
       <span
-        class="[text-shadow:_rgb(1,_1,_1)_1px_0_10px] dark:[text-shadow:_unset] text-accent highlight">
-        código abierto
+        class="block text-[#ff6a27] font-montserrat tracking-widest font-superblack text-[1.05em] md:text-[1em]">
+        IMPORTANTE
       </span>
-      vuelve a Pereira
+
+      <span
+        class=" text-[0.874em] md:text-[2.49rem] lg:text-4xl xl:text-6xl block text-[#facc15] font-sans italic font-bold tracking-[-0.057em] leading-[1.2]">
+        DEL SOFTWARE LIBRE <br>Y EL CÓDIGO ABIERTO
+      </span>
     </h1>
-    <h6
-      class="flex gap-2 items-center justify-center my-2 flex-wrap text-center text-gray-700 dark:text-gray-300">
-      8:00 AM (GTM-5)
-      <hr />
-      10 / Oct / 2025
-      <hr />
-      Universidad Tecnológica de Pereira
-      <hr />
-      Colombia
-    </h6>
-    <div class="flex gap-2 mt-4">
-      <app-button
-        variant="secondary"
-        text="Registro"
-        target="_blank"
-        href="https://forms.gle/Qxch4PBTUEUara8i7">
-      </app-button>
+
+    <div class="flex flex-col items-center justify-center">
+      <app-countdown
+        targetDate="2025-10-10T08:00:00-05:00"
+        class="mt-6 font-sans text-center">
+      </app-countdown>
+      <h6
+        class="flex gap-2 items-center justify-center my-2 flex-wrap text-center text-gray-700 dark:text-gray-300">
+        8:00 AM (GTM-5)
+        <hr />
+        10 / Oct / 2025
+        <hr />
+        Universidad Tecnológica de Pereira
+        <hr />
+        Colombia
+      </h6>
+      <div class="flex gap-2 mt-4">
+        <app-button
+          variant="primary"
+          text="REGÍSTRATE AHORA"
+          target="_blank"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSe92lRhyIYrI3aTDkKqiOzpdwgVHgSJJErx3TyDPRp-DDxOFA/viewform?usp=sharing&ouid=104870229166451253715">
+        </app-button>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- <hr />
+<app-icon
+  iconName="github-logo"
+  [properties]="{
+    id: 'github-logo',
+    class:
+      'md:w-32 w-24 transition-all duration-300 ease-in-out text-gray-700 dark:text-gray-200'
+  }">
+</app-icon> -->

@@ -12,6 +12,10 @@ module.exports = {
         default: "var(--aw-color-text-default)",
         muted: "var(--aw-color-text-muted)",
       },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        orbitron: ["Orbitron", "sans-serif"],
+      },
     },
   },
   darkMode: "selector",
