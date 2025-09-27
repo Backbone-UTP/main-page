@@ -134,10 +134,9 @@ export const staff2025 = [
   {
     name: 'Luisa Bañol',
     role: 'Publicidad y Diseño',
-    image: '/assets/images/staff_0.jpeg',
+    image: '/assets/images/staff_7.jpg',
     links: [
-      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/djkde' },
-      { name: 'github' as Icon, url: 'https://github.com/Djkde01' },
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/luisa-lyu/' },
     ],
   }
 ];
