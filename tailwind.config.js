@@ -7,6 +7,7 @@ module.exports = {
       colors: {
         primary: "#ffd426",
         secondary: "#4267ff",
+        orange: "#FF8C57",
         accent: "var(--aw-color-accent)",
         default: "var(--aw-color-text-default)",
         muted: "var(--aw-color-text-muted)",
