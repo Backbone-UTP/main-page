@@ -19,7 +19,7 @@
 :root.dark,
 .dark {
   --bg-solid: #0b1220; /* fondo oscuro */
-  --bg-solid-orange: #1c1313; /* fondo naranja oscuro */
+  --bg-solid-orange: #1e1212; /* fondo naranja oscuro */
   --bg-0: rgba(120, 119, 198, 0.3);
   --bg-1: rgba(255, 255, 255, 0);
   --bg-2: rgba(255, 106, 39, 0.4);
@@ -59,14 +59,6 @@
   }
   .bg-sfd-2025 {
     background-color: var(--bg-solid-orange);
-    background-image: radial-gradient(
-      90% 90% at 50% 120%,
-      var(--bg-2),
-      var(--bg-3)
-    );
-    background-attachment: fixed; /* efecto “papel pintado” */
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 }
 

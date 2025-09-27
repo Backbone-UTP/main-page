@@ -11,7 +11,7 @@ import { ProfileCardComponent } from '../../../shared/components/profile-card/pr
 import { staff2025, supporters2025 } from 'src/assets/content/sfd.people';
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
-import { footerLinks, headerLinks } from 'src/assets/content/sfd-links';
+import { footerLinks, headerLinks25 } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
 import { ButtonComponent } from './components/button/button.component';
 import { GalleryComponent } from '../../../shared/components/gallery/gallery.component';
@@ -33,7 +33,7 @@ import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
   styleUrl: './sfd-2025.component.scss',
 })
 export class SFD2025Component {
-  headerLinks = headerLinks;
+  headerLinks = headerLinks25;
 
   footerLinks = footerLinks;
 
@@ -54,4 +54,12 @@ export class SFD2025Component {
   supporters: Logo[] = supporters2025;
 
   galleryImages = sfdGalleryImages;
+  constructor() {
+    this.enableDarkMode();
+  }
+
+  enableDarkMode(): void {
+    localStorage.setItem('theme', 'dark');
+    document.documentElement.classList.add('dark');
+  }
 }
