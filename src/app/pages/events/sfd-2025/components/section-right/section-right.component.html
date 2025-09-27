@@ -15,7 +15,8 @@
       {{ description }}
     </p>
     <!-- Conditional rendering of the Primary Call-To-Action button if 'btnExists' is true -->
-    <div *ngIf="buttonProps">
+    @if (buttonProps) {
+    <div>
       <app-button
         [variant]="buttonProps.variant"
         [text]="buttonProps.text"
@@ -23,5 +24,6 @@
         [target]="buttonProps.target"
       ></app-button>
     </div>
+    }
   </div>
 </section>
