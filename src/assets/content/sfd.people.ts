@@ -138,6 +138,18 @@ export const staff2025 = [
     links: [
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/luisa-lyu/' },
     ],
+  },
+  {
+    name: 'Juan M. Rojas',
+    role: 'Staff y Desarrollador Web',
+    image: '/assets/images/staff_8.jpg',
+    links: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://co.linkedin.com/in/juan-manuel-rojas-munoz-a76402359/',
+      },
+      { name: 'github' as Icon, url: 'https://github.com/JuanMa216' },
+    ],
   }
 ];
 
