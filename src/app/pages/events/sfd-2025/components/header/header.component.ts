@@ -1,4 +1,3 @@
-import { NgFor } from '@angular/common';
 import {
   Component,
   ElementRef,
@@ -6,7 +5,8 @@ import {
   Input,
   OnInit,
   Renderer2,
-  ViewChild, AfterViewInit,
+  ViewChild,
+  AfterViewInit,
 } from '@angular/core';
 import { ThemeToggleComponent } from '../../../../../shared/components/theme-toogle/theme.toggle.component';
 import { Header } from 'src/app/shared/interfaces/header.interface';
@@ -15,7 +15,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-sfd-header',
   standalone: true,
-  imports: [NgFor, ThemeToggleComponent, RouterLink],
+  imports: [ThemeToggleComponent, RouterLink],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
@@ -52,10 +52,7 @@ export class SFDHeaderComponent implements OnInit, AfterViewInit {
   }
 
   private initIntersectionObserver(): void {
-    const callback = (
-      entries: IntersectionObserverEntry[],
-      observer: IntersectionObserver
-    ) => {
+    const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const navItems = this.nav.nativeElement.querySelectorAll('a');
