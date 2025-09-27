@@ -10,7 +10,6 @@ import {
 } from 'src/app/shared/interfaces/features.interface';
 import { ProfileCardComponent } from '../../../shared/components/profile-card/profile-card.component';
 import { staff2025, supporters2025 } from 'src/assets/content/sfd.people';
-import { NgFor } from '@angular/common';
 import { TimelineComponent } from '../sfd-2025/components/timeline/timeline.component';
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
