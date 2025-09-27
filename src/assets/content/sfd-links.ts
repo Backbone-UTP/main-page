@@ -22,6 +22,27 @@ export const headerLinks: Header[] = [
   }
 ];
 
+export const headerLinks25: Header[] = [
+  {
+    title: 'Sobre el Evento',
+    label: 'about',
+    url: '/events/software-freedom-day-2025/',
+    fragment: 'about',
+  },
+  {
+    title: 'Ponentes',
+    label: 'speakers',
+    url: '/events/software-freedom-day-2025/',
+    fragment: '',
+  },
+  {
+    title: 'Agenda',
+    label: 'agenda',
+    url: '/events/software-freedom-day-2025/',
+    fragment: '',
+  }
+];
+
 export const footerLinks: Footer[] = [
   {
     name: 'linkedin',
