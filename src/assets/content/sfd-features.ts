@@ -145,6 +145,11 @@ export const agenda: TimelineEvent[] = [
 
 export const agenda25: TimelineEvent[] = [
   {
+    name: 'Backbone',
+    talk: 'Registro y Bienvenida',
+    time: '08:00 AM - 08:30 AM'
+  },
+  {
     name: 'Héctor Jiménez',
     talk: 'Tu Primer Pipeline GitLab: De Cero a Héroe en una Charla',
     time: '08:30 AM - 09:00 AM'
@@ -159,15 +164,11 @@ export const agenda25: TimelineEvent[] = [
     talk: 'The Future Vision: Modelos Open Source de Visión Artificial y su Aplicación en Neuroinformática',
     time: '10:00 AM - 10:30 AM'
   },
-  // {
-  //   name: 'Nicolás Osorio',
-  //   description:
-  //     'Es estudiante de Ingeniería en Sistemas y freelancer especializado en Backend. Apasionado por el desarrollo y el aprendizaje de nuevas tecnologías, su proyecto más destacado en la actualidad es un gestor de mensajería vía WhatsApp con múltiples instancias. Este sistema forma parte de un proyecto en funcionamiento en varios países de Latinoamérica. Forma parte del semillero y comunidad Backbone.',
-  //   talk: 'La versión Open Source de un chatbot de whatsapp.',
-  //   time: '10:30 - 11:00',
-  //   img: '/assets/images/speakers/Nicolás Osorio.png',
-  //   link: 'https://www.youtube.com/live/NJoeUs4pkZE?si=N2PZuc2of-CfiwAE&t=6227',
-  // },
+  {
+    name: 'Jacques Duflos',
+    talk: 'Programar en colaboración con git, o cómo reemplazar el CTRL+S por GIT COMMIT',
+    time: '11:30 AM - 12:00 PM'
+  },
   {
     name: 'Break Time',
     talk: '',
@@ -178,16 +179,6 @@ export const agenda25: TimelineEvent[] = [
     talk: 'Del Experimento a la Operación: MLflow para Agentes de IA',
     time: '02:00 - 03:00 PM'
   },
-  // {
-  //   name: 'Jose Felipe Duarte',
-  //   description:
-  //     'Entusiasta de las comunidades tecnológicas, participando en eventos como FLISoL Pereira y Pereira Tech Day. GitHub Campus Expert y miembro del semillero SNEIA, se especializa en inteligencia artificial y software de código abierto. Estudiante de Ingeniería en Sistemas, busca impulsar el aprendizaje continuo y el intercambio de conocimientos.',
-  //   talk: 'El Cubo de Rubik y el Open Source: Soluciones Simples para Problemas Complejos',
-  //   time: '02:30 - 03:00',
-  //   img: '/assets/images/speakers/Jose Felipe Duarte.png',
-  //   link: 'https://www.youtube.com/live/5_qyNXwqpE8?si=KjfsKQELvq9gygLx&t=1652',
-  // },
-
   {
     name: 'Juan Campuzano',
     talk: 'Model Context Protocol (MCP): El Futuro de la Interoperabilidad en IA',
@@ -203,13 +194,9 @@ export const agenda25: TimelineEvent[] = [
     talk: 'La IA que Nace del Open Source',
     time: '05:00 PM - 05:30 PM'
   },
-  // {
-  //   name: 'SONAR ISC - Semillero de Investigación',
-  //   description:
-  //     'Es un grupo conformado por estudiantes del Programa de Ingeniería de Sistemas y Computación de la Universidad Tecnológica de Pereira que tiene como objetivo el análisis del aseguramiento de calidad durante el proceso de desarrollo de software. Para lograrlo, se enfoca en investigar técnicas, herramientas y principios de las pruebas de software, así como en el aprendizaje de las buenas prácticas y el manejo correcto de la codificación, durante todo el ciclo de vida del software.',
-  //   talk: 'El Opensource en los espacios académicos: Conversatorio con líderes de semilleros de investigación',
-  //   time: '05:00 - 06:00',
-  //   img: '/assets/images/speakers/SONAR ISC.png',
-  //   link: 'https://www.youtube.com/live/5_qyNXwqpE8?si=H32txjRd591tXZyh&t=10235',
-  // },
+  {
+    name: 'Backbone',
+    talk: 'Cierre y palabras del patrocinador',
+    time: '05:30 PM - 06:00 PM'
+  },
 ];
