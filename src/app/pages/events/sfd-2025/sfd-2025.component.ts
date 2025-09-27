@@ -14,27 +14,25 @@ import { NgFor } from '@angular/common';
 import { TimelineComponent } from '../sfd-2025/components/timeline/timeline.component';
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
-import { SectionRightComponent } from './components/section-right/section-right.component';
-import { footerLinks, headerLinks, headerLinks25 } from 'src/assets/content/sfd-links';
+import { footerLinks, headerLinks25 } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
-import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
-import { ButtonComponent } from "./components/button/button.component";
+import { ButtonComponent } from './components/button/button.component';
+import { GalleryComponent } from '../../../shared/components/gallery/gallery.component';
+import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
 @Component({
-  selector: 'app-sfd-2024',
+  selector: 'app-sfd-2025',
   standalone: true,
   imports: [
     SFD2025HeroComponent,
     SFDHeaderComponent,
     FeaturesComponent,
     ProfileCardComponent,
-    NgFor,
-    TimelineComponent,
     LogosListComponent,
-    // SectionRightComponent,
     FooterComponent,
-    // CallToActionComponent,
-    ButtonComponent
-],
+    ButtonComponent,
+    GalleryComponent,
+    TimelineComponent
+  ],
   templateUrl: './sfd-2025.component.html',
   styleUrl: './sfd-2025.component.scss',
 })
@@ -59,10 +57,10 @@ export class SFD2025Component {
 
   supporters: Logo[] = supporters2025;
 
+  galleryImages = sfdGalleryImages;
   constructor() {
     this.enableDarkMode();
   }
-
   enableDarkMode(): void {
     localStorage.setItem('theme', 'dark');
     document.documentElement.classList.add('dark');
