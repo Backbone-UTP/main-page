@@ -57,7 +57,6 @@ export class SFD2025Component {
   constructor() {
     this.enableDarkMode();
   }
-
   enableDarkMode(): void {
     localStorage.setItem('theme', 'dark');
     document.documentElement.classList.add('dark');
