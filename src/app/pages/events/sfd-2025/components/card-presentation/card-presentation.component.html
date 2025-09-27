@@ -47,7 +47,7 @@
           alt
         />
       </div>
-      @if (data.link && data.link != '') {
+      @if (data.link && data.link !== '') {
       <app-button
         variant="primary"
         text="Revive la charla"
@@ -106,7 +106,7 @@
         {{ data.aditional[0].name }}
       </h2>
       <h3 class="z-20">{{ data.aditional[0].description }}</h3>
-      @if (data.link && data.link != '') {
+      @if (data.link && data.link !== '') {
       <app-button
         class="self-center mt-6"
         variant="primary"
@@ -121,7 +121,7 @@
   }
 
   <div class="absolute top-0 -right-[30%] w-[40%] aspect-square m-0">
-    <growing-circles [circles]="circles" [circleStyle]="circlesStyle">
-    </growing-circles>
+    <app-growing-circles [circles]="circles" [circleStyle]="circlesStyle">
+    </app-growing-circles>
   </div>
 </div>
