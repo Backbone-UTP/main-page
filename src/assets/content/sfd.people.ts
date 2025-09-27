@@ -75,7 +75,7 @@ export const staff2025 = [
     ],
   },
   {
-    name: 'Sergio Estrella',
+    name: 'Sergio D. Estrella',
     role: 'Streaming y Lead Desarrollo Web',
     image: '/assets/images/staff_0.jpeg',
     links: [
@@ -132,7 +132,7 @@ export const staff2025 = [
     ],
   },
   {
-    name: 'Luisa Bañol',
+    name: 'Luisa M. Bañol',
     role: 'Publicidad y Diseño',
     image: '/assets/images/staff_7.jpg',
     links: [
