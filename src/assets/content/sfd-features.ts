@@ -210,7 +210,7 @@ export const speakersSFD2025 = [
   {
     name: 'Jacques Duflos',
     role: 'Ingeniero mecánico y artista',
-    img: '/assets/images/speakerSFD2025/ponentes-07.webp',
+    img: '/assets/images/speakerSFD2025/ponentes-06.webp',
     description:
       'Aficionado de la programación, creador de videojuegos. Profesor de tecnología con cinco años de experiencia.',
     social: {
