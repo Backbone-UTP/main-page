@@ -207,7 +207,7 @@ export const supporters2024: Logo[] = [
 export const supporters2025: Logo[] = [
   {
     name: 'SIRIUS',
-    url: 'https://sirius.utp.edu.co/ ',
+    url: 'https://vicerrectorias.utp.edu.co/viie/integrantes/105/grupo ',
     image: '/assets/images/support/sirius.png',
     alt: 'Logo de SIRIUS',
   },
