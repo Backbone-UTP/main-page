@@ -141,7 +141,7 @@ export const staff2025 = [
   },
   {
     name: 'Juan M. Rojas',
-    role: 'Staff y Desarrollador Web',
+    role: 'Staff y Desarrollo Web',
     image: '/assets/images/staff_8.jpg',
     links: [
       {
