@@ -145,103 +145,128 @@ export const agenda: TimelineEvent[] = [
 
 export const speakersSFD2025 = [
   {
-    name: 'Héctor Pulido',
-    role: 'Senior Data Scientist',
-    img: '/assets/images/speakerSFD2025/Hector Pulido.webp',
+    name: 'Héctor Jiménez',
+    role: 'SRE/DevOps',
+    img: '/assets/images/speakerSFD2025/ponentes-01.webp',
     description:
-      'Mi objetivo es crear tecnologías que sean indistinguibles de la magia y que cambien el mundo para mejor',
+      'Me apasionan la seguridad informática, la automatización y la infraestructura como código.',
     social: {
-      instagram: 'https://www.instagram.com/hector.pulido',
-      linkedin: 'https://www.linkedin.com/in/hector-pulido-17547369/',
-    },
-  },
-  {
-    name: 'Jose Duarte',
-    role: 'Ingeniero en IA',
-    img: '/assets/images/speakerSFD2025/Jose Duarte.webp',
-    description:
-      'Ingeniero en IA enfocado en LLMs y agentes autónomos, con especial interés en su aplicación para acelerar el descubrimiento científico, especialmente en el desarrollo de fármacos. GitHub Campus Expert y apasionado por las comunidades tecnológicas, el open source, la ciencia y las matemáticas. Creo en el poder de la inteligencia colectiva, el aprendizaje continuo y la colaboración para construir soluciones que generen impacto real.',
-    social: {
-      instagram: 'https://www.instagram.com/josefeldc',
-      linkedin: 'https://www.linkedin.com/in/josefeldc/',
-    },
-  },
-  {
-    name: 'Ana López',
-    role: 'Arquitecta en la Nube de Datos e IA',
-    img: '/assets/images/speakerSFD2025/Ana Lopez.webp',
-    description:
-      'Soy Ingeniera Electrónica, Magíster en Gestión Informática y Telecomunicaciones, con especializaciones en Inteligencia de Negocios y Finanzas. Actualmente estoy realizando el trabajo de grado de la Maestría en Estadística y cursando un Doctorado en Ingeniería. Me apasionan los datos; he trabajado como científica de datos, con experiencia en Machine Learning y Deep Learning. Actualmente me desempeño como Arquitecta en la Nube de Datos e IA.',
-    social: {
-      instagram: 'https://www.instagram.com/darkanita',
-      linkedin: 'https://www.linkedin.com/in/amlopez81/',
+      github: 'https://github.com/h3ct0rjs',
+      linkedin: 'https://www.linkedin.com/in/h3ct0rjs/',
     },
   },
   {
     name: 'Steven Mejia',
     role: 'CEO de Pulsatrix y To Grow',
-    img: '/assets/images/speakerSFD2025/Steven Mejia.webp',
+    img: '/assets/images/speakerSFD2025/ponentes-02.webp',
     description:
-      'Economista e Ingeniero de sistemas, Magíster en Ingeniería de Sistemas. CEO de Pulsatrix y To Grow. Apasionado del software libre y la educación, busca inspirar a otros a contribuir al ecosistema open source.',
+      'Economista, ingeniero de sistema, Magíster en ingeniería de sistemas, emprendedor de base tecnológica',
     social: {
-      instagram: 'https://www.instagram.com/steve__master',
+      github: 'https://github.com/steve-master',
       linkedin: 'https://www.linkedin.com/in/stevenmejia/',
     },
   },
   {
-    name: 'Juan Campuzano',
-    role: 'Senior Mobile & DevEx Engineer @ Bancolombia',
-    img: '/assets/images/speakerSFD2025/Juan Campuzano.webp',
+    name: 'Mariana Tellez',
+    role: 'Estudiante UTP',
+    img: '/assets/images/speakerSFD2025/ponentes-03.webp',
     description:
-      'Experto en desarrollo móvil y experiencia de desarrollador.',
+      'Apasionada por la innovación tecnológica, el diseño y la programación, con interés en proyectos de investigación aplicada.',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/mariana-tellez',
+    },
+  },
+  {
+    name: 'Víctor Correa',
+    role: 'Estudiante UTP',
+    img: '/assets/images/speakerSFD2025/ponentes-04.webp',
+    description:
+      'Interesado en el desarrollo de soluciones y estrategias tecnológicas innovadoras que impacten positivamente la sociedad y las organizaciones.',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/victormcg',
+    },
+  },
+  {
+    name: 'Jose Duarte',
+    role: 'AI/LLM Engineer',
+    img: '/assets/images/speakerSFD2025/ponentes-05.webp',
+    description:
+      'Creo en el poder de la inteligencia colectiva, el aprendizaje continuo y la colaboración para construir soluciones que generen impacto real.',
+    social: {
+      github: 'https://github.com/josefeldc',
+      linkedin: 'https://www.linkedin.com/in/josefeldc/',
+    },
+  },
+  {
+    name: 'Juan Alejandro Pérez',
+    role: '',
+    img: '/assets/images/speakerSFD2025/ponentes-06.webp',
+    description: '',
+    social: {
+      github: 'https://github.com/mega-barto',
+      linkedin: 'https://www.linkedin.com/in/mega-barto/',
+    },
+  },
+  {
+    name: 'Jacques Duflos',
+    role: 'Ingeniero mecánico y artista',
+    img: '/assets/images/speakerSFD2025/ponentes-07.webp',
+    description:
+      'Aficionado de la programación, creador de videojuegos. Profesor de tecnología con cinco años de experiencia.',
+    social: {
+      github: 'https://github.com/jacques.duflos.9 ',
+    },
+  },
+  {
+    name: 'Ana López',
+    role: 'SR Partner Solution Architect Data+AI',
+    img: '/assets/images/speakerSFD2025/ponentes-08.webp',
+    description:
+      'Me apasionan los datos; he trabajado como científica de datos, con experiencia en Machine Learning y Deep Learning.',
+    social: {
+      github: 'https://github.com/darkanita',
+      linkedin: 'https://www.linkedin.com/in/amlopez81/',
+    },
+  },
+  {
+    name: 'Andrés Torres',
+    role: 'Senior Software Engineer',
+    img: '/assets/images/speakerSFD2025/ponentes-09.webp',
+    description:
+      'Ingeniero de sistemas con +12 años de experiencia como desarrollador. Msc. en Ciencias de la computación y MBA.',
+    social: {
+      github: 'https://github.com/elfotografo007',
+      linkedin: 'https://www.linkedin.com/in/elfotografo007/',
+    },
+  },
+  {
+    name: 'Juan Campuzano',
+    role: 'Senior Mobile & DevEx Engineer',
+    img: '/assets/images/speakerSFD2025/ponentes-10.webp',
+    description: '(falta)',
     social: {
       linkedin: 'https://www.linkedin.com/in/jcampuza2/',
     },
   },
   {
-    name: 'Héctor Jiménez',
-    role: 'Ingeniero en sistemas y DevOps',
-    img: '/assets/images/speakerSFD2025/Hector Jimenez.webp',
-    description:
-      'Soy ingeniero en sistemas y DevOps con experiencia en AWS, Azure y GCP. Me apasionan la seguridad informática, la automatización y la infraestructura como código. Coorganizo comunidades tecnológicas y promuevo el aprendizaje colaborativo.',
-    social: {
-      instagram: 'https://www.instagram.com/h3ct0rjs',
-      linkedin: 'https://www.linkedin.com/in/h3ct0rjs/',
-    },
-  },
-  {
     name: 'Julián Cárdenas',
-    role: 'Desarrollador Web y Especialista en Ciberseguridad',
-    img: '/assets/images/speakerSFD2025/Julian Cardenas.webp',
+    role: 'Fullstack Developer',
+    img: '/assets/images/speakerSFD2025/ponentes-11.webp',
     description:
-      'Apasionado por la tecnología y el poder transformador del software, he enfocado mi experiencia en desarrollo web y ciberseguridad, participando en proyectos e investigaciones que integran innovación y automatización. Mi propósito es inspirar y construir soluciones que generen impacto real.',
-  },
-  {
-    name: 'Andrés Torres',
-    role: 'Ingeniero de sistemas, especialista en backend',
-    img: '/assets/images/speakerSFD2025/Andres Torres.webp',
-    description:
-      'Ingeniero de sistemas especialista en web backend con 12 años de experiencia en startups y multinacionales. Msc. en Ciencias de la computación y MBA.',
+      'Apasionado por la tecnología y el poder transformador del software. Mi propósito es inspirar y construir soluciones que generen impacto real.',
     social: {
-      instagram: 'https://www.instagram.com/elfotografo007',
-      linkedin: 'https://www.linkedin.com/in/elfotografo007/',
+      linkedin: 'https://www.linkedin.com/in/julian-cardenas-392201284/',
     },
   },
   {
-    name: 'Mariana Tellez y Víctor Correa',
-    role: 'Estudiantes e investigadores en Neuroinformática e IA',
-    img: '/assets/images/speakerSFD2025/Mariana Tellez.webp',
+    name: 'Héctor Pulido',
+    role: 'Senior Data Scientist',
+    img: '/assets/images/speakerSFD2025/ponentes-12.webp',
     description:
-      'Estudiantes de la UTP, investigadores del Semillero de Neuroinformática e Inteligencia Artificial - SNEIA.',
-  },
-  {
-    name: 'Juan Alejandro Pérez',
-    role: '---',
-    img: '/assets/images/speakerSFD2025/Juan Alejandro.webp',
-    description: '',
+      'Mi objetivo es crear tecnologías que sean indistinguibles de la magia y que cambien el mundo para mejor.',
     social: {
-      instagram: 'https://www.instagram.com/mega_barto',
-      linkedin: 'https://www.linkedin.com/in/mega-barto/',
+      github: 'https://github.com/hector-pulido',
+      linkedin: 'https://www.linkedin.com/in/hector-pulido-17547369/',
     },
   },
 ];
