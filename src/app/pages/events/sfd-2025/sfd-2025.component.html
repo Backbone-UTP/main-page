@@ -13,11 +13,12 @@
             <app-sfd-hero></app-sfd-hero>
 
             <app-about-event></app-about-event>
-            
+
             <p class="text-center font-semibold">
               ¿Quieres compartir tus ideas?
             </p>
-            <section class="my-5 bg-primary py-8 text-center m-auto mr-auto px-4 flex justify-center gap-5">
+            <section
+              class="my-5 bg-primary py-8 text-center m-auto mr-auto px-4 flex justify-center gap-5">
               <app-button
                 variant="secondary"
                 target="_blank"
@@ -31,8 +32,7 @@
                 [subtitle]="aboutSubTitle"
                 [features]="aboutFeatures"></app-features>
             </section>
-            <!-- Team Section -->
-            <app-team-section></app-team-section>
+
             <section class="flex flex-col gap-2 py-20 " id="agenda">
               <div
                 class="flex items-center gap-4 px-4 lg:gap-8 lg:px-8 bg-[#231515] h-20">
@@ -46,6 +46,9 @@
               </div>
               <app-timeline [timelineItems]="sfdAgenda"></app-timeline>
             </section>
+
+            <!-- Team Section -->
+            <app-team-section></app-team-section>
 
             <section id="gallery">
               <app-gallery
