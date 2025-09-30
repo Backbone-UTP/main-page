@@ -2,36 +2,23 @@
   <app-sfd-header [navItems]="headerLinks"></app-sfd-header>
 
   <div class="border-2 border-[#F9C71D] w-auto h-auto rounded-md">
-    <div class="border-2 border-[#F99D1D] w-auto h-auto rounded-md m-1 md:m-1.5">
-      <div class="border-2 border-[#FF6A27] w-auto h-auto rounded-md m-1 md:m-1.5">
-        <div class="border-2 border-[#6B3918] w-auto h-auto rounded-md m-1 md:m-1.5">
-          <div class="border-0 md:border-2 border-[#441F19] w-auto h-auto rounded-md m-1 md:m-1.5">
-            <!-- Hero Section -->
+    <div
+      class="border-2 border-[#F99D1D] w-auto h-auto rounded-md m-1 md:m-1.5">
+      <div
+        class="border-2 border-[#FF6A27] w-auto h-auto rounded-md m-1 md:m-1.5">
+        <div
+          class="border-2 border-[#6B3918] w-auto h-auto rounded-md m-1 md:m-1.5">
+          <div
+            class="border-0 md:border-2 border-[#441F19] w-auto h-auto rounded-md m-1 md:m-1.5">
             <app-sfd-hero></app-sfd-hero>
 
-            <!-- About Event Section -->
-            <app-about-event></app-about-event>
-            
-            <p class="text-center font-semibold">
-              ¿Quieres compartir tus ideas?
-            </p>
-            <section
-              class="my-5 bg-primary py-8 text-center m-auto mr-auto px-4 flex justify-center gap-5"
-            >
-              <app-button
-                variant="secondary"
-                target="_blank"
-                className="bg-white dark:bg-slate-900"
-                [text]="'Postular charla'"
-                href="https://forms.gle/nuzPku68xgGKhy5N6"
-              ></app-button>
-            </section>
             <section id="about">
-              <app-features
-                [title]="aboutTitle"
-                [subtitle]="aboutSubTitle"
-                [features]="aboutFeatures"
-              ></app-features>
+              <app-about-event></app-about-event>
+            </section>
+
+            <section class="flex flex-col gap-2 py-20 " id="agenda">
+              <app-subtitle [subtitle]="'Agenda'"></app-subtitle>
+              <app-timeline [timelineItems]="sfdAgenda"></app-timeline>
             </section>
 
             <!-- Team Section -->
@@ -39,15 +26,14 @@
               <app-subtitle [subtitle]="'Equipo'"></app-subtitle>
               <app-team-section></app-team-section>
             </section>
-            
+
             <section id="gallery">
               <app-gallery
                 [title]="'Momentos destacados'"
                 [subtitle]="
                   'Así se vivieron las versiones anteriores del Software Freedom Day en Pereira'
                 "
-                [images]="galleryImages"
-              ></app-gallery>
+                [images]="galleryImages"></app-gallery>
             </section>
 
             <!-- Unirse a la comunidad -->
@@ -57,8 +43,7 @@
               <app-logos-list
                 [title]="'Invitan'"
                 subtitle="Estas organizaciones también hacen posible el evento"
-                [logos]="supporters"
-              ></app-logos-list>
+                [logos]="supporters"></app-logos-list>
             </section>
 
             <app-footer [socialLinks]="footerLinks"></app-footer>

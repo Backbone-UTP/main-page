@@ -8,14 +8,13 @@ import {
   ViewChild,
   AfterViewInit,
 } from '@angular/core';
-import { ThemeToggleComponent } from '../../../../../shared/components/theme-toogle/theme.toggle.component';
 import { Header } from 'src/app/shared/interfaces/header.interface';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-sfd-header',
   standalone: true,
-  imports: [ThemeToggleComponent, RouterLink],
+  imports: [ RouterLink],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })

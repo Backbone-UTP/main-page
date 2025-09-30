@@ -10,7 +10,7 @@ import {
 import { ProfileCardComponent } from '../../../shared/components/profile-card/profile-card.component';
 import { staff2024, supporters2024 } from 'src/assets/content/sfd.people';
 
-import { TimelineComponent } from '../../../shared/components/timeline/timeline.component';
+import { TimelineComponent } from './components/timeline/timeline.component';
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
 import { footerLinks, headerLinks } from 'src/assets/content/sfd-links';
