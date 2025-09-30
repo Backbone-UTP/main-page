@@ -17,6 +17,7 @@ import { AboutEventComponent } from './components/about-event/about-event.compon
 import { GalleryComponent } from '../../../shared/components/gallery/gallery.component';
 import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
 import {TeamSectionComponent} from "./components/team-section/team-section.component";
+import {ProfileCardComponent} from "../../../shared/components/profile-card/profile-card.component";
 import { SubtitleComponent } from './components/subtitle/subtitle.component';
 
 @Component({
@@ -28,11 +29,14 @@ import { SubtitleComponent } from './components/subtitle/subtitle.component';
     LogosListComponent,
     FooterComponent,
     SubtitleComponent,
+    ButtonComponent,
     UnirseComunidadComponent,
+    IconComponent,
     AboutEventComponent,
     GalleryComponent,
     TeamSectionComponent,
-    TimelineComponent,
+    ProfileCardComponent,
+    SubtitleComponent,
 ],
   templateUrl: './sfd-2025.component.html',
   styleUrl: './sfd-2025.component.scss',
