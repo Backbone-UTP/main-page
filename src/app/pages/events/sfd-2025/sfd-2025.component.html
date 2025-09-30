@@ -28,27 +28,9 @@
                     }
                   </div>
                 </section>
-                <section class="flex flex-col gap-2 py-20" id="supporters">
-                  <div class="flex items-center gap-4 px-4 lg:gap-8 lg:px-8  bg-[#231515] h-20">
-                    <img src="assets/images/patch_small.png" alt="SFD 2025" class="h-8 lg:h-10">
-                    <h2 class="text-lg md:text-xl lg:text-2xl text-balance font-bold text-neutral-200 w-full">
-                      PATROCINADOR
-                    </h2>
-                  </div>
-                  <div class="mt-12 flex justify-center items-center gap-3 w-full italic">
-                    <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold font-[Open Sans] text-center">
-                      <span class="text-white mr-4">¡GRACIAS</span>
-                      <app-icon
-                        iconName="github-logo"
-                        [properties]="{
-                        id: 'github-logo',
-                        class: 'inline-block w-28 lg:w-40 transition-all duration-300 ease-in-out text-white'}">
-                      </app-icon>
-                      <span class="text-white ml-4">POR CREER</span><br />
-                      <span class="text-[#F9C71D] italic font-black">EN EL SOFTWARE FREEDOM</span><br />
-                      <span class="text-[#FF6A27] italic font-black">DAY PEREIRA!</span>
-                    </h2>
-                  </div>
+                <section>
+                  <app-subtitle [subtitle]="'PATROCINADOR'"></app-subtitle>
+                  <app-sponsor></app-sponsor>
                 </section>
                 <section id="gallery">
                   <app-gallery
