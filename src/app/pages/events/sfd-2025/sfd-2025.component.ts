@@ -7,7 +7,6 @@ import {
   Feature,
   TimelineEvent,
 } from 'src/app/shared/interfaces/features.interface';
-import { ProfileCardComponent } from '../../../shared/components/profile-card/profile-card.component';
 import { staff2025, supporters2025 } from 'src/assets/content/sfd.people';
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
@@ -16,6 +15,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ButtonComponent } from './components/button/button.component';
 import { GalleryComponent } from '../../../shared/components/gallery/gallery.component';
 import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
+import {TeamSectionComponent} from "./components/team-section/team-section.component";
+
 @Component({
   selector: 'app-sfd-2025',
   standalone: true,
@@ -23,12 +24,12 @@ import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
     SFD2025HeroComponent,
     SFDHeaderComponent,
     FeaturesComponent,
-    ProfileCardComponent,
     LogosListComponent,
     FooterComponent,
     ButtonComponent,
     GalleryComponent,
-  ],
+    TeamSectionComponent
+],
   templateUrl: './sfd-2025.component.html',
   styleUrl: './sfd-2025.component.scss',
 })
