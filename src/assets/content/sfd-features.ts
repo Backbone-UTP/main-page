@@ -2,6 +2,7 @@ import {
   Feature,
   TimelineEvent,
 } from 'src/app/shared/interfaces/features.interface';
+import { Icon } from 'src/app/shared/interfaces/icons.interface';
 
 export const features: Feature[] = [
   {
@@ -150,10 +151,10 @@ export const speakersSFD2025 = [
     img: '/assets/images/speakerSFD2025/ponentes-01.webp',
     description:
       'Me apasionan la seguridad informática, la automatización y la infraestructura como código.',
-    social: {
-      github: 'https://github.com/h3ct0rjs',
-      linkedin: 'https://www.linkedin.com/in/h3ct0rjs/',
-    },
+    social: [
+      { name: 'github' as Icon, url: 'https://github.com/h3ct0rjs' },
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/h3ct0rjs/' }
+    ],
   },
   {
     name: 'Steven Mejia',
@@ -161,10 +162,10 @@ export const speakersSFD2025 = [
     img: '/assets/images/speakerSFD2025/ponentes-02.webp',
     description:
       'Economista, ingeniero de sistema, Magíster en ingeniería de sistemas, emprendedor de base tecnológica',
-    social: {
-      github: 'https://github.com/steve-master',
-      linkedin: 'https://www.linkedin.com/in/stevenmejia/',
-    },
+    social: [
+      { name: 'github' as Icon, url: 'https://github.com/steve-master' },
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/stevenmejia/' }
+    ],
   },
   {
     name: 'Mariana Tellez',
@@ -172,9 +173,9 @@ export const speakersSFD2025 = [
     img: '/assets/images/speakerSFD2025/ponentes-03.webp',
     description:
       'Apasionada por la innovación tecnológica, el diseño y la programación, con interés en proyectos de investigación aplicada.',
-    social: {
-      linkedin: 'https://www.linkedin.com/in/mariana-tellez',
-    },
+    social: [
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/mariana-tellez' }
+    ],
   },
   {
     name: 'Víctor Correa',
@@ -182,9 +183,9 @@ export const speakersSFD2025 = [
     img: '/assets/images/speakerSFD2025/ponentes-04.webp',
     description:
       'Interesado en el desarrollo de soluciones y estrategias tecnológicas innovadoras que impacten positivamente la sociedad y las organizaciones.',
-    social: {
-      linkedin: 'https://www.linkedin.com/in/victormcg',
-    },
+    social: [
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/victormcg' }
+    ],
   },
   {
     name: 'Jose Duarte',
@@ -192,20 +193,20 @@ export const speakersSFD2025 = [
     img: '/assets/images/speakerSFD2025/ponentes-05.webp',
     description:
       'Creo en el poder de la inteligencia colectiva, el aprendizaje continuo y la colaboración para construir soluciones que generen impacto real.',
-    social: {
-      github: 'https://github.com/josefeldc',
-      linkedin: 'https://www.linkedin.com/in/josefeldc/',
-    },
+    social: [
+      { name: 'github' as Icon, url: 'https://github.com/josefeldc' },
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/josefeldc/' }
+    ],
   },
   {
     name: 'Juan Alejandro Pérez',
-    role: '',
+    role: 'Software Developer',
     img: '/assets/images/speakerSFD2025/ponentes-06.webp',
-    description: '',
-    social: {
-      github: 'https://github.com/mega-barto',
-      linkedin: 'https://www.linkedin.com/in/mega-barto/',
-    },
+    description: 'Ingeniero en Sistemas y Computación egresado de la UTP, miembro organizador de comunidades tecnológicas de la ciudad como Pereira Tech Talks, QAConf, FLISOL, SFD, etc. ',
+    social: [
+      { name: 'github' as Icon, url: 'https://github.com/mega-barto' },
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/mega-barto/' }
+    ],
   },
   {
     name: 'Jacques Duflos',
@@ -213,9 +214,9 @@ export const speakersSFD2025 = [
     img: '/assets/images/speakerSFD2025/ponentes-06.webp',
     description:
       'Aficionado de la programación, creador de videojuegos. Profesor de tecnología con cinco años de experiencia.',
-    social: {
-      github: 'https://github.com/jacques.duflos.9 ',
-    },
+    social: [
+      { name: 'github' as Icon, url: 'https://github.com/jacques.duflos.9' }
+    ],
   },
   {
     name: 'Ana López',
@@ -223,10 +224,10 @@ export const speakersSFD2025 = [
     img: '/assets/images/speakerSFD2025/ponentes-08.webp',
     description:
       'Me apasionan los datos; he trabajado como científica de datos, con experiencia en Machine Learning y Deep Learning.',
-    social: {
-      github: 'https://github.com/darkanita',
-      linkedin: 'https://www.linkedin.com/in/amlopez81/',
-    },
+    social: [
+      { name: 'github' as Icon, url: 'https://github.com/darkanita' },
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/amlopez81/' }
+    ],
   },
   {
     name: 'Andrés Torres',
@@ -234,19 +235,19 @@ export const speakersSFD2025 = [
     img: '/assets/images/speakerSFD2025/ponentes-09.webp',
     description:
       'Ingeniero de sistemas con +12 años de experiencia como desarrollador. Msc. en Ciencias de la computación y MBA.',
-    social: {
-      github: 'https://github.com/elfotografo007',
-      linkedin: 'https://www.linkedin.com/in/elfotografo007/',
-    },
+    social: [
+      { name: 'github' as Icon, url: 'https://github.com/elfotografo007' },
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/elfotografo007/' }
+    ],
   },
   {
     name: 'Juan Campuzano',
     role: 'Senior Mobile & DevEx Engineer',
     img: '/assets/images/speakerSFD2025/ponentes-10.webp',
-    description: '(falta)',
-    social: {
-      linkedin: 'https://www.linkedin.com/in/jcampuza2/',
-    },
+    description: 'Ingeniero de sistemas y desarrollador de software con más de 5 años de experiencia.',
+    social: [
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/jcampuza2/' }
+    ],
   },
   {
     name: 'Julián Cárdenas',
@@ -254,9 +255,9 @@ export const speakersSFD2025 = [
     img: '/assets/images/speakerSFD2025/ponentes-11.webp',
     description:
       'Apasionado por la tecnología y el poder transformador del software. Mi propósito es inspirar y construir soluciones que generen impacto real.',
-    social: {
-      linkedin: 'https://www.linkedin.com/in/julian-cardenas-392201284/',
-    },
+    social: [
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/julian-cardenas-392201284/' }
+    ],
   },
   {
     name: 'Héctor Pulido',
@@ -264,9 +265,9 @@ export const speakersSFD2025 = [
     img: '/assets/images/speakerSFD2025/ponentes-12.webp',
     description:
       'Mi objetivo es crear tecnologías que sean indistinguibles de la magia y que cambien el mundo para mejor.',
-    social: {
-      github: 'https://github.com/hector-pulido',
-      linkedin: 'https://www.linkedin.com/in/hector-pulido-17547369/',
-    },
+    social: [
+      { name: 'github' as Icon, url: 'https://github.com/hector-pulido' },
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/hector-pulido-17547369/' }
+    ],
   },
 ];

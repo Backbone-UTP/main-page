@@ -1,9 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import  {IconComponent} from 'src/app/shared/components/icons/icons.component';
+import { LinkItem } from 'src/app/shared/interfaces/link-item.interface';
 
 @Component({
   selector: 'app-speaker-card',
-  imports: [CommonModule],
+  imports: [CommonModule, IconComponent],
   templateUrl: './speaker-card.component.html',
   styleUrls: ['./speaker-card.component.scss']
 })
@@ -13,6 +15,7 @@ export class SpeakerCardComponent {
   @Input() image: string = 'assets/default-speaker.png';
   @Input() description: string = 'No description available.';
   @Input() index: number = 0;
+  @Input() links: LinkItem[] = [];
   constructor() { }
 }
   

@@ -1,7 +1,7 @@
 <section id="speakers" class="flex flex-col justify-center items-center gap-10 mt-6">
     <div class="flex justify-start items-center w-full py-4 bg-[#231515] shadow-md shadow-black">
-        <img src="/assets/images/sfd-patch.png" alt="logo" class="h-10 md:h-10 lg:h-12 xl:h-14 mr-4">
-        <h2 class="text-primary font-sans font-extrabold text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Ponentes</h2>
+        <img src="/assets/images/sfd-patch.png" alt="logo" class="h-10 md:h-10 lg:h-12 mr-4">
+        <h2 class="text-primary font-sans font-extrabold text-center text-2xl md:text-3xl lg:text-4xl">Ponentes</h2>
     </div>
     <app-speaker-card
         class="w-10/12 flex justify-center items-center"
@@ -10,6 +10,7 @@
         [role]="speaker.role"
         [image]="speaker.img"
         [description]="speaker.description"
+        [links]="speaker.social"
         [index]="i">
     </app-speaker-card>
 </section>
