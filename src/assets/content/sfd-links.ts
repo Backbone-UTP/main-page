@@ -39,7 +39,7 @@ export const headerLinks25: Header[] = [
     title: 'Agenda',
     label: 'agenda',
     url: '/events/software-freedom-day-2025/',
-    fragment: '',
+    fragment: 'agenda',
   }
 ];
 

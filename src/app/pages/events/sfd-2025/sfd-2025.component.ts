@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { SFD2025HeroComponent } from './components/hero/hero.component';
 import { SFDHeaderComponent } from './components/header/header.component';
 import { agenda25, features } from 'src/assets/content/sfd-features';
-import { FeaturesComponent } from './components/features/features.component';
 import {
   Feature,
   TimelineEvent,
@@ -13,8 +12,6 @@ import { LogosListComponent } from '../../../shared/components/logos-list/logos-
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
 import { footerLinks, headerLinks25 } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
-import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
-import { ButtonComponent } from "./components/button/button.component";
 import { AboutEventComponent } from './components/about-event/about-event.component';
 import { GalleryComponent } from '../../../shared/components/gallery/gallery.component';
 import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
@@ -26,11 +23,9 @@ import {TeamSectionComponent} from "./components/team-section/team-section.compo
   imports: [
     SFD2025HeroComponent,
     SFDHeaderComponent,
-    FeaturesComponent,
     LogosListComponent,
     FooterComponent,
     // CallToActionComponent,
-    ButtonComponent,
     AboutEventComponent,
     GalleryComponent,
     TeamSectionComponent,
