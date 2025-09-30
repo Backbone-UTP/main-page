@@ -3,92 +3,63 @@
 
   <div class="border-2 border-[#F9C71D] w-auto h-auto rounded-md">
     <div
-      class="border-2 border-[#F99D1D] w-auto h-auto rounded-md m-1 md:m-1.5"
-    >
+      class="border-2 border-[#F99D1D] w-auto h-auto rounded-md m-1 md:m-1.5">
       <div
-        class="border-2 border-[#FF6A27] w-auto h-auto rounded-md m-1 md:m-1.5"
-      >
+        class="border-2 border-[#FF6A27] w-auto h-auto rounded-md m-1 md:m-1.5">
         <div
-          class="border-2 border-[#6B3918] w-auto h-auto rounded-md m-1 md:m-1.5"
-        >
+          class="border-2 border-[#6B3918] w-auto h-auto rounded-md m-1 md:m-1.5">
           <div
-            class="border-0 md:border-2 border-[#441F19] w-auto h-auto rounded-md m-1 md:m-1.5"
-          >
+            class="border-0 md:border-2 border-[#441F19] w-auto h-auto rounded-md m-1 md:m-1.5">
             <app-sfd-hero></app-sfd-hero>
 
             <p class="text-center font-semibold">
               ¿Quieres compartir tus ideas?
             </p>
             <section
-              class="my-5 bg-primary py-8 text-center m-auto mr-auto px-4 flex justify-center gap-5"
-            >
+              class="my-5 bg-primary py-8 text-center m-auto mr-auto px-4 flex justify-center gap-5">
               <!--Añadir componente charlas-->
               <app-button
                 variant="secondary"
                 target="_blank"
                 className="bg-white dark:bg-slate-900"
                 [text]="'Postular charla'"
-                href="https://forms.gle/nuzPku68xgGKhy5N6"
-              ></app-button>
+                href="https://forms.gle/nuzPku68xgGKhy5N6"></app-button>
             </section>
             <section id="about">
               <app-features
                 [title]="aboutTitle"
                 [subtitle]="aboutSubTitle"
-                [features]="aboutFeatures"
-              ></app-features>
+                [features]="aboutFeatures"></app-features>
             </section>
-            <section class="flex flex-col gap-2 py-20">
-              <h2
-                class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl w-full text-center"
-              >
-                Equipo
-              </h2>
-              <div
-                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 py-5 mx-auto"
-              >
-                @for (person of staff; track person) {
-                <app-profile-card
-                  [name]="person.name"
-                  [role]="person.role"
-                  [image]="person.image"
-                  [links]="person.links"
-                ></app-profile-card>
-                }
-              </div>
-            </section>
+            <!-- Team Section -->
+            <app-team-section></app-team-section>
             <section class="flex flex-col gap-2 py-20 " id="agenda">
-    <div class="flex items-center gap-4 px-4 lg:gap-8 lg:px-8 bg-[#231515] h-20">
-      <img  
-        src="assets/images/patch_small.png" 
-        alt="SFD 2025" class=" h-8 lg:h-10"
-      >
-      <h2 class="text-balance text-lg md:text-xl lg:text-2xl  font-bold text-neutral-200 w-full">
-        AGENDA
-      </h2>
-    </div>
-    <!-- <p
-      class="text-pretty text-neutral-700 dark:text-neutral-400 text-center text-sm">
-      La agenda pueden estar sujeta a cambios a medida que se confirman los
-      detalles de las charlas.
-    </p> -->
-    <app-timeline [timelineItems]="sfdAgenda"></app-timeline>
-  </section>
+              <div
+                class="flex items-center gap-4 px-4 lg:gap-8 lg:px-8 bg-[#231515] h-20">
+                <img
+                  src="assets/images/patch_small.png"
+                  alt="SFD 2025" class=" h-8 lg:h-10">
+                <h2
+                  class="text-balance text-lg md:text-xl lg:text-2xl  font-bold text-neutral-200 w-full">
+                  AGENDA
+                </h2>
+              </div>
+              <app-timeline [timelineItems]="sfdAgenda"></app-timeline>
+            </section>
+
             <section id="gallery">
               <app-gallery
                 [title]="'Momentos destacados'"
                 [subtitle]="
                   'Así se vivieron las versiones anteriores del Software Freedom Day en Pereira'
                 "
-                [images]="galleryImages"
-              ></app-gallery>
+                [images]="galleryImages"></app-gallery>
             </section>
             <section class="flex flex-col gap-2 py-20" id="supporters">
               <app-logos-list
                 [title]="'Invitan'"
                 subtitle="Estas organizaciones también hacen posible el evento"
-                [logos]="supporters"
-              ></app-logos-list>
+                [logos]="supporters"></app-logos-list>
             </section>
 
             <app-footer [socialLinks]="footerLinks"></app-footer>
