@@ -14,6 +14,8 @@ import { footerLinks, headerLinks25 } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { ButtonComponent } from "./components/button/button.component";
+import { UnirseComunidadComponent } from './components/unirse-comunidad/unirse-comunidad.component';
+import { IconComponent } from '../../../shared/components/icons/icons.component';
 import { AboutEventComponent } from './components/about-event/about-event.component';
 import { GalleryComponent } from '../../../shared/components/gallery/gallery.component';
 import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
@@ -32,6 +34,8 @@ import { SubtitleComponent } from './components/subtitle/subtitle.component';
     // CallToActionComponent,
     SubtitleComponent,
     ButtonComponent,
+    UnirseComunidadComponent,
+    IconComponent,
     AboutEventComponent,
     GalleryComponent,
     TeamSectionComponent

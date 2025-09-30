@@ -2,20 +2,14 @@
   <app-sfd-header [navItems]="headerLinks"></app-sfd-header>
 
   <div class="border-2 border-[#F9C71D] w-auto h-auto rounded-md">
-    <div
-      class="border-2 border-[#F99D1D] w-auto h-auto rounded-md m-1 md:m-1.5"
-    >
-      <div
-        class="border-2 border-[#FF6A27] w-auto h-auto rounded-md m-1 md:m-1.5"
-      >
-        <div
-          class="border-2 border-[#6B3918] w-auto h-auto rounded-md m-1 md:m-1.5"
-        >
-          <div
-            class="border-0 md:border-2 border-[#441F19] w-auto h-auto rounded-md m-1 md:m-1.5"
-          >
+    <div class="border-2 border-[#F99D1D] w-auto h-auto rounded-md m-1 md:m-1.5">
+      <div class="border-2 border-[#FF6A27] w-auto h-auto rounded-md m-1 md:m-1.5">
+        <div class="border-2 border-[#6B3918] w-auto h-auto rounded-md m-1 md:m-1.5">
+          <div class="border-0 md:border-2 border-[#441F19] w-auto h-auto rounded-md m-1 md:m-1.5">
+            <!-- Hero Section -->
             <app-sfd-hero></app-sfd-hero>
 
+            <!-- About Event Section -->
             <app-about-event></app-about-event>
             
             <p class="text-center font-semibold">
@@ -24,28 +18,6 @@
             <section
               class="my-5 bg-primary py-8 text-center m-auto mr-auto px-4 flex justify-center gap-5"
             >
-              <app-button
-                variant="secondary"
-                target="_blank"
-                className="bg-white dark:bg-slate-900"
-                [text]="'Postular charla'"
-                href="https://forms.gle/nuzPku68xgGKhy5N6"
-              ></app-button>
-            </section>
-            <section id="about">
-              <app-features
-                [title]="aboutTitle"
-                [subtitle]="aboutSubTitle"
-                [features]="aboutFeatures"
-              ></app-features>
-            </section>
-            <p class="text-center font-semibold">
-              ¿Quieres compartir tus ideas?
-            </p>
-            <section
-              class="my-5 bg-primary py-8 text-center m-auto mr-auto px-4 flex justify-center gap-5"
-            >
-              <!--Añadir componente charlas-->
               <app-button
                 variant="secondary"
                 target="_blank"
@@ -77,6 +49,10 @@
                 [images]="galleryImages"
               ></app-gallery>
             </section>
+
+            <!-- Unirse a la comunidad -->
+            <app-unirse-comunidad></app-unirse-comunidad>
+
             <section class="flex flex-col gap-2 py-20" id="supporters">
               <app-logos-list
                 [title]="'Invitan'"
