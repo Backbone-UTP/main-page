@@ -17,7 +17,7 @@ export const staff2024 = [
   {
     name: 'Jhon A. Gaviria',
     role: 'Ing. Sistemas, Backend Developer',
-    image: '/assets/images/staff_2.jpeg',
+    image: '/assets/images/staff_2.jpg',
     links: [
       {
         name: 'linkedin' as Icon,
@@ -29,7 +29,7 @@ export const staff2024 = [
   {
     name: 'Sergio Estrella',
     role: 'Est. Ing. Sistemas, Fullstack Developer',
-    image: '/assets/images/staff_0.jpeg',
+    image: '/assets/images/staff_0.jpg',
     links: [
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/djkde' },
       { name: 'github' as Icon, url: 'https://github.com/Djkde01' },
@@ -38,7 +38,7 @@ export const staff2024 = [
   {
     name: 'Jose F. Duarte',
     role: 'Est. Ing. Sistemas, GitHub Campus Expert',
-    image: '/assets/images/staff_3.jpeg',
+    image: '/assets/images/staff_3.jpg',
     links: [
       {
         name: 'linkedin' as Icon,
@@ -65,7 +65,7 @@ export const staff2025 = [
   {
     name: 'Jhon A. Gaviria',
     role: 'Coordinación y Desarrollo Web',
-    image: '/assets/images/staff_2.jpeg',
+    image: '/assets/images/staff_2.jpg',
     links: [
       {
         name: 'linkedin' as Icon,
@@ -76,8 +76,8 @@ export const staff2025 = [
   },
   {
     name: 'Sergio D. Estrella',
-    role: 'Streaming y Lead Desarrollo Web',
-    image: '/assets/images/staff_0.jpeg',
+    role: 'Streaming y Líder Desarrollo Web',
+    image: '/assets/images/staff_0.jpg',
     links: [
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/djkde' },
       { name: 'github' as Icon, url: 'https://github.com/Djkde01' },
@@ -86,7 +86,7 @@ export const staff2025 = [
   {
     name: 'Jose F. Duarte',
     role: 'Promotor',
-    image: '/assets/images/staff_3.jpeg',
+    image: '/assets/images/staff_3.jpg',
     links: [
       {
         name: 'linkedin' as Icon,
@@ -98,7 +98,7 @@ export const staff2025 = [
   {
     name: 'Juan A. Pérez',
     role: 'Logística',
-    image: '/assets/images/staff_4.jpeg',
+    image: '/assets/images/staff_4.jpg',
     links: [
       {
         name: 'linkedin' as Icon,
@@ -110,7 +110,7 @@ export const staff2025 = [
   {
     name: 'Juan D. Álvarez',
     role: 'Streaming y Desarrollo Web',
-    image: '/assets/images/staff_5.jpeg',
+    image: '/assets/images/staff_5.jpg',
     links: [
       {
         name: 'linkedin' as Icon,

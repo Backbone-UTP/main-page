@@ -7,7 +7,7 @@ import {
   Feature,
   TimelineEvent,
 } from 'src/app/shared/interfaces/features.interface';
-import { ProfileCardComponent } from '../../../shared/components/profile-card/profile-card.component';
+import { ProfileCardComponent } from 'src/app/pages/events/sfd-2024/components/profile-card/profile-card.component';
 import { staff2024, supporters2024 } from 'src/assets/content/sfd.people';
 
 import { TimelineComponent } from './components/timeline/timeline.component';
