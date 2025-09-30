@@ -31,7 +31,10 @@
             </section>
 
             <!-- Team Section -->
-            <app-team-section></app-team-section>
+            <section>
+              <app-subtitle [subtitle]="'Equipo'"></app-subtitle>
+              <app-team-section></app-team-section>
+            </section>
 
             <section id="gallery">
               <app-gallery
@@ -41,6 +44,10 @@
                 "
                 [images]="galleryImages"></app-gallery>
             </section>
+
+            <!-- Unirse a la comunidad -->
+            <app-unirse-comunidad></app-unirse-comunidad>
+
             <section class="flex flex-col gap-2 py-20" id="supporters">
               <app-logos-list
                 [title]="'Invitan'"
