@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { SFD2025HeroComponent } from './components/hero/hero.component';
 import { SFDHeaderComponent } from './components/header/header.component';
-import { Header } from 'src/app/shared/interfaces/header.interface';
-import { agenda, agenda25, features } from 'src/assets/content/sfd-features';
+import { agenda25, features } from 'src/assets/content/sfd-features';
 import { FeaturesComponent } from './components/features/features.component';
 import {
   Feature,
@@ -18,7 +17,6 @@ import { ButtonComponent } from './components/button/button.component';
 import { GalleryComponent } from '../../../shared/components/gallery/gallery.component';
 import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
 import {TeamSectionComponent} from "./components/team-section/team-section.component";
-import { ProfileCardComponent } from 'src/app/shared/components/profile-card/profile-card.component';
 
 @Component({
   selector: 'app-sfd-2025',
@@ -32,7 +30,6 @@ import { ProfileCardComponent } from 'src/app/shared/components/profile-card/pro
     ButtonComponent,
     GalleryComponent,
     TeamSectionComponent,
-    ProfileCardComponent,
     TimelineComponent,
 ],
   templateUrl: './sfd-2025.component.html',
