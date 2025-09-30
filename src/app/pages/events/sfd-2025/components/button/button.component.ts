@@ -1,4 +1,3 @@
-import { NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 interface Variants {
@@ -10,9 +9,8 @@ interface Variants {
 }
 
 @Component({
-  selector: 'app-button', 
+  selector: 'app-button',
   standalone: true,
-  // imports: [NgClass],
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
 })
@@ -24,9 +22,9 @@ export class ButtonComponent {
   @Input() href = '';
 
   variants: Variants = {
-    primary: 'btn-primary',
-    secondary: 'btn-secondary',
-    tertiary: 'btn btn-tertiary',
+    primary: 'btn-primary-2025',
+    secondary: 'btn-secondary-2025',
+    tertiary: 'btn-2025 btn-tertiary-2025',
     link: 'cursor-pointer hover:text-primary',
   };
 

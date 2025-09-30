@@ -1,50 +1,48 @@
 import { Component } from '@angular/core';
 import { SFD2025HeroComponent } from './components/hero/hero.component';
 import { SFDHeaderComponent } from './components/header/header.component';
-import { Header } from 'src/app/shared/interfaces/header.interface';
 import { agenda, features } from 'src/assets/content/sfd-features';
 import { FeaturesComponent } from './components/features/features.component';
 import {
   Feature,
   TimelineEvent,
 } from 'src/app/shared/interfaces/features.interface';
-import { ProfileCardComponent } from '../../../shared/components/profile-card/profile-card.component';
 import { staff2025, supporters2025 } from 'src/assets/content/sfd.people';
-import { NgFor } from '@angular/common';
-import { TimelineComponent } from '../../../shared/components/timeline/timeline.component';
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
-import { SectionRightComponent } from './components/section-right/section-right.component';
-import { footerLinks, headerLinks } from 'src/assets/content/sfd-links';
+import { footerLinks, headerLinks25 } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
 import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
 import { ButtonComponent } from "./components/button/button.component";
 import { UnirseComunidadComponent } from './components/unirse-comunidad/unirse-comunidad.component';
 import { IconComponent } from '../../../shared/components/icons/icons.component';
+import { AboutEventComponent } from './components/about-event/about-event.component';
+import { GalleryComponent } from '../../../shared/components/gallery/gallery.component';
+import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
+import {TeamSectionComponent} from "./components/team-section/team-section.component";
 
 @Component({
-  selector: 'app-sfd-2024',
+  selector: 'app-sfd-2025',
   standalone: true,
   imports: [
     SFD2025HeroComponent,
     SFDHeaderComponent,
     FeaturesComponent,
-    ProfileCardComponent,
-    NgFor,
-    TimelineComponent,
     LogosListComponent,
-    // SectionRightComponent,
     FooterComponent,
     // CallToActionComponent,
     ButtonComponent,
     UnirseComunidadComponent,
-    IconComponent
+    IconComponent,
+    AboutEventComponent,
+    GalleryComponent,
+    TeamSectionComponent
 ],
   templateUrl: './sfd-2025.component.html',
   styleUrl: './sfd-2025.component.scss',
 })
 export class SFD2025Component {
-  headerLinks = headerLinks;
+  headerLinks = headerLinks25;
 
   footerLinks = footerLinks;
 
@@ -63,4 +61,13 @@ export class SFD2025Component {
   sfdAgenda: TimelineEvent[] = agenda;
 
   supporters: Logo[] = supporters2025;
+
+  galleryImages = sfdGalleryImages;
+  constructor() {
+    this.enableDarkMode();
+  }
+  enableDarkMode(): void {
+    localStorage.setItem('theme', 'dark');
+    document.documentElement.classList.add('dark');
+  }
 }
