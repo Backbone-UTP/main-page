@@ -13,7 +13,9 @@ import { LogosListComponent } from '../../../shared/components/logos-list/logos-
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
 import { footerLinks, headerLinks25 } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
-import { ButtonComponent } from './components/button/button.component';
+import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
+import { ButtonComponent } from "./components/button/button.component";
+import { AboutEventComponent } from './components/about-event/about-event.component';
 import { GalleryComponent } from '../../../shared/components/gallery/gallery.component';
 import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
 import {TeamSectionComponent} from "./components/team-section/team-section.component";
@@ -27,7 +29,9 @@ import {TeamSectionComponent} from "./components/team-section/team-section.compo
     FeaturesComponent,
     LogosListComponent,
     FooterComponent,
+    // CallToActionComponent,
     ButtonComponent,
+    AboutEventComponent,
     GalleryComponent,
     TeamSectionComponent,
     TimelineComponent,
