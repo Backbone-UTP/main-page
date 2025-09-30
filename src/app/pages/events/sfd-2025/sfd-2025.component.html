@@ -10,12 +10,16 @@
           class="border-2 border-[#6B3918] w-auto h-auto rounded-md m-1 md:m-1.5">
           <div
             class="border-0 md:border-2 border-[#441F19] w-auto h-auto rounded-md m-1 md:m-1.5">
+            <!-- Hero Section -->
             <app-sfd-hero></app-sfd-hero>
 
+            <!-- About Event Section -->
             <section id="about">
+              <app-subtitle [subtitle]="'Sobre el evento'"></app-subtitle>
               <app-about-event></app-about-event>
             </section>
 
+            <!-- Agenda Section -->
             <section class="flex flex-col gap-2 py-20 " id="agenda">
               <app-subtitle [subtitle]="'Agenda'"></app-subtitle>
               <app-timeline [timelineItems]="sfdAgenda"></app-timeline>
@@ -27,6 +31,7 @@
               <app-team-section></app-team-section>
             </section>
 
+            <!-- Gallery Section -->
             <section id="gallery">
               <app-gallery
                 [title]="'Momentos destacados'"
