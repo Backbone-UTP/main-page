@@ -1,0 +1,22 @@
+.text-shadow-layered-opensans {
+  // Color base: Un amarillo más claro que el anterior, similar al deseado.
+  color: #FFDA5B; 
+  
+  // Color de sombra: Rojo-naranja vibrante.
+  $shadow-color: #FF5722; 
+  
+  // Color de la sombra negra
+  $black-shadow: #000000;
+  
+  text-shadow: 
+    // Capa 1: Sombra negra sutil (desplazada un poco más que la naranja)
+    -5px -1px 0px $black-shadow,
+    
+    -10px -1px 0px $shadow-color, 
+    
+    // // Capa 3: Sombra naranja más desplazada
+    -8px -1px 0px $shadow-color, 
+    
+    // // Capa 4: Sombra naranja más profunda
+    // -6px -6px 0px $shadow-color,
+}
