@@ -41,8 +41,23 @@
                 [images]="galleryImages"></app-gallery>
             </section>
 
-            <!-- Unirse a la comunidad -->
-            <app-unirse-comunidad></app-unirse-comunidad>
+             <section class="flex flex-col gap-2 py-20" id="supporters">
+              <app-subtitle [subtitle]="'PATROCINADOR'"></app-subtitle>
+              <div class="mt-12 flex justify-center items-center gap-3 w-full italic">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-extrabold font-[Open Sans] text-center">
+                  <span class="text-white mr-4">¡GRACIAS</span>
+                  <app-icon
+                    iconName="github-logo"
+                    [properties]="{
+                    id: 'github-logo',
+                    class: 'inline-block w-28 lg:w-40 transition-all duration-300 ease-in-out text-white'}">
+                  </app-icon>
+                  <span class="text-white ml-4">POR CREER</span><br />
+                  <span class="text-[#F9C71D] italic font-black">EN EL SOFTWARE FREEDOM</span><br />
+                  <span class="text-[#FF6A27] italic font-black">DAY PEREIRA!</span>
+                </h2>
+              </div>
+            </section>
 
             <section class="flex flex-col gap-2 py-20" id="supporters">
               <app-logos-list
@@ -50,6 +65,9 @@
                 subtitle="Estas organizaciones también hacen posible el evento"
                 [logos]="supporters"></app-logos-list>
             </section>
+                
+            <!-- Unirse a la comunidad -->
+            <app-unirse-comunidad></app-unirse-comunidad>
 
             <app-footer [socialLinks]="footerLinks"></app-footer>
           </div>
