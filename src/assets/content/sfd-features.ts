@@ -167,7 +167,7 @@ export const agenda25: TimelineEvent[] = [
   {
     name: 'Jose Duarte',
     talk: 'No más requirements.txt: UV, el Gestor Ultrarápido que Unifica tu Stack Python',
-    time: '1030 AM - 11:00 AM'
+    time: '10:30 AM - 11:00 AM'
   },
   {
     name: 'Juan Alejandro Pérez',
