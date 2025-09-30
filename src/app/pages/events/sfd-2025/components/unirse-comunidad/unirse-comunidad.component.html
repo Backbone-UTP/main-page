@@ -1,22 +1,20 @@
 
-<section class="p-12 flex justify-center items-center text-center flex-col">
-    <div class="flex flex-col gap-[20px] h-147 w-656">
-        <h2 class="font-[Open Sans] font-[800] italic text-[44px] leading-[64px]">
+<section class="p-6 sm:p-8 md:p-12 flex justify-center items-center text-center flex-col">
+    <div class="flex flex-col gap-5 md:gap-8">
+        <h2 class="font-[Open Sans] font-[800] italic text-3xl md:text-5xl lg:text-6xl leading-[1.2]">
             <span class="text-[#ffc107]">Sé parte de nuestro</span><br>
             <span class="text-[#FF6A27]"> Semillero y</span>
             <span class="text-white"> Comunidad</span>
         </h2>
-        <div class="flex items-center text-center gap-[20px]">
-            <app-icon iconName="backbone-logo" [properties]="{ id: 'backbone-logo', class: 'md:w-60 w-40 transition-all duration-300 ease-in-out text-gray-700 dark:text-gray-200' }">
-            </app-icon>
-
+         <div class="flex flex-col md:flex-row items-center justify-center gap-5 md:gap-8">
+            <app-icon iconName="backbone-logo" [properties]="{ id: 'backbone-logo', class: 'w-36 md:w-44 lg:w-52' }"></app-icon>
             <app-button
-            variant="primary"
-            target="_blank"
-            className="bg-[#FF6A27] border border-[#FF6A27] hover:bg-[#e67600] hover:border-[#e67600] text-white"
-            [text]="'Unirse a la comunidad'"
-            href="#"
-        ></app-button>
+                variant="primary"
+                target="_blank"
+                className="bg-[#FF6A27] border border-[#FF6A27] hover:bg-[#e67600] hover:border-[#e67600] text-white px-8 py-4 text-base md:text-lg"
+                [text]="'Unirse a la comunidad'"
+                href="https://github.com/Backbone-UTP">
+            </app-button>
         </div>
     </div>
 </section>
