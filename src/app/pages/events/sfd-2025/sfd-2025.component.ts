@@ -20,6 +20,7 @@ import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
 import {TeamSectionComponent} from "./components/team-section/team-section.component";
 import {IconComponent} from "../../../shared/components/icons/icons.component";
 import {ProfileCardComponent} from "../../../shared/components/profile-card/profile-card.component";
+import { SubtitleComponent } from './components/subtitle/subtitle.component';
 
 @Component({
   selector: 'app-sfd-2025',
@@ -31,12 +32,14 @@ import {ProfileCardComponent} from "../../../shared/components/profile-card/prof
     LogosListComponent,
     FooterComponent,
     // CallToActionComponent,
+    SubtitleComponent,
     ButtonComponent,
     IconComponent,
     AboutEventComponent,
     GalleryComponent,
     TeamSectionComponent,
-    ProfileCardComponent
+    ProfileCardComponent,
+    SubtitleComponent,
 ],
   templateUrl: './sfd-2025.component.html',
   styleUrl: './sfd-2025.component.scss',
