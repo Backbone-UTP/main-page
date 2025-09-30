@@ -165,6 +165,11 @@ export const agenda25: TimelineEvent[] = [
     time: '10:00 AM - 10:30 AM'
   },
   {
+    name: 'Juan Alejandro Pérez',
+    talk: 'FLOSS en la Academia y la Industria: Importancia, Reto y Oportunidades',
+    time: '11:00 AM - 11:30 AM'
+  },
+  {
     name: 'Jacques Duflos',
     talk: 'Programar en colaboración con git, o cómo reemplazar el CTRL+S por GIT COMMIT',
     time: '11:30 AM - 12:00 PM'
