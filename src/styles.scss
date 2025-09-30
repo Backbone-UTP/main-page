@@ -2,6 +2,9 @@
 @use "tailwindcss/components";
 @use "tailwindcss/utilities";
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+
 /* Paleta base (tema claro) */
 :root {
   --bg-solid: #f8fafc; /* slate-50-ish */
@@ -103,6 +106,15 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  font-synthesis: none;
+  -webkit-appearance: none;
+  text-size-adjust: none;
+  size-adjust: none;
+  text-size-adjust: initial;
 }
 
 .font-superblack {
