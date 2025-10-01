@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ProfileCardComponent} from '../../../../../shared/components/profile-card/profile-card.component';
+import {ProfileCardComponent} from 'src/app/pages/events/sfd-2025/components/profile-card/profile-card.component';
 import { staff2025 } from 'src/assets/content/sfd.people';
 
 @Component({

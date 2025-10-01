@@ -14,26 +14,15 @@
             <app-sfd-hero></app-sfd-hero>
 
             <!-- About Event Section -->
-            <app-about-event></app-about-event>
-
-            <p class="text-center font-semibold">
-              ¿Quieres compartir tus ideas?
-            </p>
-            <section
-              class="my-5 bg-primary py-8 text-center m-auto mr-auto px-4 flex justify-center gap-5">
-              <!--Añadir componente charlas-->
-              <app-button
-                variant="secondary"
-                target="_blank"
-                className="bg-white dark:bg-slate-900"
-                [text]="'Postular charla'"
-                href="https://forms.gle/nuzPku68xgGKhy5N6"></app-button>
-            </section>
             <section id="about">
-              <app-features
-                [title]="aboutTitle"
-                [subtitle]="aboutSubTitle"
-                [features]="aboutFeatures"></app-features>
+              <app-subtitle [subtitle]="'Sobre el evento'"></app-subtitle>
+              <app-about-event></app-about-event>
+            </section>
+
+            <!-- Agenda Section -->
+            <section class="flex flex-col gap-2 py-20 " id="agenda">
+              <app-subtitle [subtitle]="'Agenda'"></app-subtitle>
+              <app-timeline [timelineItems]="sfdAgenda"></app-timeline>
             </section>
 
             <!-- Team Section -->
@@ -42,6 +31,7 @@
               <app-team-section></app-team-section>
             </section>
 
+            <!-- Gallery Section -->
             <section id="gallery">
               <app-gallery
                 [title]="'Momentos destacados'"
@@ -51,8 +41,27 @@
                 [images]="galleryImages"></app-gallery>
             </section>
 
-            <!-- Unirse a la comunidad -->
-            <app-unirse-comunidad></app-unirse-comunidad>
+            <section class="flex flex-col gap-2 py-20" id="supporters">
+              <app-subtitle [subtitle]="'PATROCINADOR'"></app-subtitle>
+              <div
+                class="mt-12 flex justify-center items-center gap-3 w-full italic">
+                <h2
+                  class="text-2xl md:text-3xl lg:text-4xl font-extrabold font-[Open Sans] text-center">
+                  <span class="text-white mr-4">¡GRACIAS</span>
+                  <app-icon
+                    iconName="github-logo"
+                    [properties]="{
+                    id: 'github-logo',
+                    class: 'inline-block w-28 lg:w-40 transition-all duration-300 ease-in-out text-white'}">
+                  </app-icon>
+                  <span class="text-white ml-4">POR CREER</span><br />
+                  <span class="text-[#F9C71D] italic font-black">EN EL SOFTWARE
+                    FREEDOM</span><br />
+                  <span class="text-[#FF6A27] italic font-black">DAY
+                    PEREIRA!</span>
+                </h2>
+              </div>
+            </section>
 
             <section class="flex flex-col gap-2 py-20" id="supporters">
               <app-logos-list
@@ -60,6 +69,9 @@
                 subtitle="Estas organizaciones también hacen posible el evento"
                 [logos]="supporters"></app-logos-list>
             </section>
+
+            <!-- Unirse a la comunidad -->
+            <app-unirse-comunidad></app-unirse-comunidad>
 
             <app-footer [socialLinks]="footerLinks"></app-footer>
           </div>

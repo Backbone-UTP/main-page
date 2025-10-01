@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IconComponent } from '../icons/icons.component';
+import { IconComponent } from 'src/app/shared/components/icons/icons.component';
 
 import { LinkItem } from 'src/app/shared/interfaces/link-item.interface';
 
