@@ -14,16 +14,16 @@
     }
   </div>
   <div
-    class="grid grid-cols-2 md:flex md:items-center md:justify-center gap-y-2 lg:gap-x-24 bg-primary dark:bg-primary py-4"
+    class="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap md:justify-center lg:flex items-center justify-center md:gap-y-2 gap-2 sm:gap-8 md:gap-16 lg:gap-24 bg-primary dark:bg-primary py-4"
   >
     @for (item of logos; track item) {
     <a
-      class="mx-auto w-32 py-3 sm:mx-0 lg:w-40 lg:py-5 hover:scale-105 transition-all duration-500"
+      class=" items-center justify-center mx-auto w-32 py-3 px-3 sm:mx-0 lg:w-40 lg:py-5 hover:scale-105 transition-all duration-500"
       [href]="item.url"
       target="_blank"
     >
       <img
-        class="drop-shadow-lg w-[700px] h-[80px] object-scale-down mx-auto"
+        class="drop-shadow-lg w-[700px] h-[80px] object-scale-down "
         [src]="item.image"
         [alt]="item.alt"
       />

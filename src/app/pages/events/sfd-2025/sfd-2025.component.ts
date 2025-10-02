@@ -1,36 +1,46 @@
 import { Component } from '@angular/core';
 import { SFD2025HeroComponent } from './components/hero/hero.component';
 import { SFDHeaderComponent } from './components/header/header.component';
-import { agenda, features } from 'src/assets/content/sfd-features';
-import { FeaturesComponent } from './components/features/features.component';
+import { agenda25, features } from 'src/assets/content/sfd-features';
 import {
   Feature,
   TimelineEvent,
 } from 'src/app/shared/interfaces/features.interface';
-import { ProfileCardComponent } from '../../../shared/components/profile-card/profile-card.component';
 import { staff2025, supporters2025 } from 'src/assets/content/sfd.people';
+import { TimelineComponent } from '../sfd-2025/components/timeline/timeline.component';
 import { LogosListComponent } from '../../../shared/components/logos-list/logos-list.component';
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
 import { footerLinks, headerLinks25 } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
 import { ButtonComponent } from "./components/button/button.component";
 import {SpeakersComponent} from "./components/speakers/speakers.component";
+import { UnirseComunidadComponent } from './components/unirse-comunidad/unirse-comunidad.component';
+import { AboutEventComponent } from './components/about-event/about-event.component';
 import { GalleryComponent } from '../../../shared/components/gallery/gallery.component';
 import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
+import {TeamSectionComponent} from "./components/team-section/team-section.component";
+import { SubtitleComponent } from './components/subtitle/subtitle.component';
+import { IconComponent } from 'src/app/shared/components/icons/icons.component';
+
 @Component({
   selector: 'app-sfd-2025',
   standalone: true,
   imports: [
     SFD2025HeroComponent,
     SFDHeaderComponent,
-    FeaturesComponent,
-    ProfileCardComponent,
     LogosListComponent,
     FooterComponent,
     ButtonComponent,
     SpeakersComponent,
+    SubtitleComponent,
+    UnirseComunidadComponent,
+    IconComponent,
+    AboutEventComponent,
     GalleryComponent,
-  ],
+    TeamSectionComponent,
+    SubtitleComponent,
+    TimelineComponent,
+],
   templateUrl: './sfd-2025.component.html',
   styleUrl: './sfd-2025.component.scss',
 })
@@ -51,7 +61,7 @@ export class SFD2025Component {
 
   staff = staff2025;
 
-  sfdAgenda: TimelineEvent[] = agenda;
+  sfdAgenda: TimelineEvent[] = agenda25;
 
   supporters: Logo[] = supporters2025;
 

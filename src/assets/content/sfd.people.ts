@@ -17,7 +17,7 @@ export const staff2024 = [
   {
     name: 'Jhon A. Gaviria',
     role: 'Ing. Sistemas, Backend Developer',
-    image: '/assets/images/staff_2.jpeg',
+    image: '/assets/images/staff_2.jpg',
     links: [
       {
         name: 'linkedin' as Icon,
@@ -29,7 +29,7 @@ export const staff2024 = [
   {
     name: 'Sergio Estrella',
     role: 'Est. Ing. Sistemas, Fullstack Developer',
-    image: '/assets/images/staff_0.jpeg',
+    image: '/assets/images/staff_0.jpg',
     links: [
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/djkde' },
       { name: 'github' as Icon, url: 'https://github.com/Djkde01' },
@@ -38,7 +38,7 @@ export const staff2024 = [
   {
     name: 'Jose F. Duarte',
     role: 'Est. Ing. Sistemas, GitHub Campus Expert',
-    image: '/assets/images/staff_3.jpeg',
+    image: '/assets/images/staff_3.jpg',
     links: [
       {
         name: 'linkedin' as Icon,
@@ -65,7 +65,7 @@ export const staff2025 = [
   {
     name: 'Jhon A. Gaviria',
     role: 'Coordinación y Desarrollo Web',
-    image: '/assets/images/staff_2.jpeg',
+    image: '/assets/images/staff_2.jpg',
     links: [
       {
         name: 'linkedin' as Icon,
@@ -75,9 +75,9 @@ export const staff2025 = [
     ],
   },
   {
-    name: 'Sergio Estrella',
-    role: 'Streaming y Lead Desarrollo Web',
-    image: '/assets/images/staff_0.jpeg',
+    name: 'Sergio D. Estrella',
+    role: 'Streaming y Líder Desarrollo Web',
+    image: '/assets/images/staff_0.jpg',
     links: [
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/djkde' },
       { name: 'github' as Icon, url: 'https://github.com/Djkde01' },
@@ -86,7 +86,7 @@ export const staff2025 = [
   {
     name: 'Jose F. Duarte',
     role: 'Promotor',
-    image: '/assets/images/staff_3.jpeg',
+    image: '/assets/images/staff_3.jpg',
     links: [
       {
         name: 'linkedin' as Icon,
@@ -98,7 +98,7 @@ export const staff2025 = [
   {
     name: 'Juan A. Pérez',
     role: 'Logística',
-    image: '/assets/images/staff_4.jpeg',
+    image: '/assets/images/staff_4.jpg',
     links: [
       {
         name: 'linkedin' as Icon,
@@ -110,7 +110,7 @@ export const staff2025 = [
   {
     name: 'Juan D. Álvarez',
     role: 'Streaming y Desarrollo Web',
-    image: '/assets/images/staff_5.jpeg',
+    image: '/assets/images/staff_5.jpg',
     links: [
       {
         name: 'linkedin' as Icon,
@@ -119,6 +119,38 @@ export const staff2025 = [
       { name: 'github' as Icon, url: 'https://github.com/seqenenra08' },
     ],
   },
+  {
+    name: 'Nohora C. Cardozo',
+    role: 'Diseño UX y Desarrollo Web',
+    image: '/assets/images/staff_6.jpg',
+    links: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/nohora-cardozo-6b9101328/',
+      },
+      { name: 'github' as Icon, url: 'https://github.com/notnohora' },
+    ],
+  },
+  {
+    name: 'Luisa M. Bañol',
+    role: 'Publicidad y Diseño',
+    image: '/assets/images/staff_7.jpg',
+    links: [
+      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/luisa-lyu/' },
+    ],
+  },
+  {
+    name: 'Juan M. Rojas',
+    role: 'Staff y Desarrollo Web',
+    image: '/assets/images/staff_8.jpg',
+    links: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://co.linkedin.com/in/juan-manuel-rojas-munoz-a76402359/',
+      },
+      { name: 'github' as Icon, url: 'https://github.com/JuanMa216' },
+    ],
+  }
 ];
 
 export const supporters2024: Logo[] = [
@@ -196,5 +228,17 @@ export const supporters2025: Logo[] = [
     url: 'https://ubuntu-co.com',
     image: '/assets/images/support/ubuntu.jpg',
     alt: 'Logo de Ubuntu',
+  },
+  {
+    name: 'ASE UTP',
+    url: 'https://egresados.utp.edu.co/',
+    image: '/assets/images/support/aseutp.png',
+    alt: 'Logo de ASE UTP',
+  },
+  {
+    name: 'QA Conf',
+    url: 'https://www.qaconf.co/',
+    image: '/assets/images/support/conf.png',
+    alt: 'Logo de QA Conf',
   },
 ];

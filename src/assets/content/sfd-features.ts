@@ -144,6 +144,74 @@ export const agenda: TimelineEvent[] = [
   },
 ];
 
+export const agenda25: TimelineEvent[] = [
+  {
+    name: 'Backbone',
+    talk: 'Registro y Bienvenida',
+    time: '08:00 AM - 08:30 AM'
+  },
+  {
+    name: 'Héctor Jiménez',
+    talk: 'Tu Primer Pipeline GitLab: De Cero a Héroe en una Charla',
+    time: '08:30 AM - 09:00 AM'
+  },
+  {
+    name: 'Steven Mejía',
+    talk: 'La Edad Oscura del Software Libre',
+    time: '09:00 AM - 10:00 AM'
+  },
+  {
+    name: 'SNEIA (Mariana Tellez y Victor Correa)',
+    talk: 'The Future Vision: Modelos Open Source de Visión Artificial y su Aplicación en Neuroinformática',
+    time: '10:00 AM - 10:30 AM'
+  },
+  {
+    name: 'Jose Duarte',
+    talk: 'No más requirements.txt: UV, el Gestor Ultrarápido que Unifica tu Stack Python',
+    time: '10:30 AM - 11:00 AM'
+  },
+  {
+    name: 'Juan Alejandro Pérez',
+    talk: 'FLOSS en la Academia y la Industria: Importancia, Reto y Oportunidades',
+    time: '11:00 AM - 11:30 AM'
+  },
+  {
+    name: 'Jacques Duflos',
+    talk: 'Programar en colaboración con git, o cómo reemplazar el CTRL+S por GIT COMMIT',
+    time: '11:30 AM - 12:00 PM'
+  },
+  {
+    name: 'Break Time',
+    talk: '',
+    time: '12:00 PM - 02:00 PM'
+  },
+  {
+    name: 'Ana López',
+    talk: 'Del Experimento a la Operación: MLflow para Agentes de IA',
+    time: '02:00 - 03:00 PM'
+  },
+  {
+    name: 'Juan Campuzano',
+    talk: 'Model Context Protocol (MCP): El Futuro de la Interoperabilidad en IA',
+    time: '03:30 PM - 04:00 PM'
+   },
+  {
+    name: 'Julián Cárdenas',
+    talk: 'Kali Linux: Tu Puerta de Entrada al Mundo de la Ciberseguridad',
+    time: '04:00 PM - 05:00 PM'
+  },
+  {
+    name: 'Héctor Pulido',
+    talk: 'La IA que Nace del Open Source',
+    time: '05:00 PM - 05:30 PM'
+  },
+  {
+    name: 'Backbone',
+    talk: 'Cierre y palabras del patrocinador',
+    time: '05:30 PM - 06:00 PM'
+  },
+];
+
 export const speakersSFD2025 = [
   {
     name: 'Héctor Jiménez',
@@ -211,7 +279,7 @@ export const speakersSFD2025 = [
   {
     name: 'Jacques Duflos',
     role: 'Ingeniero mecánico y artista',
-    img: '/assets/images/speakerSFD2025/ponentes-06.webp',
+    img: '/assets/images/speakerSFD2025/ponentes-07.webp',
     description:
       'Aficionado de la programación, creador de videojuegos. Profesor de tecnología con cinco años de experiencia.',
     social: [
