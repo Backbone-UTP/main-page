@@ -191,6 +191,11 @@ export const agenda25: TimelineEvent[] = [
     time: '02:00 - 03:00 PM'
   },
   {
+    name: 'Andrés Torres',
+    talk: 'Introducción a Ruby On Rails',
+    time: '03:00 - 03:30 PM'
+  },
+  {
     name: 'Juan Campuzano',
     talk: 'Model Context Protocol (MCP): El Futuro de la Interoperabilidad en IA',
     time: '03:30 PM - 04:00 PM'
