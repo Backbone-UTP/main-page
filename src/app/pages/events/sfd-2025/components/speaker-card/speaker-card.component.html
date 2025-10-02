@@ -1,4 +1,6 @@
-<div class="bg-[#180e0e] w-full sm:w-11/12 p-6 rounded-lg shadow-md shadow-[#FF6A27] flex items-center flex-col gap-4 lg:flex-row lg:gap-6 lg:w-2/3" [ngClass]="{'lg:flex-row-reverse lg:justify-between': index % 2 !== 0}">
+<div class="bg-[#180e0e] w-full sm:w-11/12 p-6 rounded-lg shadow-md shadow-[#FF6A27] flex items-center flex-col gap-4 lg:flex-row lg:gap-6 lg:w-2/3" [ngClass]="{'lg:flex-row-reverse lg:justify-between': index % 2 !== 0}"
+    [routerLink]="'/events/software-freedom-day-2025/'"
+    [fragment]="((index === 2 || index === 3) ? 'SNEIA' : name) + '-timeline'">
 
   <h3 class="text-primary font-sans text-xl font-extrabold md:text-3xl text-center block lg:hidden lg:text-left lg:text-2xl xl:text-3xl">{{ name }}</h3>
 
@@ -12,11 +14,7 @@
 
     <div class="flex flex-col items-center lg:items-start   ">
       <h3 class="text-primary font-sans text-xl font-extrabold text-center hidden lg:block lg:text-left lg:text-2xl xl:text-3xl">
-        <a 
-          [routerLink]="'/events/software-freedom-day-2025/'"
-          [fragment]="((index === 2 || index === 3) ? 'SNEIA' : name) + '-timeline'">
-          {{ name }}
-        </a>
+        {{ name }}
       </h3>
         <div class="flex items-center justify-center gap-1 mb-2 flex-col-reverse lg:flex-row">
           <p class="text-[#93C5FD] font-mono font-bold text-sm text-center md:text-xl lg:text-left lg:text-base xl:text-lg">{{ role }}</p>
