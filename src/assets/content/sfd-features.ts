@@ -224,7 +224,7 @@ export const speakersSFD2025 = [
     ],
   },
   {
-    name: 'Steven Mejia',
+    name: 'Steven Mejía',
     role: 'CEO de Pulsatrix y To Grow',
     img: '/assets/images/speakerSFD2025/ponentes-02.webp',
     description:

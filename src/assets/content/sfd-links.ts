@@ -33,7 +33,7 @@ export const headerLinks25: Header[] = [
     title: 'Ponentes',
     label: 'speakers',
     url: '/events/software-freedom-day-2025/',
-    fragment: '',
+    fragment: 'speakers',
   },
   {
     title: 'Agenda',
