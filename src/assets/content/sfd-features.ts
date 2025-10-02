@@ -220,7 +220,6 @@ export const speakersSFD2025 = [
     description:
       'Me apasionan la seguridad informática, la automatización y la infraestructura como código.',
     social: [
-      { name: 'github' as Icon, url: 'https://github.com/h3ct0rjs' },
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/h3ct0rjs/' }
     ],
   },
@@ -231,7 +230,6 @@ export const speakersSFD2025 = [
     description:
       'Economista, ingeniero de sistema, Magíster en ingeniería de sistemas, emprendedor de base tecnológica',
     social: [
-      { name: 'github' as Icon, url: 'https://github.com/steve-master' },
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/stevenmejia/' }
     ],
   },
@@ -262,7 +260,6 @@ export const speakersSFD2025 = [
     description:
       'Creo en el poder de la inteligencia colectiva, el aprendizaje continuo y la colaboración para construir soluciones que generen impacto real.',
     social: [
-      { name: 'github' as Icon, url: 'https://github.com/josefeldc' },
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/josefeldc/' }
     ],
   },
@@ -272,7 +269,6 @@ export const speakersSFD2025 = [
     img: '/assets/images/speakerSFD2025/ponentes-06.webp',
     description: 'Ingeniero en Sistemas y Computación egresado de la UTP, miembro organizador de comunidades tecnológicas de la ciudad como Pereira Tech Talks, QAConf, FLISOL, SFD, etc. ',
     social: [
-      { name: 'github' as Icon, url: 'https://github.com/mega-barto' },
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/mega-barto/' }
     ],
   },
@@ -283,7 +279,6 @@ export const speakersSFD2025 = [
     description:
       'Aficionado de la programación, creador de videojuegos. Profesor de tecnología con cinco años de experiencia.',
     social: [
-      { name: 'github' as Icon, url: 'https://github.com/jacques.duflos.9' }
     ],
   },
   {
@@ -293,7 +288,6 @@ export const speakersSFD2025 = [
     description:
       'Me apasionan los datos; he trabajado como científica de datos, con experiencia en Machine Learning y Deep Learning.',
     social: [
-      { name: 'github' as Icon, url: 'https://github.com/darkanita' },
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/amlopez81/' }
     ],
   },
@@ -304,7 +298,6 @@ export const speakersSFD2025 = [
     description:
       'Ingeniero de sistemas con +12 años de experiencia como desarrollador. Msc. en Ciencias de la computación y MBA.',
     social: [
-      { name: 'github' as Icon, url: 'https://github.com/elfotografo007' },
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/elfotografo007/' }
     ],
   },
@@ -334,7 +327,6 @@ export const speakersSFD2025 = [
     description:
       'Mi objetivo es crear tecnologías que sean indistinguibles de la magia y que cambien el mundo para mejor.',
     social: [
-      { name: 'github' as Icon, url: 'https://github.com/hector-pulido' },
       { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/hector-pulido-17547369/' }
     ],
   },
