@@ -17,7 +17,8 @@ module.exports = {
         orbitron: ["Orbitron", "sans-serif"],
       },
       screens: {
-        xs: "375px",
+        xss: "375px",
+        xs: "425px",
       },
     },
   },
