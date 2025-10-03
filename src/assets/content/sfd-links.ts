@@ -19,12 +19,12 @@ export const headerLinks: Header[] = [
     label: 'supporters',
     url: '/events/software-freedom-day-2025/',
     fragment: 'supporters',
-  }
+  },
 ];
 
 export const headerLinks25: Header[] = [
   {
-    title: 'Sobre el Evento',
+    title: 'Acerca',
     label: 'about',
     url: '/events/software-freedom-day-2025/',
     fragment: 'about',
@@ -40,7 +40,7 @@ export const headerLinks25: Header[] = [
     label: 'agenda',
     url: '/events/software-freedom-day-2025/',
     fragment: 'agenda',
-  }
+  },
 ];
 
 export const footerLinks: Footer[] = [
