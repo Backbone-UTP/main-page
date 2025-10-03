@@ -2,6 +2,7 @@ import {
   Feature,
   TimelineEvent,
 } from 'src/app/shared/interfaces/features.interface';
+import { Icon } from 'src/app/shared/interfaces/icons.interface';
 
 export const features: Feature[] = [
   {
@@ -147,66 +148,225 @@ export const agenda25: TimelineEvent[] = [
   {
     name: 'Backbone',
     talk: 'Registro y Bienvenida',
-    time: '08:00 AM - 08:30 AM'
+    time: '08:00 AM - 08:30 AM',
   },
   {
     name: 'Héctor Jiménez',
     talk: 'Tu Primer Pipeline GitLab: De Cero a Héroe en una Charla',
-    time: '08:30 AM - 09:00 AM'
+    time: '08:30 AM - 09:00 AM',
   },
   {
     name: 'Steven Mejía',
     talk: 'La Edad Oscura del Software Libre',
-    time: '09:00 AM - 10:00 AM'
+    time: '09:00 AM - 10:00 AM',
   },
   {
     name: 'SNEIA (Mariana Tellez y Victor Correa)',
     talk: 'The Future Vision: Modelos Open Source de Visión Artificial y su Aplicación en Neuroinformática',
-    time: '10:00 AM - 10:30 AM'
+    time: '10:00 AM - 10:30 AM',
   },
   {
     name: 'Jose Duarte',
     talk: 'No más requirements.txt: UV, el Gestor Ultrarápido que Unifica tu Stack Python',
-    time: '10:30 AM - 11:00 AM'
+    time: '10:30 AM - 11:00 AM',
   },
   {
     name: 'Juan Alejandro Pérez',
     talk: 'FLOSS en la Academia y la Industria: Importancia, Reto y Oportunidades',
-    time: '11:00 AM - 11:30 AM'
+    time: '11:00 AM - 11:30 AM',
   },
   {
     name: 'Jacques Duflos',
-    talk: 'Programar en colaboración con git, o cómo reemplazar el CTRL+S por GIT COMMIT',
-    time: '11:30 AM - 12:00 PM'
+    talk: 'Cómo remplazar el CTRL + S por Git Commit: Programar en colaboracion con git',
+    time: '11:30 AM - 12:00 PM',
   },
   {
     name: 'Break Time',
     talk: '',
-    time: '12:00 PM - 02:00 PM'
+    time: '12:00 PM - 02:00 PM',
   },
   {
     name: 'Ana López',
     talk: 'Del Experimento a la Operación: MLflow para Agentes de IA',
-    time: '02:00 - 03:00 PM'
+    time: '02:00 - 03:00 PM',
+  },
+  {
+    name: 'Andrés Torres',
+    talk: 'Introducción a Ruby On Rails',
+    time: '03:00 - 03:30 PM',
   },
   {
     name: 'Juan Campuzano',
     talk: 'Model Context Protocol (MCP): El Futuro de la Interoperabilidad en IA',
-    time: '03:30 PM - 04:00 PM'
-   },
+    time: '03:30 PM - 04:00 PM',
+  },
   {
     name: 'Julián Cárdenas',
     talk: 'Kali Linux: Tu Puerta de Entrada al Mundo de la Ciberseguridad',
-    time: '04:00 PM - 05:00 PM'
+    time: '04:00 PM - 05:00 PM',
   },
   {
     name: 'Héctor Pulido',
     talk: 'La IA que Nace del Open Source',
-    time: '05:00 PM - 05:30 PM'
+    time: '05:00 PM - 05:30 PM',
   },
   {
     name: 'Backbone',
     talk: 'Cierre y palabras del patrocinador',
-    time: '05:30 PM - 06:00 PM'
+    time: '05:30 PM - 06:00 PM',
+  },
+];
+
+export const speakersSFD2025 = [
+  {
+    name: 'Héctor Jiménez',
+    role: 'SRE/DevOps',
+    img: '/assets/images/speakerSFD2025/ponentes-01.webp',
+    description:
+      'Me apasionan la seguridad informática, la automatización y la infraestructura como código.',
+    social: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/h3ct0rjs/',
+      },
+    ],
+  },
+  {
+    name: 'Steven Mejía',
+    role: 'CEO de Pulsatrix y To Grow',
+    img: '/assets/images/speakerSFD2025/ponentes-02.webp',
+    description:
+      'Economista, ingeniero de sistema, Magíster en ingeniería de sistemas, emprendedor de base tecnológica',
+    social: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/stevenmejia/',
+      },
+    ],
+  },
+  {
+    name: 'Mariana Tellez',
+    role: 'Estudiante UTP',
+    img: '/assets/images/speakerSFD2025/ponentes-03.webp',
+    description:
+      'Apasionada por la innovación tecnológica, el diseño y la programación, con interés en proyectos de investigación aplicada.',
+    social: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/mariana-tellez',
+      },
+    ],
+  },
+  {
+    name: 'Víctor Correa',
+    role: 'Estudiante UTP',
+    img: '/assets/images/speakerSFD2025/ponentes-04.webp',
+    description:
+      'Interesado en el desarrollo de soluciones y estrategias tecnológicas innovadoras que impacten positivamente la sociedad y las organizaciones.',
+    social: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/victormcg',
+      },
+    ],
+  },
+  {
+    name: 'Jose Duarte',
+    role: 'AI/LLM Engineer',
+    img: '/assets/images/speakerSFD2025/ponentes-05.webp',
+    description:
+      'Creo en el poder de la inteligencia colectiva, el aprendizaje continuo y la colaboración para construir soluciones que generen impacto real.',
+    social: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/josefeldc/',
+      },
+    ],
+  },
+  {
+    name: 'Juan Alejandro Pérez',
+    role: 'Software Developer',
+    img: '/assets/images/speakerSFD2025/ponentes-06.webp',
+    description:
+      'Ingeniero en Sistemas y Computación egresado de la UTP, miembro organizador de comunidades tecnológicas de la ciudad como Pereira Tech Talks, QAConf, FLISOL, SFD, etc. ',
+    social: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/mega-barto/',
+      },
+    ],
+  },
+  {
+    name: 'Jacques Duflos',
+    role: 'Ingeniero mecánico y artista',
+    img: '/assets/images/speakerSFD2025/ponentes-07.webp',
+    description:
+      'Aficionado de la programación, creador de videojuegos. Profesor de tecnología con cinco años de experiencia.',
+    social: [],
+  },
+  {
+    name: 'Ana López',
+    role: 'SR Partner Solution Architect Data+AI',
+    img: '/assets/images/speakerSFD2025/ponentes-08.webp',
+    description:
+      'Me apasionan los datos; he trabajado como científica de datos, con experiencia en Machine Learning y Deep Learning.',
+    social: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/amlopez81/',
+      },
+    ],
+  },
+  {
+    name: 'Andrés Torres',
+    role: 'Senior Software Engineer',
+    img: '/assets/images/speakerSFD2025/ponentes-09.webp',
+    description:
+      'Ingeniero de sistemas con +12 años de experiencia como desarrollador. Msc. en Ciencias de la computación y MBA.',
+    social: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/elfotografo007/',
+      },
+    ],
+  },
+  {
+    name: 'Juan Campuzano',
+    role: 'Senior Mobile & DevEx Engineer',
+    img: '/assets/images/speakerSFD2025/ponentes-10.webp',
+    description:
+      'Ingeniero de sistemas y desarrollador de software con más de 5 años de experiencia.',
+    social: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/jcampuza2/',
+      },
+    ],
+  },
+  {
+    name: 'Julián Cárdenas',
+    role: 'Fullstack Developer',
+    img: '/assets/images/speakerSFD2025/ponentes-11.webp',
+    description:
+      'Apasionado por la tecnología y el poder transformador del software. Mi propósito es inspirar y construir soluciones que generen impacto real.',
+    social: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/julian-cardenas-392201284/',
+      },
+    ],
+  },
+  {
+    name: 'Héctor Pulido',
+    role: 'Senior Data Scientist',
+    img: '/assets/images/speakerSFD2025/ponentes-12.webp',
+    description:
+      'Mi objetivo es crear tecnologías que sean indistinguibles de la magia y que cambien el mundo para mejor.',
+    social: [
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/hector-pulido-17547369/',
+      },
+    ],
   },
 ];

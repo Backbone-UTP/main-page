@@ -3,10 +3,12 @@ import { Component, inject, Input } from '@angular/core';
 import { TimelineEvent } from 'src/app/shared/interfaces/features.interface';
 import { MatDialog } from '@angular/material/dialog';
 import { CardPresentationComponent } from 'src/app/pages/events/sfd-2024/components/card-presentation/card-presentation.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
+  imports: [RouterLink],
   styleUrls: ['./timeline.component.scss'],
 })
 export class TimelineComponent {

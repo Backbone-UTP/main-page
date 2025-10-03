@@ -1,30 +1,69 @@
 <main class="bg-sfd-2025">
   <app-sfd-header [navItems]="headerLinks"></app-sfd-header>
-
   <div class="border-2 border-[#F9C71D] w-auto h-auto rounded-md">
     <div
-      class="border-2 border-[#F99D1D] w-auto h-auto rounded-md m-1 md:m-1.5">
+      class="border-2 border-[#F99D1D] w-auto h-auto rounded-md m-1 md:m-1.5"
+    >
       <div
-        class="border-2 border-[#FF6A27] w-auto h-auto rounded-md m-1 md:m-1.5">
+        class="border-2 border-[#FF6A27] w-auto h-auto rounded-md m-1 md:m-1.5"
+      >
         <div
-          class="border-2 border-[#6B3918] w-auto h-auto rounded-md m-1 md:m-1.5">
+          class="border-2 border-[#6B3918] w-auto h-auto rounded-md m-1 md:m-1.5"
+        >
           <div
-            class="border-0 md:border-2 border-[#441F19] w-auto h-auto rounded-md m-1 md:m-1.5">
+            class="border-0 md:border-2 border-[#441F19] w-auto h-auto rounded-md m-1 md:m-1.5"
+          >
             <!-- Hero Section -->
             <app-sfd-hero></app-sfd-hero>
 
             <!-- About Event Section -->
             <section id="about">
-              <app-subtitle [subtitle]="'Sobre el evento'"></app-subtitle>
+              <app-subtitle [subtitle]="'Acerca del evento'"></app-subtitle>
               <app-about-event></app-about-event>
             </section>
 
+            <!-- Speakers Section -->
+            <section id="speakers">
+              <app-subtitle [subtitle]="'Ponentes'"></app-subtitle>
+              <app-speakers></app-speakers>
+            </section>
+
             <!-- Agenda Section -->
-            <section class="flex flex-col gap-2 py-20 " id="agenda">
+            <section class="flex flex-col gap-2 py-20" id="agenda">
               <app-subtitle [subtitle]="'Agenda'"></app-subtitle>
               <app-timeline [timelineItems]="sfdAgenda"></app-timeline>
             </section>
-
+            <!-- Sponsors Section -->
+            <section class="flex flex-col gap-2 py-20" id="supporters">
+              <app-subtitle [subtitle]="'Patrocinador'"></app-subtitle>
+              <div
+                class="mt-12 flex justify-center items-center gap-3 w-full italic"
+              >
+                <h2
+                  class="text-2xl md:text-3xl lg:text-4xl font-extrabold font-[Open Sans] text-center"
+                >
+                  <span class="text-white mr-4 flex items-center gap-2"
+                    >¡GRACIAS
+                    <app-icon
+                      iconName="github-logo"
+                      [properties]="{
+                        id: 'github-logo',
+                        class:
+                          'inline-block w-28 lg:w-40 transition-all duration-300 ease-in-out text-white'
+                      }"
+                    >
+                    </app-icon>
+                    POR CREER</span
+                  ><br />
+                  <span class="text-[#F9C71D] italic font-black"
+                    >EN EL SOFTWARE FREEDOM</span
+                  ><br />
+                  <span class="text-[#FF6A27] italic font-black"
+                    >DAY PEREIRA!</span
+                  >
+                </h2>
+              </div>
+            </section>
             <!-- Team Section -->
             <section>
               <app-subtitle [subtitle]="'Equipo'"></app-subtitle>
@@ -33,45 +72,26 @@
 
             <!-- Gallery Section -->
             <section id="gallery">
+              <app-subtitle [subtitle]="'Momentos destacados'"></app-subtitle>
               <app-gallery
                 [title]="'Momentos destacados'"
                 [subtitle]="
                   'Así se vivieron las versiones anteriores del Software Freedom Day en Pereira'
                 "
-                [images]="galleryImages"></app-gallery>
+                [images]="galleryImages"
+              ></app-gallery>
             </section>
 
-            <section class="flex flex-col gap-2 py-20" id="supporters">
-              <app-subtitle [subtitle]="'PATROCINADOR'"></app-subtitle>
-              <div
-                class="mt-12 flex justify-center items-center gap-3 w-full italic">
-                <h2
-                  class="text-2xl md:text-3xl lg:text-4xl font-extrabold font-[Open Sans] text-center">
-                  <span class="text-white mr-4">¡GRACIAS</span>
-                  <app-icon
-                    iconName="github-logo"
-                    [properties]="{
-                    id: 'github-logo',
-                    class: 'inline-block w-28 lg:w-40 transition-all duration-300 ease-in-out text-white'}">
-                  </app-icon>
-                  <span class="text-white ml-4">POR CREER</span><br />
-                  <span class="text-[#F9C71D] italic font-black">EN EL SOFTWARE
-                    FREEDOM</span><br />
-                  <span class="text-[#FF6A27] italic font-black">DAY
-                    PEREIRA!</span>
-                </h2>
-              </div>
-            </section>
+            <!-- Unirse a la comunidad -->
+            <app-unirse-comunidad></app-unirse-comunidad>
 
             <section class="flex flex-col gap-2 py-20" id="supporters">
               <app-logos-list
                 [title]="'Invitan'"
                 subtitle="Estas organizaciones también hacen posible el evento"
-                [logos]="supporters"></app-logos-list>
+                [logos]="supporters"
+              ></app-logos-list>
             </section>
-
-            <!-- Unirse a la comunidad -->
-            <app-unirse-comunidad></app-unirse-comunidad>
 
             <app-footer [socialLinks]="footerLinks"></app-footer>
           </div>

@@ -136,7 +136,10 @@ export const staff2025 = [
     role: 'Publicidad y Diseño',
     image: '/assets/images/staff_7.jpg',
     links: [
-      { name: 'linkedin' as Icon, url: 'https://www.linkedin.com/in/luisa-lyu/' },
+      {
+        name: 'linkedin' as Icon,
+        url: 'https://www.linkedin.com/in/luisa-lyu/',
+      },
     ],
   },
   {
@@ -150,7 +153,7 @@ export const staff2025 = [
       },
       { name: 'github' as Icon, url: 'https://github.com/JuanMa216' },
     ],
-  }
+  },
 ];
 
 export const supporters2024: Logo[] = [
@@ -222,12 +225,6 @@ export const supporters2025: Logo[] = [
     url: 'https://ingenierias.utp.edu.co',
     image: '/assets/images/support/facultad.png',
     alt: 'Logo de Facultad',
-  },
-  {
-    name: 'Ubuntu Colombia',
-    url: 'https://ubuntu-co.com',
-    image: '/assets/images/support/ubuntu.jpg',
-    alt: 'Logo de Ubuntu',
   },
   {
     name: 'ASE UTP',

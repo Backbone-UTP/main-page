@@ -12,6 +12,8 @@ import { LogosListComponent } from '../../../shared/components/logos-list/logos-
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
 import { footerLinks, headerLinks25 } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
+import { ButtonComponent } from "./components/button/button.component";
+import {SpeakersComponent} from "./components/speakers/speakers.component";
 import { UnirseComunidadComponent } from './components/unirse-comunidad/unirse-comunidad.component';
 import { AboutEventComponent } from './components/about-event/about-event.component';
 import { GalleryComponent } from '../../../shared/components/gallery/gallery.component';
@@ -28,6 +30,8 @@ import { IconComponent } from 'src/app/shared/components/icons/icons.component';
     SFDHeaderComponent,
     LogosListComponent,
     FooterComponent,
+    ButtonComponent,
+    SpeakersComponent,
     SubtitleComponent,
     UnirseComunidadComponent,
     IconComponent,
