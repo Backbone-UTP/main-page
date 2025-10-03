@@ -21,6 +21,7 @@ import { sfdGalleryImages } from 'src/assets/content/sfd-gallery';
 import {TeamSectionComponent} from "./components/team-section/team-section.component";
 import { SubtitleComponent } from './components/subtitle/subtitle.component';
 import { IconComponent } from 'src/app/shared/components/icons/icons.component';
+import {SponsorComponent} from "./components/sponsor/sponsor.component";
 
 @Component({
   selector: 'app-sfd-2025',
@@ -40,6 +41,7 @@ import { IconComponent } from 'src/app/shared/components/icons/icons.component';
     TeamSectionComponent,
     SubtitleComponent,
     TimelineComponent,
+    SponsorComponent,
 ],
   templateUrl: './sfd-2025.component.html',
   styleUrl: './sfd-2025.component.scss',
