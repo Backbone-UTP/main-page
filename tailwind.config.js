@@ -16,6 +16,10 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
         orbitron: ["Orbitron", "sans-serif"],
       },
+      screens: {
+        xss: "375px",
+        xs: "425px",
+      },
     },
   },
   darkMode: "selector",
