@@ -91,7 +91,7 @@
   }
 
   .btn-secondary-2025 {
-    @apply btn-2025;
+    @apply btn-2025 font-semibold bg-[#facc15] border-[#facc15] hover:bg-[#d6b325] hover:border-white text-black drop-shadow-sm;
   }
 
   .btn-tertiary-2025 {
