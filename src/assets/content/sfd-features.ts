@@ -198,12 +198,12 @@ export const agenda25: TimelineEvent[] = [
   {
     name: 'Juan Campuzano',
     talk: 'Model Context Protocol (MCP): El Futuro de la Interoperabilidad en IA',
-    time: '03:30 PM - 04:00 PM',
+    time: '03:30 PM - 04:30 PM',
   },
   {
-    name: 'Julián Cárdenas',
-    talk: 'Kali Linux: Tu Puerta de Entrada al Mundo de la Ciberseguridad',
-    time: '04:00 PM - 05:00 PM',
+    name: 'Frederick Castañeda',
+    talk: 'De Datos a Predicciones: Cómo Hacer que las Máquinas Piensen Contigo',
+    time: '04:30 PM - 05:00 PM',
   },
   {
     name: 'Héctor Pulido',
@@ -344,15 +344,15 @@ export const speakersSFD2025 = [
     ],
   },
   {
-    name: 'Julián Cárdenas',
-    role: 'Fullstack Developer',
-    img: '/assets/images/speakerSFD2025/ponentes-11.webp',
+    name: 'Frederick Castañeda',
+    role: 'AI/ML Engineer',
+    img: '/assets/images/speakerSFD2025/ponentes-13.webp',
     description:
-      'Apasionado por la tecnología y el poder transformador del software. Mi propósito es inspirar y construir soluciones que generen impacto real.',
+      'Apasionado por la ciencia de datos y la analítica, con experiencia en la creación de modelos predictivos y soluciones basadas en datos.',
     social: [
       {
         name: 'linkedin' as Icon,
-        url: 'https://www.linkedin.com/in/julian-cardenas-392201284/',
+        url: 'https://www.linkedin.com/in/frederick-casta%C3%B1eda/',
       },
     ],
   },
