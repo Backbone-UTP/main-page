@@ -1,6 +1,6 @@
 <section
   class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
->
+  >
   <!-- Displaying the main content consisting of title, subtitle, and several `IconBlock` components -->
   <div class="mt-5 grid gap-8 lg:mt-16 lg:grid-cols-3 lg:gap-12">
     <!-- Block for title and subtitle -->
@@ -8,16 +8,17 @@
       <!-- Rendering title -->
       <h2
         class="text-balance text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-3xl"
-      >
+        >
         {{ title }}
       </h2>
       <!-- Rendering subtitle -->
-      <p
-        class="mt-2 text-pretty text-neutral-600 dark:text-neutral-400 md:mt-4"
-        *ngIf="subtitle"
-      >
-        {{ subtitle }}
-      </p>
+      @if (subtitle) {
+        <p
+          class="mt-2 text-pretty text-neutral-600 dark:text-neutral-400 md:mt-4"
+          >
+          {{ subtitle }}
+        </p>
+      }
     </div>
 
     <!-- Block to display the IconBlock components -->
@@ -25,20 +26,21 @@
       <div class="grid gap-8 sm:grid-cols-2 md:gap-12">
         <!-- Injecting IconBlock components with different properties -->
 
-        <app-icons-block
-          *ngFor="let feature of features"
-          [heading]="feature.heading"
-          [content]="feature.content"
-        >
-          <app-icon
-            [iconName]="feature.svg"
+        @for (feature of features; track feature) {
+          <app-icons-block
+            [heading]="feature.heading"
+            [content]="feature.content"
+            >
+            <app-icon
+              [iconName]="feature.svg"
             [properties]="{
               id: feature.svg,
               class:
                 'size-5 transition-all duration-300 ease-in-out text-primary dark:text-primary-dark'
             }"
-          />
-        </app-icons-block>
+              />
+          </app-icons-block>
+        }
       </div>
     </div>
   </div>

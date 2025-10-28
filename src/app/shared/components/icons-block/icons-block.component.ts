@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-icons-block',
@@ -6,12 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './icons-block.component.html',
   styleUrls: ['./icons-block.component.scss'],
 })
-export class IconsBlockComponent implements OnInit {
-  @Input() heading: string = '';
-  @Input() content: string = '';
-  constructor() {}
-
-  ngOnInit(): void {
+export class IconsBlockComponent {
+  @Input() heading = '';
+  @Input() content = '';
+  constructor() {
     // Initialization code goes here
   }
 }

@@ -20,7 +20,9 @@
     <p class="project-description">{{ description }}</p>
   </mat-card-content>
 
-  <mat-card-actions *ngIf="link">
+  @if(link){
+  <mat-card-actions>
     <a mat-button color="primary" [href]="link" target="_blank">Ver Proyecto</a>
   </mat-card-actions>
+  }
 </mat-card>

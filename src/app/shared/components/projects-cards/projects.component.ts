@@ -7,10 +7,10 @@ import {
 
 @Component({
   selector: 'app-projects',
+  standalone: true,
+  imports: [MatCard, MatCardContent, MatCardActions],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
-  standalone: true,
-  imports: [MatCard, MatCardActions, MatCardContent],
 })
 export class ProjectsComponent {
   @Input() title!: string;

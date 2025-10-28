@@ -1,17 +1,16 @@
 import { Component, Input } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
-import { NgIf } from '@angular/common';
+
 
 @Component({
-  selector: 'app-section-right',
-  standalone: true,
-  templateUrl: './section-right.component.html',
-  styleUrls: ['./section-right.component.scss'],
-  imports: [ButtonComponent, NgIf],
+    selector: 'app-section-right',
+    templateUrl: './section-right.component.html',
+    styleUrls: ['./section-right.component.scss'],
+    imports: [ButtonComponent]
 })
 export class SectionRightComponent {
-  @Input() title: string = '';
-  @Input() description: string = '';
+  @Input() title = '';
+  @Input() description = '';
   @Input() buttonProps: {
     text: string;
     variant: string;

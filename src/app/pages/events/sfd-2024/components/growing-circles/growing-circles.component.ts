@@ -2,8 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'growing-circles',
-  standalone: true,
+  selector: 'app-growing-circles',
   imports: [CommonModule],
   templateUrl: './growing-circles.component.html',
 })
@@ -12,6 +11,5 @@ export class GrowingCirclesComponent {
   public circles: number[] = [];
 
   @Input()
-  public circleStyle: string = '';
-
+  public circleStyle = '';
 }
