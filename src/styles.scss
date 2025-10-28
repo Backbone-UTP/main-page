@@ -1,6 +1,36 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@use "tailwindcss/base";
+@use "tailwindcss/components";
+@use "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+
+/* Paleta base (tema claro) */
+:root {
+  --bg-solid: #f8fafc; /* slate-50-ish */
+  --bg-solid-orange: #f8fafc; /* fondo naranja claro */
+  --bg-0: rgba(217, 216, 255, 0.5);
+  --bg-1: rgba(255, 255, 255, 0.9);
+  --bg-2: rgba(255, 207, 181, 0.12);
+  --bg-3: rgba(255, 240, 232, 0.12);
+
+  /* Gallery fade effect colors */
+  --gallery-bg: #f8fafc;
+}
+
+/* Paleta base (tema oscuro) */
+:root.dark,
+.dark {
+  --bg-solid: #0b1220; /* fondo oscuro */
+  --bg-solid-orange: #1e1212; /* fondo naranja oscuro */
+  --bg-0: rgba(120, 119, 198, 0.3);
+  --bg-1: rgba(255, 255, 255, 0);
+  --bg-2: rgba(255, 106, 39, 0.4);
+  --bg-3: rgba(249, 189, 30, 0.4);
+
+  /* Gallery fade effect colors for dark theme */
+  --gallery-bg-dark: #0b1220;
+}
 
 @layer utilities {
   .bg-page {
@@ -17,6 +47,21 @@
   }
   .text-muted {
     color: var(--aw-color-text-muted);
+  }
+
+  .bg-sfd-2024 {
+    background-color: var(--bg-solid);
+    background-image: radial-gradient(
+      80% 80% at 50% -20%,
+      var(--bg-0),
+      var(--bg-1)
+    );
+    background-attachment: fixed; /* efecto “papel pintado” */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .bg-sfd-2025 {
+    background-color: var(--bg-solid-orange);
   }
 }
 
@@ -36,7 +81,42 @@
   .btn-tertiary {
     @apply btn border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
   }
+
+  .btn-2025 {
+    @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-slate-300 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800 cursor-pointer text-xs md:text-sm xl:text-base;
+  }
+
+  .btn-primary-2025 {
+    @apply btn-2025 font-semibold bg-[#ff6a27] border-[#ff6a27] hover:bg-[#ff6b27d0] hover:border-white hover:text-white text-white dark:drop-shadow-sm;
+  }
+
+  .btn-secondary-2025 {
+    @apply btn-2025 font-semibold bg-[#facc15] border-[#facc15] hover:bg-[#d6b325] hover:border-white text-black drop-shadow-sm;
+  }
+
+  .btn-tertiary-2025 {
+      @apply btn-2025 border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
+  }
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: none;
+  font-synthesis: none;
+  -webkit-appearance: none;
+  text-size-adjust: none;
+  size-adjust: none;
+  text-size-adjust: initial;
+}
+
+.font-superblack {
+  font-variation-settings: "wght" 800;
+}

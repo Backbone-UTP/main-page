@@ -1,22 +1,24 @@
-import { DecimalPipe, NgIf } from '@angular/common';
-import { Component, OnInit, Input, OnDestroy } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
+import { Component, OnInit, Input, OnDestroy, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-countdown',
   standalone: true,
-  imports: [NgIf, DecimalPipe],
+  imports: [DecimalPipe],
   templateUrl: './countdown.component.html',
   styleUrls: ['./countdown.component.scss'],
 })
 export class CountdownComponent implements OnInit, OnDestroy {
   @Input() targetDate = '';
   @Input() className = '';
+  @Output() countdownExpired = new EventEmitter<boolean>(); 
 
   days = 0;
   hours = 0;
   minutes = 0;
   seconds = 0;
-  private countdownInterval: any;
+  isExpired = false;
+  private countdownInterval: NodeJS.Timeout | undefined;
 
   ngOnInit(): void {
     this.updateCountdown();
@@ -43,9 +45,18 @@ export class CountdownComponent implements OnInit, OnDestroy {
       this.minutes = Math.floor((timeDiff / 1000 / 60) % 60);
       this.hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
       this.days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      if (this.isExpired) {
+        this.isExpired = false;
+        this.countdownExpired.emit(false); 
+      }
     } else {
       clearInterval(this.countdownInterval);
       this.days = this.hours = this.minutes = this.seconds = 0;
+      
+      if (!this.isExpired) { 
+        this.isExpired = true;
+        this.countdownExpired.emit(true);
+      }
     }
   }
 

@@ -1,0 +1,24 @@
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+  <nav
+    class="flex px-1 md:px-3 text-sm font-medium rounded-full justify-center text-gray-200 items-center shadow-lg ring-1 backdrop-blur ring-gray-400 bg-[#271B1B]"
+  >
+    <img
+      src="assets/images/SDFlogo-banner2025.svg"
+      alt="SFD 2025"
+      class="h-8 object-cover"
+    />
+    <hr class="border h-4 rounded-md md:mx-2 mx-0.5 border-gray-400" />
+    @for (link of navItems; track link) {
+    <a
+      class="relative block md:px-2 px-1 py-2 transition hover:scale-125"
+      [attr.aria-label]="link.label"
+      [routerLink]="link.url"
+      [fragment]="link.fragment"
+    >
+      {{ link.title }}
+    </a>
+    }
+  </nav>
+</header>

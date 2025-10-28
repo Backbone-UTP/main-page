@@ -1,0 +1,17 @@
+<section
+  id="speakers"
+  class="flex flex-col justify-center items-center gap-10 my-20 container mx-auto"
+>
+  <app-speaker-card
+    class="w-10/12 flex justify-center items-center scroll-mt-32 cursor-pointer"
+    [id]="i === 2 ? 'SNEIA' : speaker.name"
+    *ngFor="let speaker of speakers; let i = index"
+    [name]="speaker.name"
+    [role]="speaker.role"
+    [image]="speaker.img"
+    [description]="speaker.description"
+    [links]="speaker.social"
+    [index]="i"
+  >
+  </app-speaker-card>
+</section>
