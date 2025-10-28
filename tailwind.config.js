@@ -5,11 +5,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#ffd426",
+        primary: "#ffc107",
         secondary: "#4267ff",
+        orange: "#FF8C57",
         accent: "var(--aw-color-accent)",
         default: "var(--aw-color-text-default)",
         muted: "var(--aw-color-text-muted)",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
+        orbitron: ["Orbitron", "sans-serif"],
+      },
+      screens: {
+        xss: "375px",
+        xs: "425px",
       },
     },
   },

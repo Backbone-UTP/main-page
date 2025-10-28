@@ -1,0 +1,64 @@
+<section
+  class="gallery-section py-20"
+  role="region"
+  aria-labelledby="gallery-title"
+>
+  <div class="container mx-auto">
+
+    @if (subtitle) {
+    <p
+      class="text-pretty text-neutral-700 dark:text-neutral-400 text-center text-sm mb-8"
+    >
+      {{ subtitle }}
+    </p>
+    }
+
+    <!-- First row - moving left to right -->
+    <div
+      class="gallery-row mb-6 overflow-hidden"
+      aria-label="Primera fila de imágenes"
+    >
+      <div class="gallery-track animate-scroll-left">
+        @for (image of firstRowImages; track image.src + $index) {
+        <div class="gallery-item">
+          <img
+            [src]="image.src"
+            [alt]="image.alt"
+            [title]="image.title || image.alt"
+            class="gallery-image"
+            loading="lazy"
+            (error)="onImageError($event)"
+            (load)="onImageLoad($event)"
+            tabindex="0"
+            role="img"
+          />
+        </div>
+        }
+      </div>
+    </div>
+
+    <!-- Second row - moving right to left -->
+    <div
+      class="gallery-row overflow-hidden"
+      aria-label="Segunda fila de imágenes"
+    >
+      <div class="gallery-track animate-scroll-right">
+        @for (image of secondRowImages; track image.src + $index) {
+        <div class="gallery-item">
+          <img
+            [src]="image.src"
+            [alt]="image.alt"
+            [title]="image.title || image.alt"
+            class="gallery-image"
+            loading="lazy"
+            (error)="onImageError($event)"
+            (load)="onImageLoad($event)"
+            tabindex="0"
+            role="img"
+          />
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

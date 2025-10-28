@@ -1,0 +1,7 @@
+@for(size of circles; track $index) {
+<div
+  class="aspect-square rounded-full border-4  absolute opacity-10"
+  [ngClass]="circleStyle"
+  [ngStyle]="{ 'width': size + '%', 'transform': 'translate(-50%, -50%)'}">
+</div>
+}

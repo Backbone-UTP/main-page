@@ -1,33 +1,32 @@
 <div [class]="className" class="flex justify-center items-end space-x-4">
-  <ng-container *ngIf="days + hours + minutes + seconds > 0; else timeUp">
-    <div class="flex flex-col items-center time-unit">
-      <span class="text-sm mb-1 time-unit-label">Días</span>
-      <span class="text-2xl font-bold time-unit-value">{{
-        days | number : "2.0-0"
-      }}</span>
-    </div>
-    <div class="flex flex-col items-center time-unit">
-      <span class="text-sm mb-1 time-unit-label">Horas</span>
-      <span class="text-2xl font-bold time-unit-value">{{
-        hours | number : "2.0-0"
-      }}</span>
-    </div>
-    <div class="flex flex-col items-center time-unit">
-      <span class="text-sm mb-1 time-unit-label">Minutos</span>
-      <span class="text-2xl font-bold time-unit-value">{{
-        minutes | number : "2.0-0"
-      }}</span>
-    </div>
-    <div class="flex flex-col items-center time-unit">
-      <span class="text-sm mb-1 time-unit-label">Segundos</span>
-      <span class="text-2xl font-bold time-unit-value">{{
-        seconds | number : "2.0-0"
-      }}</span>
-    </div>
-  </ng-container>
-</div>
-
-<ng-template #timeUp>
+  @if(days + hours + minutes + seconds > 0){
+  <div class="flex flex-col items-center time-unit">
+    <span class="text-2xl font-bold time-unit-value">{{
+      days | number : "2.0-0"
+    }}</span>
+    <span class="text-sm mb-1 time-unit-label">Días</span>
+  </div>
+  <div class="time-separator">:</div>
+  <div class="flex flex-col items-center time-unit">
+    <span class="text-2xl font-bold time-unit-value">{{
+      hours | number : "2.0-0"
+    }}</span>
+    <span class="text-sm mb-1 time-unit-label">Horas</span>
+  </div>
+  <div class="time-separator">:</div>
+  <div class="flex flex-col items-center time-unit">
+    <span class="text-2xl font-bold time-unit-value">{{
+      minutes | number : "2.0-0"
+    }}</span>
+    <span class="text-sm mb-1 time-unit-label">Minutos</span>
+  </div>
+  <!-- <div class="flex flex-col items-center time-unit">
+    <span class="text-2xl font-bold time-unit-value">{{
+      seconds | number : "2.0-0"
+    }}</span>
+    <span class="text-sm mb-1 time-unit-label">Segundos</span>
+  </div> -->
+  }@else {
   <div [class]="className" class="flex justify-center items-end space-x-4">
     <div class="flex flex-col items-center time-unit">
       <span class="text-sm mb-1 time-unit-label">Days</span>
@@ -46,4 +45,5 @@
       <span class="text-2xl font-bold time-unit-value">00</span>
     </div>
   </div>
-</ng-template>
+  }
+</div>
