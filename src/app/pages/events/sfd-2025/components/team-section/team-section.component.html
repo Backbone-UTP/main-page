@@ -1,0 +1,12 @@
+<div class="flex flex-col gap-10 py-20">
+    <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 py-5 mx-auto">
+        @for (person of staff; track person) {
+        <app-profile-card
+            [name]="person.name"
+            [role]="person.role"
+            [image]="person.image"
+            [links]="person.links"></app-profile-card>
+        }
+    </div>
+</div>

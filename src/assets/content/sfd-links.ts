@@ -5,21 +5,42 @@ export const headerLinks: Header[] = [
   {
     title: 'Qué es',
     label: 'about',
-    url: '/events/software-freedom-day-2024/',
+    url: '/events/software-freedom-day-2025/',
     fragment: 'about',
   },
   {
     title: 'Agenda',
     label: 'agenda',
-    url: '/events/software-freedom-day-2024/',
+    url: '/events/software-freedom-day-2025/',
     fragment: 'agenda',
   },
   {
     title: 'Invitan',
     label: 'supporters',
-    url: '/events/software-freedom-day-2024/',
+    url: '/events/software-freedom-day-2025/',
     fragment: 'supporters',
-  }
+  },
+];
+
+export const headerLinks25: Header[] = [
+  {
+    title: 'Acerca',
+    label: 'about',
+    url: '/events/software-freedom-day-2025/',
+    fragment: 'about',
+  },
+  {
+    title: 'Ponentes',
+    label: 'speakers',
+    url: '/events/software-freedom-day-2025/',
+    fragment: 'speakers',
+  },
+  {
+    title: 'Agenda',
+    label: 'agenda',
+    url: '/events/software-freedom-day-2025/',
+    fragment: 'agenda',
+  },
 ];
 
 export const footerLinks: Footer[] = [
