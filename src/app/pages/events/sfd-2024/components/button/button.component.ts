@@ -1,4 +1,3 @@
-import { NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 interface Variants {
@@ -11,8 +10,6 @@ interface Variants {
 
 @Component({
   selector: 'app-button',
-  standalone: true,
-  imports: [NgClass],
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
 })

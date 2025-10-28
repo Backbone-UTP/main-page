@@ -1,0 +1,58 @@
+<ol class="relative mt-16">
+  @for (item of timelineItems; track item; let i = $index) {
+  <a class="scroll-mt-24 grid grid-cols-2 md:grid-cols-4 gap-10"
+    [id]="((i === 3) ? 'SNEIA' : item.name) + '-timeline'"
+     [routerLink]="'/events/software-freedom-day-2025/'"
+     [fragment]="( i === 3 ) ? 'SNEIA' : item.name"
+   >
+     <div
+       class="relative pb-12 md:col-span-2 text-right space-x-4 justify-self-end md:w-64 mx-2">
+       @if (i % 2 === 0) {
+        <div
+          class="hover:scale-110 duration-700 cursor-pointer sticky top-0"
+          role="button"
+          aria-disabled="true">
+          <h3 class="text-lg md:text-xl font-bold text-[#93C5FD]">
+            {{ item.name }}
+          </h3>
+          <h4
+            class="font-semibold text-base sm:text-lg md:text-xl  text-[#F8C622]">
+            {{ item.talk }}
+          </h4>
+          <time class="p-0 m-0 text-xs sm:text-base font-bold text-[#FF6A27]">{{
+            item.time
+            }}</time>
+        </div>
+        }
+      </div>
+      <div
+        class="relative md:mx-12 mx-2 pb-12 before:absolute before:left-[-35px] before:block before:h-full before:border-l-2 before:border-gray-400 before:content-['']">
+        <div class="relative pb-12 space-x-4 md:col-span-2 md:w-64">
+          @if (i % 2 !== 0) {
+          <div
+            class="sticky top-0"
+            role="button"
+            aria-disabled="true">
+            <span
+              class="text-[#FF6A27] -left-[42px] absolute rounded-full text-5xl">&bull;</span>
+            <div
+              class="hover:scale-110 duration-700 transition-transform cursor-pointer">
+              <h3 class="text-lg md:text-xl font-bold text-[#93C5FD]">
+                {{ item.name }}
+              </h3>
+              <h4
+                class="font-semibold text-base sm:text-lg md:text-xl text-[#F8C622]">
+                {{ item.talk }}
+              </h4>
+              <time
+                class="p-0 m-0 text-xs sm:text-base font-bold text-[#FF6A27]">{{
+                item.time
+                }}</time>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </a>
+  }
+</ol>
