@@ -1,0 +1,23 @@
+<article class="member-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 w-72 group">
+  <div class="relative p-8 text-center">
+    <div class="relative mx-auto w-24 h-24 mb-6">
+      <div class="w-full h-full rounded-full overflow-hidden bg-gray-100 dark:bg-gray-700 ring-4 ring-white dark:ring-gray-600">
+        <img [src]="photoUrl" [alt]="name" class="w-full h-full object-cover" />
+      </div>
+      
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 dark:bg-opacity-70 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-full backdrop-blur-sm">
+        <div class="flex space-x-3">
+          <button *ngFor="let link of socialLinks" (click)="onIconClick(link.url)"
+            class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 hover:scale-110 transition-all focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50" 
+            [attr.aria-label]="link.alt || 'Social icon'">
+            <img [src]="link.icon" [alt]="link.alt" class="w-5 h-5 object-contain filter brightness-0 invert" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">{{ name }}</h2>
+    
+    <p class="text-sm text-gray-500 dark:text-gray-400 font-medium tracking-wide">{{ role }}</p>
+  </div>
+</article>
