@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Próximo Evento</h2>
+  <div class="next-event">
+    <div class="card">
+      <div class="card-img">
+        <img
+          [src]="eventImage"
+          [alt]="eventTitle"
+        />
+        <div class="badge location">{{ eventLocation }}</div>
+        <div class="badge date">{{ eventDate }}</div>
+      </div>
+      <div class="card-info">
+        <h3>{{ eventTitle }}</h3>
+        <p>{{ eventDescription }}</p>
+        <div class="footer-next-event">
+          <div class="timer">
+            <span>{{ countdownTime }}</span>
+            <br />
+            <small>{{ countdownLabels }}</small>
+          </div>
+          <button class="register-button" (click)="onRegisterClick()">Regístrate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
