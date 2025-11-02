@@ -1,7 +1,18 @@
-<mat-card class="project-card">
-  <div class="image-container">
-    <img mat-card-image [src]="imageUrl" alt="{{ title }}" />
-    <span class="status-badge">{{ status }}</span>
+<mat-card
+  class="project-card max-w-[400px] my-4 mx-auto rounded-xl overflow-hidden border border-[#e0e0e0]"
+>
+  <div class="image-container relative">
+    <img
+      class="size-72 object-cover"
+      mat-card-image
+      [src]="imageUrl"
+      alt="{{ title }}"
+    />
+    <span
+      [style.backgroundColor]="getStatusColor()"
+      class="status-badge absolute top-3 right-3 text-white text-xs py-1 px-2 font-semibold rounded-xl"
+      >{{ status }}</span
+    >
   </div>
 
   <mat-card-content>
