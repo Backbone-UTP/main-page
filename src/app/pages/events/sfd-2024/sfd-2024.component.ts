@@ -15,7 +15,9 @@ import { LogosListComponent } from '../../../shared/components/logos-list/logos-
 import { Logo } from 'src/app/shared/interfaces/logo.interface';
 import { footerLinks, headerLinks } from 'src/assets/content/sfd-links';
 import { FooterComponent } from './components/footer/footer.component';
-import { ButtonComponent } from './components/button/button.component';
+import { CallToActionComponent } from './components/call-to-action/call-to-action.component';
+import { ButtonComponent } from "./components/button/button.component";
+
 @Component({
   selector: 'app-sfd-2024',
   standalone: true,
@@ -27,8 +29,9 @@ import { ButtonComponent } from './components/button/button.component';
     TimelineComponent,
     LogosListComponent,
     FooterComponent,
+    CallToActionComponent,
     ButtonComponent,
-  ],
+],
   templateUrl: './sfd-2024.component.html',
   styleUrl: './sfd-2024.component.scss',
 })
