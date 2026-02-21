@@ -1,14 +1,10 @@
 import { Component, Input } from '@angular/core';
-import {
-  MatCard,
-  MatCardActions,
-  MatCardContent,
-} from '@angular/material/card';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [MatCard, MatCardContent, MatCardActions],
+  imports: [CommonModule],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })

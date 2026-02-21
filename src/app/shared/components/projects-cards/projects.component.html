@@ -1,28 +1,31 @@
-<mat-card
-  class="project-card max-w-[400px] my-4 mx-auto rounded-xl overflow-hidden border border-[#e0e0e0]"
+<a
+  [href]="link"
+  target="_blank"
+  class="w-[301px] flex flex-col gap-3 pb-3 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#fac738] rounded-lg hover:scale-[1.02] transition-transform block"
 >
-  <div class="image-container relative">
-    <img
-      class="size-72 object-cover"
-      mat-card-image
-      [src]="imageUrl"
-      alt="{{ title }}"
-    />
-    <span
-      [style.backgroundColor]="getStatusColor()"
-      class="status-badge absolute top-3 right-3 text-white text-xs py-1 px-2 font-semibold rounded-xl"
-      >{{ status }}</span
-    >
+  <!-- Image with status badge -->
+  <div class="relative h-[301px] rounded-xl overflow-hidden">
+    <img [src]="imageUrl" [alt]="title" class="w-full h-full object-cover" />
+    <div class="absolute top-2.5 right-2.5">
+      <div
+        class="h-[32px] rounded-[16px] px-3 flex items-center"
+        [style.backgroundColor]="getStatusColor()"
+      >
+        <span
+          class="font-medium text-sm leading-[21px] text-[#e5e8eb] whitespace-nowrap"
+          >{{ status }}</span
+        >
+      </div>
+    </div>
   </div>
 
-  <mat-card-content>
-    <h2 class="project-title">{{ title }}</h2>
-    <p class="project-description">{{ description }}</p>
-  </mat-card-content>
-
-  @if(link){
-  <mat-card-actions>
-    <a mat-button color="primary" [href]="link" target="_blank">Ver Proyecto</a>
-  </mat-card-actions>
-  }
-</mat-card>
+  <!-- Content -->
+  <div class="flex flex-col">
+    <h3 class="font-medium text-base leading-[24px] text-white mb-1">
+      {{ title }}
+    </h3>
+    <p class="font-normal text-sm leading-[21px] text-[#ccbd8f]">
+      {{ description }}
+    </p>
+  </div>
+</a>

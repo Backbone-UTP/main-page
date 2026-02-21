@@ -1,12 +1,18 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-interface SocialLink { icon: string; url: string; alt?: string; }
+interface SocialLink {
+  icon: string;
+  url: string;
+  alt?: string;
+}
 
 @Component({
   selector: 'app-member-card',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './member-card.component.html',
   styleUrls: ['./member-card.component.scss'],
-  host: { 'class': 'group' }
 })
 export class MemberCardComponent {
   @Input() name = '';

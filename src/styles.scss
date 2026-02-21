@@ -4,7 +4,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
-
 /* Paleta base (tema claro) */
 :root {
   --bg-solid: #f8fafc; /* slate-50-ish */
@@ -16,6 +15,9 @@
 
   /* Gallery fade effect colors */
   --gallery-bg: #f8fafc;
+
+  --aw-color-bg-page: #ffffff;
+  --aw-color-bg-page-dark: #0b1220;
 }
 
 /* Paleta base (tema oscuro) */
@@ -95,7 +97,7 @@
   }
 
   .btn-tertiary-2025 {
-      @apply btn-2025 border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
+    @apply btn-2025 border-none shadow-none text-muted hover:text-gray-900 dark:text-gray-400 dark:hover:text-white;
   }
 }
 

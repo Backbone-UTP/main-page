@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IconComponent } from '../../../../../shared/components/icons/icons.component';
 import { ButtonComponent } from '../button/button.component';
 
@@ -8,11 +8,4 @@ import { ButtonComponent } from '../button/button.component';
   templateUrl: './unirse-comunidad.component.html',
   styleUrls: ['./unirse-comunidad.component.scss']
 })
-export class UnirseComunidadComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class UnirseComunidadComponent {}

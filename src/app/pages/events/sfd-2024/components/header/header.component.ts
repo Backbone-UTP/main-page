@@ -52,8 +52,7 @@ export class SFDHeaderComponent implements OnInit, AfterViewInit {
 
   private initIntersectionObserver(): void {
     const callback = (
-      entries: IntersectionObserverEntry[],
-      observer: IntersectionObserver
+      entries: IntersectionObserverEntry[]
     ) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {

@@ -1,15 +1,14 @@
-import { Component } from '@angular/core';
-import { EVENTS } from 'src/assets/content/events';
+import { Component, input } from '@angular/core';
+import { RouterLink } from '@angular/router';
+import { Event } from '../../interfaces/data.models';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-previous-event-card',
   standalone: true,
-  imports: [],
+  imports: [DatePipe, RouterLink],
   templateUrl: './previous-event-card.component.html',
 })
 export class PreviousEventCardComponent {
-  events = EVENTS[0];
-
-  constructor() {
-  }
+  event = input.required<Event>();
 }

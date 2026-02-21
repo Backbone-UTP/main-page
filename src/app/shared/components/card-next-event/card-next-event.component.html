@@ -1,27 +1,104 @@
-<div class="container">
-  <h2>Próximo Evento</h2>
-  <div class="next-event">
-    <div class="card">
-      <div class="card-img">
-        <img
-          [src]="eventImage"
-          [alt]="eventTitle"
-        />
-        <div class="badge location">{{ eventLocation }}</div>
-        <div class="badge date">{{ eventDate }}</div>
+@if (event()) {
+<div class="bg-[#fac738] rounded-[24px] p-4 w-full">
+  <div class="flex items-center justify-center gap-4">
+    <!-- Image section with badges -->
+    <div
+      class="relative w-[464px] h-[264px] rounded-xl overflow-hidden shrink-0"
+    >
+      <img
+        [src]="event()!.image"
+        [alt]="event()!.title"
+        class="w-full h-full object-cover"
+      />
+      <div class="absolute top-5 right-6 flex flex-col gap-2 items-end">
+        <div
+          class="bg-[#07012a] h-[32px] rounded-[16px] px-3 flex items-center gap-1"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-[#e5e8eb]"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+            />
+          </svg>
+          <span class="font-medium text-sm leading-[21px] text-[#e5e8eb]"
+            >{{ event()!.location }}</span
+          >
+        </div>
+        <div
+          class="bg-[#07012a] h-[32px] rounded-[16px] px-3 flex items-center gap-1"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-[#e5e8eb]"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+            />
+          </svg>
+          <span class="font-medium text-sm leading-[21px] text-[#e5e8eb]"
+            >{{ event()!.date | date:'d/MMM - h:mm a' }}</span
+          >
+        </div>
       </div>
-      <div class="card-info">
-        <h3>{{ eventTitle }}</h3>
-        <p>{{ eventDescription }}</p>
-        <div class="footer-next-event">
-          <div class="timer">
-            <span>{{ countdownTime }}</span>
-            <br />
-            <small>{{ countdownLabels }}</small>
+    </div>
+
+    <!-- Content section -->
+    <div class="flex-1 min-w-[288px] p-4 flex flex-col justify-between h-full">
+      <div class="py-[18px]">
+        <h3 class="font-bold text-[18px] leading-[23px] text-[#1e1e1e]">
+          {{ event()!.title }}
+        </h3>
+      </div>
+
+      <div class="flex-1 flex flex-col gap-3 justify-center">
+        <p
+          class="font-normal text-base leading-[24px] text-[rgba(17,24,39,0.9)]"
+        >
+          {{ event()!.description }}
+        </p>
+
+        <div class="flex items-center justify-between px-4">
+          <div class="flex flex-col items-center">
+            <p class="font-bold text-[18px] leading-[23px] text-[#1e1e1e]">
+              {{ countdownTime }}
+            </p>
+            <p class="font-bold text-[12px] leading-[23px] text-[#1e1e1e]">
+              {{ countdownLabels }}
+            </p>
           </div>
-          <button class="register-button" (click)="onRegisterClick()">Regístrate</button>
+          <button
+            class="bg-[#07012a] px-4 py-3 rounded-[32px] font-medium text-sm leading-[21px] text-[#e5e8eb] cursor-pointer transition-all duration-300 hover:bg-[#0f0a3a]"
+            (click)="onRegisterClick()"
+          >
+            Regístrate
+          </button>
         </div>
       </div>
     </div>
   </div>
 </div>
+} @else {
+  <div class="bg-gray-100 rounded-[24px] p-8 w-full text-center">
+    <h3 class="font-bold text-xl text-gray-600">No hay eventos próximos</h3>
+    <p class="text-gray-500 mt-2">¡Mantente atento a nuestras redes para futuras actualizaciones!</p>
+  </div>
+}

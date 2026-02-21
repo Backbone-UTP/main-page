@@ -1,12 +1,29 @@
-<div class = "flex flex-col w-[960px] h-[512px] bg-[#07012A]">
-    <div class = "py-[85px] inline-flex items-start justify-between">
-        <div class="pl-4 w-[522px] gap-[15px]"> 
-            <h1 [innerHTML] = "spacesTitle" style = "font-family: 'Inter', sans-serif;" class = " mb-3 font-black text-5xl leading-[60px] tracking-[-1px] text-[#FFFFFF]"></h1>
-            <p [innerHTML] = "spacesSubtitle" style = "font-family: 'Inter', sans-serif;" class = "mb-4 font-normal text-base leading-[24px] text-[#FFFFFF]"></p>
-            <button style = "font-family: 'Inter', sans-serif;" class = "px-[18px] py-[12px] bg-[#FAC738] font-bold text-base rounded-3xl leading-[24px] text-[#241F0F] cursor-pointer transition-colors duration-300 hover:bg-[#fbc12d80] hover:text-[#FFFFFF] ">
-                {{ctaText}}
-            </button>                
-        </div> 
-        <img [src] = "imageUrl" alt = "Hero Image" class = "w-[438px] h-[328px] rounded-xl"/>
+<div class="flex items-center w-full max-w-[960px] mx-auto p-4">
+  <!-- Left content section -->
+  <div class="flex-1 min-w-0 p-4">
+    <div class="flex flex-col gap-[15px] justify-center min-h-[480px]">
+      <h1
+        class="font-black text-[48px] leading-[60px] tracking-[-2px] text-white"
+      >
+        {{ title }}
+      </h1>
+      <p class="font-normal text-base leading-[24px] text-white">
+        {{ subTitle }}
+      </p>
+      <button
+        class="bg-[#fac738] px-[18px] py-[12px] rounded-[24px] font-bold text-base leading-[24px] text-[#241f0f] cursor-pointer transition-all duration-300 hover:bg-[#e6b730] max-w-max"
+      >
+        {{ ctaText }}
+      </button>
     </div>
+  </div>
+
+  <!-- Right image section -->
+  <div class="w-[438px] h-[356px] rounded-xl overflow-hidden shrink-0">
+    <img
+      [src]="imageUrl"
+      alt="Backbone Community"
+      class="w-full h-full object-cover"
+    />
+  </div>
 </div>

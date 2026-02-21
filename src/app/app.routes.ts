@@ -21,11 +21,12 @@ export const routes: Routes = [
       ),
   },
   {
-    path: 'main',
-    redirectTo: 'events/software-freedom-day-2025',
+    path: '',
+    loadComponent: () =>
+      import('./pages/main/main.component').then((m) => m.MainComponent),
   },
   {
-    path: '',
+    path: '*',
     redirectTo: 'events/software-freedom-day-2025',
     pathMatch: 'full',
   },
