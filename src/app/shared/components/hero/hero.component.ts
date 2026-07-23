@@ -14,5 +14,5 @@ export class HeroComponent {
     'Somos una comunidad y semillero de investigación dedicado a fomentar el aprendizaje, la colaboración y la innovación en tecnología.';
 
   ctaText = 'Únete a la comunidad';
-  imageUrl = 'assets/images/abstract_img.jpg';
+  imageUrl = 'assets/images/main-hero.webp';
 }

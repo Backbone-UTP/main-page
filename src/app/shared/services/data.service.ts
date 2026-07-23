@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Event, Member, Project } from '../interfaces/data.models';
+import { EVENTS } from '../../../assets/content/events';
 
 @Injectable({
   providedIn: 'root',
@@ -11,22 +12,35 @@ export class DataService {
     // Add simulated projects here if needed, or keep empty for now if none provided in context
     // Using data from previous context if available or generic ones
     {
-      imageUrl: 'assets/images/project1.jpg',
-      title: 'Backbone Landing',
+      imageUrl: 'assets/images/main/judge.webp',
+      title: 'Juez Programación',
       tech: 'Angular, NestJS',
-      status: 'Publicado',
-      description: 'Landing page para Backbone.',
-      repoLink: 'https://github.com/example/project-alpha',
+      status: 'En Desarrollo',
+      description:
+        'Juez para competencias de programación. Permite evaluar código en múltiples lenguajes.',
+      repoLink: 'https://github.com/Backbone-UTP/main-page',
       liveLink: 'https://backboneutp.com',
     },
     {
-      imageUrl: 'assets/images/project1.jpg',
-      title: 'Juez Programación',
+      imageUrl: 'assets/images/main/backbone.webp',
+      title: 'Backbone Page',
       tech: 'Angular, NestJS',
-      status: 'Próximamente',
-      description: 'Juez Programación para la comunidad.',
-      repoLink: 'https://github.com/example/project-alpha',
+      status: 'Publicado',
+      description:
+        'Página principal de Backbone. Junto a sus eventos, proyectos y miembros.',
+      repoLink: 'https://github.com/Backbone-UTP/main-page',
       liveLink: 'https://backboneutp.com',
+    },
+    {
+      imageUrl: 'assets/images/main/hackathon.webp',
+      title: 'Open Tech Hackathon',
+      tech: 'React, Tailwind',
+      status: 'Publicado',
+      description:
+        'Hackathon de IA y Blockchain. Promoviendo la innovación tecnológica en el eje cafetero.',
+      repoLink:
+        'https://github.com/Backbone-UTP/opentech-hackathon-2025-landing',
+      liveLink: 'https://opentechhackathon.com/',
     },
   ];
 
@@ -63,38 +77,7 @@ export class DataService {
     },
   ];
 
-  private events: Event[] = [
-    {
-      title: 'FLiSoL 2025',
-      description:
-        'Tercera edicion en Pereira del evento de instalacion de software libre y código abierto.',
-      location: 'UTP - 3 S107',
-      date: '2025-09-15T08:00:00', // ISO format for better sorting
-      image:
-        'https://www.besame.fm/wp-content/uploads/2023/06/Colp_HF122349.jpg',
-      absoluteUrl: 'https://flisol.info/',
-    },
-    {
-      title: 'FLiSoL 2024',
-      description:
-        'Segunda edicion en Pereira del evento de instalacion de software libre y código abierto.',
-      location: 'UTP - 3 S107',
-      date: '2024-09-15T08:00:00', // ISO format for better sorting
-      image:
-        'https://www.besame.fm/wp-content/uploads/2023/06/Colp_HF122349.jpg',
-      absoluteUrl: 'https://flisol.info/',
-    },
-    {
-      title: 'Taller de Contenedores y Kubernetes',
-      description:
-        'Aprende las bases de contenedores y Kubernetes en este taller intensivo de 4 horas.',
-      location: 'UTP - 3 S107',
-      date: '2025-11-25T08:00:00', // Future event
-      image:
-        'https://ausum.cloud/wp-content/uploads/2025/01/Kubernetes-logo.png',
-      relativeUrl: '/events/kubernetes-workshop',
-    },
-  ];
+  private events: Event[] = EVENTS;
 
   getProjects(): Observable<Project[]> {
     return of(this.projects);

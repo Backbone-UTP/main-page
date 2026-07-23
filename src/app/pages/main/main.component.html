@@ -1,3 +1,13 @@
+<app-event-header
+  [useIcon]="true"
+  iconName="backbone-logo"
+  iconClass="h-4 mx-4 w-auto"
+  logoAlt="BackBone UTP"
+  [navItems]="headerLinks"
+  [showThemeToggle]="false"
+  themeMode="dark-only"
+></app-event-header>
+
 <main class="w-full flex flex-col items-center px-5 py-5 bg-dark">
   <!-- Hero Section -->
   <section class="w-full max-w-[960px]">
@@ -5,7 +15,7 @@
   </section>
 
   <!-- Próximo Evento Section -->
-  <section class="w-full max-w-[960px] mt-5">
+  <section id="next-event" class="w-full max-w-[960px] mt-5">
     <div class="px-4 pb-3 pt-5">
       <h2 class="font-bold text-[22px] leading-[28px] text-white">
         Próximo Evento
@@ -15,21 +25,49 @@
   </section>
 
   <!-- Eventos Previos Section -->
-  <section class="w-full max-w-[960px] mt-5">
+  <section id="past-events" class="w-full max-w-[960px] mt-5">
     <div class="px-4 pb-3 pt-5">
       <h2 class="font-bold text-[22px] leading-[28px] text-white">
         Eventos Previos
       </h2>
     </div>
-    <div class="flex gap-3 p-4 overflow-x-auto">
-      @for (event of pastEvents(); track event.title) {
-        <app-previous-event-card [event]="event"></app-previous-event-card>
+    <div class="relative px-4 py-4">
+      @if (canScrollPrev) {
+        <button
+          type="button"
+          class="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-[#fac738] bg-[#07012a]/90 px-3 py-2 text-[#fac738] shadow-lg"
+          (click)="scrollPastEvents('prev')"
+          aria-label="Ver eventos anteriores"
+        >
+          <
+        </button>
+      }
+
+      <div
+        #pastEventsSlider
+        class="past-events-slider flex gap-3 overflow-x-auto scroll-smooth"
+        (scroll)="onPastEventsScroll()"
+      >
+        @for (event of pastEvents() ?? []; track event.title) {
+          <app-previous-event-card [event]="event"></app-previous-event-card>
+        }
+      </div>
+
+      @if (canScrollNext) {
+        <button
+          type="button"
+          class="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-[#fac738] bg-[#07012a]/90 px-3 py-2 text-[#fac738] shadow-lg"
+          (click)="scrollPastEvents('next')"
+          aria-label="Ver siguientes eventos"
+        >
+          >
+        </button>
       }
     </div>
   </section>
 
   <!-- Proyectos Section -->
-  <section class="w-full max-w-[960px] mt-5">
+  <section id="projects" class="w-full max-w-[960px] mt-5">
     <div class="px-4 pb-3 pt-5">
       <h2 class="font-bold text-[22px] leading-[28px] text-white">Proyectos</h2>
     </div>
@@ -47,7 +85,7 @@
   </section>
 
   <!-- Miembros Section -->
-  <section class="w-full max-w-[960px] mt-5">
+  <section id="members" class="w-full max-w-[960px] mt-5">
     <div class="px-4 pb-3 pt-5">
       <h2 class="font-bold text-[22px] leading-[28px] text-white">Miembros</h2>
     </div>

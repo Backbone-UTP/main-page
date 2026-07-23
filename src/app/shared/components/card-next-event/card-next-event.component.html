@@ -97,8 +97,25 @@
   </div>
 </div>
 } @else {
-  <div class="bg-gray-100 rounded-[24px] p-8 w-full text-center">
-    <h3 class="font-bold text-xl text-gray-600">No hay eventos próximos</h3>
-    <p class="text-gray-500 mt-2">¡Mantente atento a nuestras redes para futuras actualizaciones!</p>
+  <div
+    class="w-full rounded-[24px] border border-[#fac738]/40 bg-[#110a3d] px-6 py-10 text-center shadow-lg"
+    role="status"
+  >
+    <p class="text-sm font-semibold uppercase tracking-[0.18em] text-[#fac738]">
+      Próximamente
+    </p>
+    <h3 class="mt-2 text-xl font-bold text-white">Estamos preparando el próximo evento</h3>
+    <p class="mx-auto mt-3 max-w-xl text-[#ccbd8f]">
+      Revisa nuestras redes sociales para conocer las próximas actividades de la comunidad.
+    </p>
+    <a
+      [href]="instagramUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-6 inline-flex items-center justify-center rounded-full bg-[#fac738] px-5 py-3 text-sm font-semibold text-[#07012a] transition-colors hover:bg-[#f7d66f] focus:outline-none focus:ring-2 focus:ring-[#fac738] focus:ring-offset-2 focus:ring-offset-[#110a3d]"
+      aria-label="Visitar el Instagram de BackBone UTP (abre en una nueva pestaña)"
+    >
+      Ver Instagram
+    </a>
   </div>
 }

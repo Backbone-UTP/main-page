@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SFD2024HeroComponent } from './components/hero/hero.component';
-import { SFDHeaderComponent } from './components/header/header.component';
+import { EventHeaderComponent } from '../../../shared/components/event-header/event-header.component';
 import { agenda, features } from 'src/assets/content/sfd-features';
 import { FeaturesComponent } from './components/features/features.component';
 import {
@@ -22,7 +22,7 @@ import { ButtonComponent } from "./components/button/button.component";
   standalone: true,
   imports: [
     SFD2024HeroComponent,
-    SFDHeaderComponent,
+    EventHeaderComponent,
     FeaturesComponent,
     ProfileCardComponent,
     TimelineComponent,

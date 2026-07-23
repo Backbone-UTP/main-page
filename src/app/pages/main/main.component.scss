@@ -1,0 +1,8 @@
+.past-events-slider {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.past-events-slider::-webkit-scrollbar {
+	display: none;
+}

@@ -11,7 +11,7 @@ import { Component, OnInit, Input, OnDestroy, Output, EventEmitter } from '@angu
 export class CountdownComponent implements OnInit, OnDestroy {
   @Input() targetDate = '';
   @Input() className = '';
-  @Output() countdownExpired = new EventEmitter<boolean>(); 
+  @Output() countdownExpired = new EventEmitter<boolean>(true);
 
   days = 0;
   hours = 0;

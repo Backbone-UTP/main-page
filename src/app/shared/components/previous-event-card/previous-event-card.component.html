@@ -1,9 +1,22 @@
-<a
-  [routerLink]="event().relativeUrl ? event().relativeUrl : null"
-  [href]="event().relativeUrl ? null : event().absoluteUrl"
-  [target]="event().relativeUrl ? undefined : '_blank'"
-  class="flex-1 min-w-[240px] max-w-[300px] rounded-lg block cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#07012a] focus:ring-[#fac738] transition-transform hover:scale-[1.02]"
->
+@if (event().relativeUrl) {
+  <a
+    [routerLink]="event().relativeUrl"
+    class="flex-1 min-w-[240px] max-w-[300px] rounded-lg block cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#07012a] focus:ring-[#fac738] transition-transform hover:scale-[1.02]"
+  >
+    <ng-container *ngTemplateOutlet="cardContent" />
+  </a>
+} @else {
+  <a
+    [href]="event().absoluteUrl"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="flex-1 min-w-[240px] max-w-[300px] rounded-lg block cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#07012a] focus:ring-[#fac738] transition-transform hover:scale-[1.02]"
+  >
+    <ng-container *ngTemplateOutlet="cardContent" />
+  </a>
+}
+
+<ng-template #cardContent>
   <div class="flex flex-col gap-4 pb-3">
     <!-- Image with badges -->
     <div class="relative h-[169px] rounded-xl overflow-hidden">
@@ -76,4 +89,4 @@
       </p>
     </div>
   </div>
-</a>
+</ng-template>

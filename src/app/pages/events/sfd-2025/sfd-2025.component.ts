@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SFD2025HeroComponent } from './components/hero/hero.component';
-import { SFDHeaderComponent } from './components/header/header.component';
+import { EventHeaderComponent } from '../../../shared/components/event-header/event-header.component';
 import { agenda25, features } from 'src/assets/content/sfd-features';
 import {
   Feature,
@@ -26,7 +26,7 @@ import {SponsorComponent} from "./components/sponsor/sponsor.component";
   standalone: true,
   imports: [
     SFD2025HeroComponent,
-    SFDHeaderComponent,
+    EventHeaderComponent,
     LogosListComponent,
     FooterComponent,
     SpeakersComponent,

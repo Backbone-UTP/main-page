@@ -1,0 +1,46 @@
+<header
+  class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
+>
+  <nav
+    #nav
+    aria-label="Navegación principal"
+    class="flex px-1 md:px-3 text-sm font-medium rounded-full justify-center items-center shadow-lg ring-1 backdrop-blur"
+    [ngClass]="{
+      'text-gray-200 ring-gray-400 bg-[#271B1B]': themeMode === 'dark-only',
+      'text-gray-600 dark:text-gray-200 ring-white/10 bg-white/70 dark:bg-gray-900/90 dark:border-gray-500/20':
+        themeMode === 'light-dark',
+    }"
+  >
+    @if (useIcon && iconName) {
+      <app-icon
+        [iconName]="iconName"
+        [properties]="{ id: 'header-logo', class: iconClass }"
+      ></app-icon>
+    } @else {
+      <img [src]="logoUrl!" [alt]="logoAlt" class="h-8 object-cover" />
+    }
+    <hr
+      class="border h-4 rounded-md md:mx-2 mx-0.5"
+      [ngClass]="{
+        'border-gray-400': themeMode === 'dark-only',
+        'border-gray-200 dark:border-gray-700': themeMode === 'light-dark',
+      }"
+    />
+    @for (link of navItems; track link.url + link.fragment) {
+      <a
+        class="relative block md:px-2 px-1 py-2 transition hover:scale-125"
+        [attr.data-section-id]="link.fragment"
+        [routerLink]="link.url"
+        [fragment]="link.fragment"
+      >
+        {{ link.title }}
+      </a>
+    }
+    @if (showThemeToggle) {
+      <hr
+        class="border h-4 rounded-md md:mx-2 mx-0.5 border-gray-200 dark:border-gray-700"
+      />
+      <app-theme-toggle></app-theme-toggle>
+    }
+  </nav>
+</header>
