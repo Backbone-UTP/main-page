@@ -1,7 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 
 import { CardNextEventComponent } from './card-next-event.component';
 import { BACKBONE_INSTAGRAM_URL } from 'src/assets/content/sfd-links';
+import { Event } from '../../interfaces/data.models';
 
 describe('CardNextEventComponent', () => {
   let component: CardNextEventComponent;
@@ -9,7 +11,8 @@ describe('CardNextEventComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardNextEventComponent]
+      imports: [CardNextEventComponent],
+      providers: [provideRouter([])],
     })
     .compileComponents();
     
@@ -35,4 +38,65 @@ describe('CardNextEventComponent', () => {
     expect(link?.rel).toContain('noreferrer');
     expect(link?.getAttribute('aria-label')).toContain('abre en una nueva pestaña');
   });
+
+  it('should show a real countdown and registration link for an upcoming event', () => {
+    const event = createEvent({
+      date: '2099-10-10T08:00:00-05:00',
+      registrationUrl: 'https://example.com/register',
+    });
+
+    fixture.componentRef.setInput('event', event);
+    fixture.detectChanges();
+
+    const element: HTMLElement = fixture.nativeElement;
+    const link = element.querySelector<HTMLAnchorElement>('a');
+
+    expect(element.querySelector('app-countdown')).toBeTruthy();
+    expect(link?.textContent).toContain('Regístrate');
+    expect(link?.href).toBe(event.registrationUrl);
+    expect(link?.target).toBe('_blank');
+    expect(link?.rel).toContain('noopener');
+  });
+
+  it('should hide the registration CTA when an upcoming event has no registration URL', () => {
+    fixture.componentRef.setInput(
+      'event',
+      createEvent({ date: '2099-10-10T08:00:00-05:00' }),
+    );
+    fixture.detectChanges();
+
+    const element: HTMLElement = fixture.nativeElement;
+
+    expect(element.querySelector('app-countdown')).toBeTruthy();
+    expect(element.textContent).not.toContain('Regístrate');
+  });
+
+  it('should link to more details when a past event has an internal page', () => {
+    fixture.componentRef.setInput(
+      'event',
+      createEvent({
+        date: '2000-10-10T08:00:00-05:00',
+        relativeUrl: '/events/example',
+      }),
+    );
+    fixture.detectChanges();
+
+    const element: HTMLElement = fixture.nativeElement;
+    const link = element.querySelector<HTMLAnchorElement>('a');
+
+    expect(element.querySelector('app-countdown')).toBeNull();
+    expect(link?.textContent).toContain('Ver más detalles');
+    expect(link?.getAttribute('href')).toBe('/events/example');
+  });
 });
+
+function createEvent(overrides: Partial<Event> = {}): Event {
+  return {
+    title: 'Example event',
+    description: 'Example description',
+    location: 'UTP',
+    date: '2099-10-10T08:00:00-05:00',
+    image: 'assets/images/main/sfd-2025.webp',
+    ...overrides,
+  };
+}

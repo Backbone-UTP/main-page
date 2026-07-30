@@ -11,6 +11,7 @@ import { Component, OnInit, Input, OnDestroy, Output, EventEmitter } from '@angu
 export class CountdownComponent implements OnInit, OnDestroy {
   @Input() targetDate = '';
   @Input() className = '';
+  @Input() compact = false;
   @Output() countdownExpired = new EventEmitter<boolean>(true);
 
   days = 0;
@@ -18,13 +19,15 @@ export class CountdownComponent implements OnInit, OnDestroy {
   minutes = 0;
   seconds = 0;
   isExpired = false;
-  private countdownInterval: NodeJS.Timeout | undefined;
+  private countdownInterval: ReturnType<typeof setInterval> | undefined;
 
   ngOnInit(): void {
     this.updateCountdown();
-    this.countdownInterval = setInterval(() => {
-      this.updateCountdown();
-    }, 1000);
+    if (!this.isExpired) {
+      this.countdownInterval = setInterval(() => {
+        this.updateCountdown();
+      }, 1000);
+    }
   }
 
   updateCountdown(): void {

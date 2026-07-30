@@ -76,21 +76,41 @@
           {{ event()!.description }}
         </p>
 
-        <div class="flex items-center justify-between px-4">
-          <div class="flex flex-col items-center">
-            <p class="font-bold text-[18px] leading-[23px] text-[#1e1e1e]">
-              {{ countdownTime }}
-            </p>
-            <p class="font-bold text-[12px] leading-[23px] text-[#1e1e1e]">
-              {{ countdownLabels }}
-            </p>
-          </div>
-          <button
-            class="bg-[#07012a] px-4 py-3 rounded-[32px] font-medium text-sm leading-[21px] text-[#e5e8eb] cursor-pointer transition-all duration-300 hover:bg-[#0f0a3a]"
-            (click)="onRegisterClick()"
-          >
-            Regístrate
-          </button>
+        <div class="flex items-center justify-between gap-4 px-4">
+          @if (isUpcoming()) {
+            <app-countdown
+              [targetDate]="event()!.date"
+              [compact]="true"
+              className="text-[#1e1e1e]"
+            ></app-countdown>
+
+            @if (event()!.registrationUrl) {
+              <a
+                [href]="event()!.registrationUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="bg-[#07012a] px-4 py-3 rounded-[32px] font-medium text-sm leading-[21px] text-[#e5e8eb] cursor-pointer transition-all duration-300 hover:bg-[#0f0a3a]"
+              >
+                Regístrate
+              </a>
+            }
+          } @else if (event()!.relativeUrl) {
+            <a
+              [routerLink]="event()!.relativeUrl"
+              class="ml-auto bg-[#07012a] px-4 py-3 rounded-[32px] font-medium text-sm leading-[21px] text-[#e5e8eb] cursor-pointer transition-all duration-300 hover:bg-[#0f0a3a]"
+            >
+              Ver más detalles
+            </a>
+          } @else if (event()!.absoluteUrl) {
+            <a
+              [href]="event()!.absoluteUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ml-auto bg-[#07012a] px-4 py-3 rounded-[32px] font-medium text-sm leading-[21px] text-[#e5e8eb] cursor-pointer transition-all duration-300 hover:bg-[#0f0a3a]"
+            >
+              Ver más detalles
+            </a>
+          }
         </div>
       </div>
     </div>

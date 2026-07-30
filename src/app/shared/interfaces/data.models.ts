@@ -20,6 +20,7 @@ export interface Event {
     location: string;
     date: string; // ISO string or specific format, keeping string for now as per existing data
     image: string;
+    registrationUrl?: string;
     relativeUrl?: string;
     absoluteUrl?: string;
 }

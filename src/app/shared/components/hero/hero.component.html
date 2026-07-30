@@ -10,11 +10,15 @@
       <p class="font-normal text-base leading-[24px] text-white">
         {{ subTitle }}
       </p>
-      <button
+      <a
+        [href]="communityUrl"
+        target="_blank"
+        rel="noopener noreferrer"
         class="bg-[#fac738] px-[18px] py-[12px] rounded-[24px] font-bold text-base leading-[24px] text-[#241f0f] cursor-pointer transition-all duration-300 hover:bg-[#e6b730] max-w-max"
+        aria-label="Unirse a la comunidad de WhatsApp de BackBone UTP (abre en una nueva pestaña)"
       >
         {{ ctaText }}
-      </button>
+      </a>
     </div>
   </div>
 

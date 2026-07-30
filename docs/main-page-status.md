@@ -2,7 +2,7 @@
 
 BackBone UTP is shifting from event-only landings (SFD) to an **org home at `/`** that shows events, projects, and members. Branch `feat/landing-integration` has the landing scaffold; **P0 blockers are resolved** in local WIP. Remaining work is mostly P1 product completeness and P2 polish.
 
-**Last reviewed:** 2026-07-23
+**Last reviewed:** 2026-07-30
 
 ## Quick path
 
@@ -93,9 +93,9 @@ Data flows through `DataService` → `toSignal()` in `MainComponent`.
 ### Partially done / open
 
 - [ ] **Members** — cards render; no social links / hover; `members.ts` unused (fake names)  
-- [ ] **Next-event card (when event exists)** — countdown still hardcoded; register is `console.log`  
-- [ ] **Hero CTA** — button has no destination  
-- [ ] **Footer** — CoC ok; Contact & Privacy routes missing  
+- [x] **Next-event card (when event exists)** — real countdown; optional registration CTA; past-event details fallback
+- [x] **Hero CTA** — links to the BackBone WhatsApp community
+- [x] **Footer** — unsupported Contact & Privacy links removed; Code of Conduct retained
 - [x] **P0 stage commit** — completed with the P0 implementation  
 - [ ] **PR** — open after the next review-ready slice  
 
@@ -115,12 +115,12 @@ Data flows through `DataService` → `toSignal()` in `MainComponent`.
 
 | ID | Task | Notes |
 |----|------|-------|
-| P1.1 | Real countdown on next-event card | Still hardcoded `"01 : 12 : 25 : 50"`. Reuse shared `countdown` when an event exists. |
-| P1.2 | Register CTA | Replace `console.log` with form/URL per event. |
-| P1.3 | Hero “Únete a la comunidad” CTA | Link (WhatsApp / Discord / form / community section). |
+| P1.1 | Real countdown on next-event card | **Done** — shared countdown uses the event date and supports a compact card presentation. |
+| P1.2 | Register CTA | **Done** — optional per-event URL; hidden when absent; past events with links show “Ver más detalles”. |
+| P1.3 | Hero “Únete a la comunidad” CTA | **Done** — links to the BackBone WhatsApp community. |
 | P1.4 | Members section (#89) | Dynamic “Integrantes”: hover, social redirect, configurable layout. |
 | P1.5 | Single source for members | Use `src/assets/content/members.ts` (or drop it); remove placeholder names. |
-| P1.6 | Footer routes | Implement `/contact` and `/privacy-policy`, or remove links. |
+| P1.6 | Footer routes | **Done** — removed unsupported Contact and Privacy links; retained Code of Conduct. |
 | P1.7 | Projects content hygiene | Confirm repo/live links; consider moving projects out of service hardcode into content file. |
 
 ### P2 — Polish & quality
@@ -161,10 +161,10 @@ Data flows through `DataService` → `toSignal()` in `MainComponent`.
 1. ~~Stabilize content (P0.1–P0.3)~~ → **done**.  
 2. ~~Finish shared header + routes (P0.4–P0.5)~~ → **done in WIP**.  
 3. ~~Commit the completed P0 WIP~~ → **done**.  
-4. **Close interaction gaps** (P1.1–P1.3, P1.6).  
+4. ~~Close interaction gaps (P1.1–P1.3, P1.6)~~ → **done**.
 5. **Members / projects depth** (P1.4–P1.5, P1.7, #89).  
 6. **Polish + PR** (P2.1, P2.3–P2.6).
 
 ## Next step
 
-Pick a P1 slice — likely **hero/register CTAs + real countdown**, or **members (#89)** — before visual polish and PR preparation.
+Continue with **members / projects depth** (#89, P1.4–P1.5, P1.7).

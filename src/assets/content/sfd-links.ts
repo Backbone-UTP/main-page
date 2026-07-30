@@ -4,6 +4,9 @@ import { Header } from 'src/app/shared/interfaces/header.interface';
 export const BACKBONE_INSTAGRAM_URL =
   'https://www.instagram.com/backboneutp/';
 
+export const BACKBONE_WHATSAPP_COMMUNITY_URL =
+  'https://chat.whatsapp.com/KDcskFjyvFIHZ0sFM1ciTf';
+
 export const headerLinks: Header[] = [
   {
     title: 'Qué es',

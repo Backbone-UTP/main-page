@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BACKBONE_WHATSAPP_COMMUNITY_URL } from 'src/assets/content/sfd-links';
 
 @Component({
   selector: 'app-hero',
@@ -14,5 +15,6 @@ export class HeroComponent {
     'Somos una comunidad y semillero de investigación dedicado a fomentar el aprendizaje, la colaboración y la innovación en tecnología.';
 
   ctaText = 'Únete a la comunidad';
+  communityUrl = BACKBONE_WHATSAPP_COMMUNITY_URL;
   imageUrl = 'assets/images/main-hero.webp';
 }
