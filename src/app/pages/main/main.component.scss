@@ -1,8 +1,10 @@
-.past-events-slider {
+.past-events-slider,
+.projects-slider {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
 
-.past-events-slider::-webkit-scrollbar {
+.past-events-slider::-webkit-scrollbar,
+.projects-slider::-webkit-scrollbar {
 	display: none;
 }

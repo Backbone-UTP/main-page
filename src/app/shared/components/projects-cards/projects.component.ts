@@ -1,22 +1,17 @@
-import { Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, input } from '@angular/core';
+import { Project } from '../../interfaces/data.models';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
-  @Input() title!: string;
-  @Input() description!: string;
-  @Input() imageUrl!: string;
-  @Input() status!: 'En Desarrollo' | 'Publicado' | 'Próximamente';
-  @Input() link!: string;
+  project = input.required<Project>();
 
   getStatusColor(): string {
-    switch (this.status) {
+    switch (this.project().status) {
       case 'Publicado':
         return '#00922C'; // Green
       case 'En Desarrollo':

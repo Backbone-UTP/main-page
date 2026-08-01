@@ -57,4 +57,41 @@ describe('MainComponent', () => {
     expect(element.querySelector('#next-event')).not.toBeNull();
     expect(element.querySelector('#members')).not.toBeNull();
   });
+
+  it('shows project navigation only when the gallery overflows', () => {
+    const element = fixture.nativeElement as HTMLElement;
+    const slider = element.querySelector<HTMLElement>('.projects-slider')!;
+
+    expect(
+      element.querySelector('[aria-label="Ver siguientes proyectos"]'),
+    ).toBeNull();
+
+    Object.defineProperties(slider, {
+      clientWidth: { configurable: true, value: 600 },
+      scrollWidth: { configurable: true, value: 1000 },
+      scrollLeft: { configurable: true, value: 0, writable: true },
+    });
+    slider.dispatchEvent(new Event('scroll'));
+    fixture.detectChanges();
+
+    const nextButton = element.querySelector<HTMLButtonElement>(
+      '[aria-label="Ver siguientes proyectos"]',
+    );
+    expect(nextButton).not.toBeNull();
+    expect(
+      element.querySelector('[aria-label="Ver proyectos anteriores"]'),
+    ).toBeNull();
+
+    const scrollBySpy = jasmine.createSpy('scrollBy');
+    Object.defineProperty(slider, 'scrollBy', {
+      configurable: true,
+      value: scrollBySpy,
+    });
+    nextButton?.click();
+
+    expect(scrollBySpy).toHaveBeenCalledWith({
+      left: 480,
+      behavior: 'smooth',
+    });
+  });
 });

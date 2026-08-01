@@ -71,36 +71,47 @@
     <div class="px-4 pb-3 pt-5">
       <h2 class="font-bold text-[22px] leading-[28px] text-white">Proyectos</h2>
     </div>
-    <div class="flex gap-3 p-4 overflow-x-auto">
-      @for (project of projects(); track project.title) {
-        <app-projects
-          [title]="project.title"
-          [description]="project.description"
-          [imageUrl]="project.imageUrl"
-          [status]="project.status"
-          [link]="project.repoLink"
-        ></app-projects>
+    <div class="relative p-4">
+      @if (canScrollProjectsPrev) {
+        <button
+          type="button"
+          class="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-[#fac738] bg-[#07012a]/90 px-3 py-2 text-[#fac738] shadow-lg"
+          (click)="scrollProjects('prev')"
+          aria-label="Ver proyectos anteriores"
+        >
+          <
+        </button>
+      }
+
+      <div
+        #projectsSlider
+        class="projects-slider flex gap-3 overflow-x-auto scroll-smooth"
+        (scroll)="onProjectsScroll()"
+      >
+        @for (project of projects(); track project.title) {
+          <app-projects [project]="project"></app-projects>
+        }
+      </div>
+
+      @if (canScrollProjectsNext) {
+        <button
+          type="button"
+          class="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-[#fac738] bg-[#07012a]/90 px-3 py-2 text-[#fac738] shadow-lg"
+          (click)="scrollProjects('next')"
+          aria-label="Ver siguientes proyectos"
+        >
+          >
+        </button>
       }
     </div>
   </section>
 
   <!-- Miembros Section -->
   <section id="members" class="w-full max-w-[960px] mt-5">
-    <div class="px-4 pb-3 pt-5">
-      <h2 class="font-bold text-[22px] leading-[28px] text-white">Miembros</h2>
-    </div>
-    <div class="flex flex-col gap-3 p-4">
-      <!-- First row of members -->
-      <div class="flex gap-3 flex-wrap">
-        @for (member of members(); track member.name) {
-          <app-member-card
-            [name]="member.name"
-            [role]="member.role"
-            [photoUrl]="member.photoUrl"
-          ></app-member-card>
-        }
-      </div>
-    </div>
+    <app-members-section
+      [members]="members() ?? []"
+      [columns]="6"
+    ></app-members-section>
   </section>
   <app-footer></app-footer>
 </main>

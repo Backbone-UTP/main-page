@@ -1,0 +1,14 @@
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 176px));
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .member-grid {
+    grid-template-columns: repeat(
+      var(--member-columns),
+      minmax(0, 176px)
+    );
+  }
+}

@@ -92,7 +92,7 @@ Data flows through `DataService` → `toSignal()` in `MainComponent`.
 
 ### Partially done / open
 
-- [ ] **Members** — cards render; no social links / hover; `members.ts` unused (fake names)  
+- [x] **Members** — reusable section, canonical homepage roster, hover and social links
 - [x] **Next-event card (when event exists)** — real countdown; optional registration CTA; past-event details fallback
 - [x] **Hero CTA** — links to the BackBone WhatsApp community
 - [x] **Footer** — unsupported Contact & Privacy links removed; Code of Conduct retained
@@ -118,10 +118,10 @@ Data flows through `DataService` → `toSignal()` in `MainComponent`.
 | P1.1 | Real countdown on next-event card | **Done** — shared countdown uses the event date and supports a compact card presentation. |
 | P1.2 | Register CTA | **Done** — optional per-event URL; hidden when absent; past events with links show “Ver más detalles”. |
 | P1.3 | Hero “Únete a la comunidad” CTA | **Done** — links to the BackBone WhatsApp community. |
-| P1.4 | Members section (#89) | Dynamic “Integrantes”: hover, social redirect, configurable layout. |
-| P1.5 | Single source for members | Use `src/assets/content/members.ts` (or drop it); remove placeholder names. |
+| P1.4 | Members section (#89) | **Done** — reusable section with configurable title/layout, hover and social links. |
+| P1.5 | Single source for members | **Done** — canonical six-person homepage roster in `src/assets/content/members.ts`. |
 | P1.6 | Footer routes | **Done** — removed unsupported Contact and Privacy links; retained Code of Conduct. |
-| P1.7 | Projects content hygiene | Confirm repo/live links; consider moving projects out of service hardcode into content file. |
+| P1.7 | Projects content hygiene | **Done** — typed content file, separate repo/live actions, both Judge repos, overflow gallery controls. |
 
 ### P2 — Polish & quality
 
@@ -162,9 +162,9 @@ Data flows through `DataService` → `toSignal()` in `MainComponent`.
 2. ~~Finish shared header + routes (P0.4–P0.5)~~ → **done in WIP**.  
 3. ~~Commit the completed P0 WIP~~ → **done**.  
 4. ~~Close interaction gaps (P1.1–P1.3, P1.6)~~ → **done**.
-5. **Members / projects depth** (P1.4–P1.5, P1.7, #89).  
+5. ~~Members / projects depth (P1.4–P1.5, P1.7, #89)~~ → **done**.
 6. **Polish + PR** (P2.1, P2.3–P2.6).
 
 ## Next step
 
-Continue with **members / projects depth** (#89, P1.4–P1.5, P1.7).
+Continue with **polish + PR** (P2.1, P2.3–P2.6).

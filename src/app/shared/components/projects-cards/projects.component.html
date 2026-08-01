@@ -1,11 +1,10 @@
-<a
-  [href]="link"
-  target="_blank"
-  class="w-[301px] flex flex-col gap-3 pb-3 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#fac738] rounded-lg hover:scale-[1.02] transition-transform block"
->
-  <!-- Image with status badge -->
+<article class="flex w-[301px] shrink-0 flex-col gap-3 rounded-lg pb-3">
   <div class="relative h-[301px] rounded-xl overflow-hidden">
-    <img [src]="imageUrl" [alt]="title" class="w-full h-full object-cover" />
+    <img
+      [src]="project().imageUrl"
+      [alt]="project().title"
+      class="h-full w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
+    />
     <div class="absolute top-2.5 right-2.5">
       <div
         class="h-[32px] rounded-[16px] px-3 flex items-center"
@@ -13,19 +12,42 @@
       >
         <span
           class="font-medium text-sm leading-[21px] text-[#e5e8eb] whitespace-nowrap"
-          >{{ status }}</span
+          >{{ project().status }}</span
         >
       </div>
     </div>
   </div>
 
-  <!-- Content -->
-  <div class="flex flex-col">
+  <div class="flex flex-1 flex-col">
     <h3 class="font-medium text-base leading-[24px] text-white mb-1">
-      {{ title }}
+      {{ project().title }}
     </h3>
     <p class="font-normal text-sm leading-[21px] text-[#ccbd8f]">
-      {{ description }}
+      {{ project().description }}
     </p>
   </div>
-</a>
+
+  <div class="flex flex-wrap gap-2">
+    @for (repository of project().repositoryLinks; track repository.url) {
+      <a
+        [href]="repository.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-full border border-[#fac738] px-3 py-2 text-sm font-medium text-[#fac738] transition-colors hover:bg-[#fac738] hover:text-[#07012a] focus:outline-none focus:ring-2 focus:ring-[#fac738]"
+      >
+        {{ repository.label }}
+      </a>
+    }
+
+    @if (project().liveUrl) {
+      <a
+        [href]="project().liveUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="rounded-full bg-[#fac738] px-3 py-2 text-sm font-medium text-[#07012a] transition-colors hover:bg-[#e6b730] focus:outline-none focus:ring-2 focus:ring-[#fac738]"
+      >
+        Ver proyecto
+      </a>
+    }
+  </div>
+</article>

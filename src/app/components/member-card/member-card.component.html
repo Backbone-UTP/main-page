@@ -1,16 +1,41 @@
-<div class="w-[176px] flex flex-col gap-3 pb-3">
-  <!-- Circular image -->
-  <div class="flex justify-center px-4">
-    <div class="w-full aspect-square rounded-full overflow-hidden">
-      <img [src]="photoUrl" [alt]="name" class="w-full h-full object-cover" />
+<article class="flex w-full max-w-[176px] flex-col gap-3 pb-3">
+  <div class="flex justify-center px-2 sm:px-4">
+    <div
+      class="group relative aspect-square w-full overflow-hidden rounded-full focus-within:ring-2 focus-within:ring-[#fac738] focus-within:ring-offset-2 focus-within:ring-offset-[#07012a]"
+    >
+      <img
+        [src]="photoUrl"
+        [alt]="name"
+        class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:brightness-50 group-focus-within:scale-105 group-focus-within:brightness-50"
+      />
+
+      @if (socialLinks.length) {
+        <div
+          class="absolute inset-0 flex items-center justify-center gap-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100"
+        >
+          @for (link of socialLinks; track link.url) {
+            <a
+              [href]="link.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="rounded-full bg-[#07012a]/90 p-2 text-white transition-transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#fac738]"
+              [attr.aria-label]="'Visitar perfil de ' + name + ' en ' + link.name + ' (abre en una nueva pestaña)'"
+            >
+              <app-icon
+                [iconName]="link.name"
+                [properties]="{ id: '', class: 'h-5 w-5' }"
+              ></app-icon>
+            </a>
+          }
+        </div>
+      }
     </div>
   </div>
 
-  <!-- Content -->
   <div class="flex flex-col items-center text-center">
     <h3 class="font-medium text-base leading-[24px] text-white">{{ name }}</h3>
     <p class="font-normal text-sm leading-[21px] text-[#ccbd8f]">
       {{ role }}
     </p>
   </div>
-</div>
+</article>
