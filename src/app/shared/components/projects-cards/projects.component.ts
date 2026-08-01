@@ -20,4 +20,8 @@ export class ProjectsComponent {
         return '#CA9500'; // Yellow
     }
   }
+
+  getStatusTextColor(): string {
+    return this.project().status === 'En Desarrollo' ? '#ffffff' : '#07012a';
+  }
 }

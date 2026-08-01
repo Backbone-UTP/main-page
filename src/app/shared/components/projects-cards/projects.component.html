@@ -7,11 +7,12 @@
     />
     <div class="absolute top-2.5 right-2.5">
       <div
-        class="h-[32px] rounded-[16px] px-3 flex items-center"
-        [style.backgroundColor]="getStatusColor()"
+         class="h-[32px] rounded-[16px] px-3 flex items-center"
+         [style.backgroundColor]="getStatusColor()"
+         [style.color]="getStatusTextColor()"
       >
         <span
-          class="font-medium text-sm leading-[21px] text-[#e5e8eb] whitespace-nowrap"
+          class="whitespace-nowrap text-sm font-medium leading-[21px]"
           >{{ project().status }}</span
         >
       </div>
@@ -33,6 +34,7 @@
         [href]="repository.url"
         target="_blank"
         rel="noopener noreferrer"
+        [attr.aria-label]="repository.label + ' (abre en una nueva pestaña)'"
         class="rounded-full border border-[#fac738] px-3 py-2 text-sm font-medium text-[#fac738] transition-colors hover:bg-[#fac738] hover:text-[#07012a] focus:outline-none focus:ring-2 focus:ring-[#fac738]"
       >
         {{ repository.label }}
@@ -44,6 +46,7 @@
         [href]="project().liveUrl"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Ver proyecto (abre en una nueva pestaña)"
         class="rounded-full bg-[#fac738] px-3 py-2 text-sm font-medium text-[#07012a] transition-colors hover:bg-[#e6b730] focus:outline-none focus:ring-2 focus:ring-[#fac738]"
       >
         Ver proyecto

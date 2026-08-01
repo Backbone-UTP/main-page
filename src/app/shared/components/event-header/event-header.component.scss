@@ -4,3 +4,12 @@
     @apply text-yellow-500 dark:text-yellow-400;
   }
 }
+
+nav {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

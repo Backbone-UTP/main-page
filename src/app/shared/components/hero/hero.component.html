@@ -1,9 +1,11 @@
-<div class="flex items-center w-full max-w-[960px] mx-auto p-4">
+<div
+  class="mx-auto flex w-full max-w-[960px] flex-col items-stretch gap-8 px-4 py-8 sm:px-6 lg:flex-row lg:items-center lg:gap-0 lg:p-4"
+>
   <!-- Left content section -->
-  <div class="flex-1 min-w-0 p-4">
-    <div class="flex flex-col gap-[15px] justify-center min-h-[480px]">
+  <div class="w-full min-w-0 lg:flex-1 lg:p-4">
+    <div class="flex min-h-0 flex-col justify-center gap-[15px] lg:min-h-[480px]">
       <h1
-        class="font-black text-[48px] leading-[60px] tracking-[-2px] text-white"
+        class="text-[40px] font-black leading-[44px] tracking-[-2px] text-white sm:text-[48px] sm:leading-[60px]"
       >
         {{ title }}
       </h1>
@@ -23,7 +25,9 @@
   </div>
 
   <!-- Right image section -->
-  <div class="w-[438px] h-[356px] rounded-xl overflow-hidden shrink-0">
+  <div
+    class="mx-auto h-[260px] w-full max-w-[438px] shrink-0 overflow-hidden rounded-xl sm:h-[356px] lg:mx-0 lg:h-[356px] lg:w-[438px]"
+  >
     <img
       [src]="imageUrl"
       alt="Backbone Community"

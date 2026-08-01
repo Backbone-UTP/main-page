@@ -8,3 +8,7 @@
 .projects-slider::-webkit-scrollbar {
 	display: none;
 }
+
+section[id] {
+  scroll-margin-top: 5rem;
+}

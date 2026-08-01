@@ -94,4 +94,28 @@ describe('MainComponent', () => {
       behavior: 'smooth',
     });
   });
+
+  it('recalculates both galleries when the viewport changes', () => {
+    const element = fixture.nativeElement as HTMLElement;
+    const projectSlider = element.querySelector<HTMLElement>('.projects-slider')!;
+    const pastEventsSlider = element.querySelector<HTMLElement>(
+      '.past-events-slider',
+    )!;
+
+    Object.defineProperties(projectSlider, {
+      clientWidth: { configurable: true, value: 600 },
+      scrollWidth: { configurable: true, value: 1000 },
+      scrollLeft: { configurable: true, value: 0, writable: true },
+    });
+    Object.defineProperties(pastEventsSlider, {
+      clientWidth: { configurable: true, value: 600 },
+      scrollWidth: { configurable: true, value: 1000 },
+      scrollLeft: { configurable: true, value: 10, writable: true },
+    });
+
+    component.onWindowResize();
+
+    expect(component.canScrollProjectsNext).toBeTrue();
+    expect(component.canScrollPrev).toBeTrue();
+  });
 });

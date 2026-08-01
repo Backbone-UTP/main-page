@@ -6,12 +6,12 @@
       <img
         [src]="photoUrl"
         [alt]="name"
-        class="h-full w-full object-cover transition duration-300 group-hover:scale-105 group-hover:brightness-50 group-focus-within:scale-105 group-focus-within:brightness-50"
+        class="h-full w-full object-cover brightness-50 transition duration-300 sm:brightness-100 sm:group-hover:scale-105 sm:group-hover:brightness-50 sm:group-focus-within:scale-105 sm:group-focus-within:brightness-50"
       />
 
       @if (socialLinks.length) {
         <div
-          class="absolute inset-0 flex items-center justify-center gap-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100"
+          class="pointer-events-auto absolute inset-0 flex items-center justify-center gap-3 opacity-100 transition-opacity duration-300 sm:pointer-events-none sm:opacity-0 sm:group-focus-within:pointer-events-auto sm:group-focus-within:opacity-100 sm:group-hover:pointer-events-auto sm:group-hover:opacity-100"
         >
           @for (link of socialLinks; track link.url) {
             <a

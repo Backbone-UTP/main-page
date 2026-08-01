@@ -5,6 +5,7 @@ import {
   ViewChild,
   effect,
   inject,
+  HostListener,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectsComponent } from 'src/app/shared/components/projects-cards/projects.component';
@@ -105,6 +106,12 @@ export class MainComponent implements AfterViewInit {
   }
 
   onProjectsScroll(): void {
+    this.updateProjectsNavigation();
+  }
+
+  @HostListener('window:resize')
+  onWindowResize(): void {
+    this.updatePastEventsNavigation();
     this.updateProjectsNavigation();
   }
 
