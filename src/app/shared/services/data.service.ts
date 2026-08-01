@@ -5,6 +5,22 @@ import { EVENTS } from '../../../assets/content/events';
 import { MEMBERS } from '../../../assets/content/members';
 import { PROJECTS } from '../../../assets/content/projects';
 
+export function sortEventsByDate(
+  events: readonly Event[],
+  descending = false,
+): Event[] {
+  const direction = descending ? -1 : 1;
+
+  return [...events].sort(
+    (a, b) =>
+      direction * (new Date(a.date).getTime() - new Date(b.date).getTime()),
+  );
+}
+
+export function isUpcomingEvent(event: Event, now: Date): boolean {
+  return new Date(event.date).getTime() > now.getTime();
+}
+
 @Injectable({
   providedIn: 'root',
 })
@@ -20,30 +36,23 @@ export class DataService {
   }
 
   getEvents(): Observable<Event[]> {
-    // Sort events by date
-    const sortedEvents = [...this.events].sort(
-      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
-    );
-    return of(sortedEvents);
+    return of(sortEventsByDate(this.events));
   }
 
   getNextEvent(): Observable<Event | null> {
     const now = new Date();
-    const sortedEvents = [...this.events].sort(
-      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+    const nextEvent = sortEventsByDate(this.events).find((event) =>
+      isUpcomingEvent(event, now),
     );
-    const nextEvent = sortedEvents.find((event) => new Date(event.date) > now);
     return of(nextEvent || null);
   }
 
   getPastEvents(): Observable<Event[]> {
     const now = new Date();
-    const sortedEvents = [...this.events].sort(
-      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-    ); // Descending for past
-    const pastEvents = sortedEvents.filter(
-      (event) => new Date(event.date) <= now,
+    return of(
+      sortEventsByDate(this.events, true).filter(
+        (event) => !isUpcomingEvent(event, now),
+      ),
     );
-    return of(pastEvents);
   }
 }
