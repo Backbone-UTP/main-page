@@ -2,7 +2,7 @@
 
 BackBone UTP is shifting from event-only landings (SFD) to an **org home at `/`** that shows events, projects, and members. Branch `feat/landing-integration` has the landing scaffold; **P0 blockers are resolved** in local WIP. Remaining work is mostly P1 product completeness and P2 polish.
 
-**Last reviewed:** 2026-07-30
+**Last reviewed:** 2026-08-01
 
 ## Quick path
 
@@ -28,21 +28,26 @@ Deliver a production-ready community landing at `/` that:
 
 | Item | Detail |
 |------|--------|
-| Branch | `feat/landing-integration` (4 commits ahead of `main` + local WIP) |
+| Branch | `feat/landing-integration` (9 commits ahead of local `main`, PR-ready, clean) |
 | Stack | Angular 20, Tailwind, SCSS, Karma/Jasmine |
 | Default route | `''` → `MainComponent` |
 | Event routes | `/events/software-freedom-day-2024`, `/events/software-freedom-day-2025` |
 | Extra route | `/code-of-conduct` |
 | Catch-all | `**` → redirect to `/` |
 
-### Commits already on the branch
+### Relevant commits on the branch
 
 1. `a6d4866` — DataService, models, footer, member cards, landing layout, staff assets  
 2. `8b07d36` — Dependency upgrade (Angular 20)  
 3. `34ed6ea` — Code of Conduct page  
 4. `2cd9ac9` — Hero / project images  
+5. `1987f4e` — Complete landing P0 integration
+6. `d8bae66` — Complete landing interactions
+7. `b1314f8` — Complete members and projects depth
+8. `6e394ba` — Polish landing responsive interactions
+9. `dfd1b2a` — Harden landing data and navigation coverage
 
-### Local WIP (uncommitted) — P0-focused
+### Previously completed local WIP — now committed
 
 | Change | Status |
 |--------|--------|
@@ -65,7 +70,7 @@ EventHeader (logo + Eventos / Proyectos / Miembros)
     ├── Próximo Evento   (#next-event)  → card-next-event (or empty state)
     ├── Eventos Previos  (#past-events) → previous-event-card slider
     ├── Proyectos        (#projects)    → projects cards
-    ├── Miembros         (#members)     → member-card grid
+    ├── Miembros         (#members)     → members-section → member-card grid
     └── Footer
 ```
 
@@ -87,7 +92,7 @@ Data flows through `DataService` → `toSignal()` in `MainComponent`.
 - [x] **P0.2** Real event images (`sfd-2023/24/25.webp`, `flisol_pereira.webp`)
 - [x] **P0.3** Deep links for SFD 2023/2024/2025 + FLiSoL 2023/2024/2025
 - [x] **P0.4** Wildcard route `**` redirects to home
-- [x] **P0.5** Header unification in working tree (still uncommitted)
+- [x] **P0.5** Header unification committed
 - [x] Header active-section tracking via `data-section-id` / page fragments
 
 ### Partially done / open
@@ -109,7 +114,7 @@ Data flows through `DataService` → `toSignal()` in `MainComponent`.
 | P0.2 | Add event images | **Done** | Artwork lives in `assets/images/main/` (not `images/events/`). |
 | P0.3 | Wire event deep links | **Done** | SFD 2023 uses its canonical external recording; SFD 24/25 and all FLiSoL editions are linked. |
 | P0.4 | Fix catch-all route | **Done** | `path: '**'` → `redirectTo: ''`. Covered by `app.routes.spec.ts`. |
-| P0.5 | Finish header unification | **Done in WIP** | Shared component + deleted per-event headers and stale SFD 2025 module. Needs commit. |
+| P0.5 | Finish header unification | **Done** | Shared component + deleted per-event headers and stale SFD 2025 module. |
 
 ### P1 — Product completeness
 
@@ -127,12 +132,12 @@ Data flows through `DataService` → `toSignal()` in `MainComponent`.
 
 | ID | Task | Status / notes |
 |----|------|----------------|
-| P2.1 | Responsive hero | Side-by-side layout may break on small screens. |
-| P2.2 | Header active-link observer | **Done in WIP** — observes section `id`s from nav fragments. |
-| P2.3 | Padding under fixed header | Main still uses `py-5`; hero may sit under fixed nav. |
-| P2.4 | Tests | Improved (routes, events content, empty state, nav highlight, past-card links). Still light on DataService date logic / slider. |
-| P2.5 | Lint / type cleanup | Related open work: PR #74 lint; issue #21 naming. |
-| P2.6 | Merge readiness | Commit WIP → rebase/merge with `main` → open PR. |
+| P2.1 | Responsive hero | **Done** — hero stacks on mobile, uses fluid sizing, and the header fits narrow viewports. |
+| P2.2 | Header active-link observer | **Done** — observes section `id`s from nav fragments. |
+| P2.3 | Padding under fixed header | **Done** — main top padding and section scroll margins account for the fixed header. |
+| P2.4 | Tests | **Done** — full suite now passes 57/57, including DataService date boundaries and gallery resize behavior. |
+| P2.5 | Lint / type cleanup | **Done for landing scope** — lint passes; dead project-description typing/component removed. PR #74 and issue #21 remain separate historical items. |
+| P2.6 | Merge readiness | **PR-ready** — commits prepared; PR creation intentionally left for manual review. |
 
 ## Related open GitHub items
 
@@ -149,6 +154,8 @@ Data flows through `DataService` → `toSignal()` in `MainComponent`.
 | Main page | `src/app/pages/main/` |
 | Routes | `src/app/app.routes.ts` (+ `app.routes.spec.ts`) |
 | Data | `src/app/shared/services/data.service.ts` |
+| Members content | `src/assets/content/members.ts` (+ `members.spec.ts`) |
+| Projects content | `src/assets/content/projects.ts` (+ `projects.spec.ts`) |
 | Models | `src/app/shared/interfaces/data.models.ts` |
 | Events content | `src/assets/content/events.ts` (+ `events.spec.ts`) |
 | Nav / social consts | `src/assets/content/sfd-links.ts` (`mainHeaderLinks`, `BACKBONE_INSTAGRAM_URL`) |
@@ -159,12 +166,12 @@ Data flows through `DataService` → `toSignal()` in `MainComponent`.
 ## Suggested planning order
 
 1. ~~Stabilize content (P0.1–P0.3)~~ → **done**.  
-2. ~~Finish shared header + routes (P0.4–P0.5)~~ → **done in WIP**.  
+2. ~~Finish shared header + routes (P0.4–P0.5)~~ → **done**.
 3. ~~Commit the completed P0 WIP~~ → **done**.  
 4. ~~Close interaction gaps (P1.1–P1.3, P1.6)~~ → **done**.
 5. ~~Members / projects depth (P1.4–P1.5, P1.7, #89)~~ → **done**.
-6. **Polish + PR** (P2.1, P2.3–P2.6).
+6. **Polish + PR** → **polish done; PR-ready commits prepared** (P2.1, P2.3–P2.6).
 
 ## Next step
 
-Continue with **polish + PR** (P2.1, P2.3–P2.6).
+Review the PR-ready commits, then open the PR manually when approved.
