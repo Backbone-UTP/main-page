@@ -71,6 +71,29 @@ describe('CardNextEventComponent', () => {
     expect(element.textContent).not.toContain('Regístrate');
   });
 
+  it('should use a responsive stacked layout for populated cards', () => {
+    fixture.componentRef.setInput(
+      'event',
+      createEvent({ date: '2099-10-10T08:00:00-05:00' }),
+    );
+    fixture.detectChanges();
+
+    const element: HTMLElement = fixture.nativeElement;
+    const layout = element.querySelector<HTMLElement>('.event-card-layout');
+    const image = element.querySelector<HTMLElement>('.event-card-image');
+    const content = element.querySelector<HTMLElement>('.event-card-content');
+    const actions = element.querySelector<HTMLElement>('.event-card-actions');
+
+    expect(layout?.classList).toContain('flex-col');
+    expect(layout?.classList).toContain('md:flex-row');
+    expect(image?.classList).toContain('w-full');
+    expect(image?.classList).toContain('md:w-[464px]');
+    expect(content?.classList).toContain('w-full');
+    expect(content?.classList).toContain('min-w-0');
+    expect(actions?.classList).toContain('flex-col');
+    expect(actions?.classList).toContain('sm:flex-row');
+  });
+
   it('should link to more details when a past event has an internal page', () => {
     fixture.componentRef.setInput(
       'event',

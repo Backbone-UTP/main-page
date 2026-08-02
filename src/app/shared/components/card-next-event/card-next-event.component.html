@@ -1,9 +1,11 @@
 @if (event()) {
 <div class="bg-[#fac738] rounded-[24px] p-4 w-full">
-  <div class="flex items-center justify-center gap-4">
+  <div
+    class="event-card-layout flex flex-col items-center justify-center gap-4 md:flex-row"
+  >
     <!-- Image section with badges -->
     <div
-      class="relative w-[464px] h-[264px] rounded-xl overflow-hidden shrink-0"
+      class="event-card-image relative h-[180px] w-full shrink-0 overflow-hidden rounded-xl md:h-[264px] md:w-[464px]"
     >
       <img
         [src]="event()!.image"
@@ -62,7 +64,9 @@
     </div>
 
     <!-- Content section -->
-    <div class="flex-1 min-w-[288px] p-4 flex flex-col justify-between h-full">
+    <div
+      class="event-card-content flex h-full w-full min-w-0 flex-1 flex-col justify-between p-4 md:min-w-[288px]"
+    >
       <div class="py-[18px]">
         <h3 class="font-bold text-[18px] leading-[23px] text-[#1e1e1e]">
           {{ event()!.title }}
@@ -76,7 +80,9 @@
           {{ event()!.description }}
         </p>
 
-        <div class="flex items-center justify-between gap-4 px-4">
+        <div
+          class="event-card-actions flex flex-col items-center justify-between gap-3 px-4 sm:flex-row sm:gap-4"
+        >
           @if (isUpcoming()) {
             <app-countdown
               [targetDate]="event()!.date"
@@ -97,7 +103,7 @@
           } @else if (event()!.relativeUrl) {
             <a
               [routerLink]="event()!.relativeUrl"
-              class="ml-auto bg-[#07012a] px-4 py-3 rounded-[32px] font-medium text-sm leading-[21px] text-[#e5e8eb] cursor-pointer transition-all duration-300 hover:bg-[#0f0a3a]"
+              class="sm:ml-auto bg-[#07012a] px-4 py-3 rounded-[32px] font-medium text-sm leading-[21px] text-[#e5e8eb] cursor-pointer transition-all duration-300 hover:bg-[#0f0a3a]"
             >
               Ver más detalles
             </a>
@@ -106,7 +112,7 @@
               [href]="event()!.absoluteUrl"
               target="_blank"
               rel="noopener noreferrer"
-              class="ml-auto bg-[#07012a] px-4 py-3 rounded-[32px] font-medium text-sm leading-[21px] text-[#e5e8eb] cursor-pointer transition-all duration-300 hover:bg-[#0f0a3a]"
+              class="sm:ml-auto bg-[#07012a] px-4 py-3 rounded-[32px] font-medium text-sm leading-[21px] text-[#e5e8eb] cursor-pointer transition-all duration-300 hover:bg-[#0f0a3a]"
             >
               Ver más detalles
             </a>
