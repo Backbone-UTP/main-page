@@ -7,7 +7,7 @@
 - Linting: ESLint with angular-eslint + typescript-eslint.
 - Tests: Karma + Jasmine (browser: Chrome).
 - Package manager: npm (package-lock.json present).
-- Node: 20.19.4 (see .nvmrc).
+- Node: 22.12.0 (see .nvmrc).
 - Build output: dist/static.
 
 ## Commands
