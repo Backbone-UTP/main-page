@@ -30,6 +30,10 @@ describe('DataService event date logic', () => {
     expect(EVENTS[0].title).toBe('Software Freedom Day 2025');
   });
 
+  it('stores catalog dates with the Colombia UTC-05:00 offset', () => {
+    expect(EVENTS.every((event) => event.date.endsWith('-05:00'))).toBeTrue();
+  });
+
   it('treats an event at the current instant as past', () => {
     const event = {
       ...EVENTS[0],

@@ -51,4 +51,13 @@ describe('ProjectsComponent', () => {
     }
     expect(links[1].getAttribute('href')).toBe(project.liveUrl);
   });
+
+  it('lazy-loads the project image', () => {
+    fixture.componentRef.setInput('project', PROJECTS[0]);
+    fixture.detectChanges();
+
+    const image = fixture.nativeElement.querySelector('img') as HTMLImageElement;
+
+    expect(image.loading).toBe('lazy');
+  });
 });

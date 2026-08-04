@@ -41,4 +41,10 @@ describe('MemberCardComponent', () => {
     });
     expect(element.querySelectorAll('app-icon').length).toBe(2);
   });
+
+  it('lazy-loads the member image', () => {
+    const image = fixture.nativeElement.querySelector('img') as HTMLImageElement;
+
+    expect(image.loading).toBe('lazy');
+  });
 });

@@ -54,4 +54,20 @@ describe('PreviousEventCardComponent', () => {
     expect(link.getAttribute('target')).toBe('_blank');
     expect(link.getAttribute('rel')).toBe('noopener noreferrer');
   });
+
+  it('includes the event year in the compact date tag', () => {
+    fixture.componentRef.setInput('event', EVENTS[0]);
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.textContent).toMatch(/\/25 - /);
+  });
+
+  it('lazy-loads the event image', () => {
+    fixture.componentRef.setInput('event', EVENTS[0]);
+    fixture.detectChanges();
+
+    const image = fixture.nativeElement.querySelector('img') as HTMLImageElement;
+
+    expect(image.loading).toBe('lazy');
+  });
 });

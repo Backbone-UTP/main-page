@@ -4,7 +4,7 @@ export const EVENTS = [
     description:
       'Jornada en la UTP con charlas sobre FLOSS, Git, Python, desarrollo e inteligencia artificial de código abierto.',
     location: 'UTP Sala Magistral 2',
-    date: '2025-10-10T08:00:00',
+    date: '2025-10-10T08:00:00-05:00',
     image: 'assets/images/main/sfd-2025.webp',
     relativeUrl: '/events/software-freedom-day-2025',
   },
@@ -13,7 +13,7 @@ export const EVENTS = [
     description:
       'Edición en Pereira con instalación de Linux, charlas, talleres prácticos y encuentro de la comunidad tecnológica.',
     location: 'UTP Sala Magistral 2',
-    date: '2025-05-08T08:00:00',
+    date: '2025-05-08T08:00:00-05:00',
     image: 'assets/images/main/flisol_pereira.webp',
     absoluteUrl: 'https://flisolpereira.vercel.app/2025',
   },
@@ -22,7 +22,7 @@ export const EVENTS = [
     description:
       'Jornada en la UTP con charlas y talleres sobre Rust, Godot, proyectos open source, documentación e IA.',
     location: 'UTP Auditorio Mecánica',
-    date: '2024-10-10T08:00:00',
+    date: '2024-10-10T08:00:00-05:00',
     image: 'assets/images/main/sfd-2024.webp',
     relativeUrl: '/events/software-freedom-day-2024',
   },
@@ -31,7 +31,7 @@ export const EVENTS = [
     description:
       'Edición de 20 años en Pereira con charlas y talleres de software, IA, cultura libre, industria, arte y diseño.',
     location: 'UTP Sala Magistral 1 y 2',
-    date: '2024-05-16T08:00:00',
+    date: '2024-05-16T08:00:00-05:00',
     image: 'assets/images/main/flisol_pereira.webp',
     absoluteUrl: 'https://flisol.info/FLISOL2024/Colombia/Pereira',
   },
@@ -40,7 +40,7 @@ export const EVENTS = [
     description:
       'Regreso de FLiSoL a Pereira: dos días de instalatón, charlas y talleres para impulsar software y cultura libre.',
     location: 'UTP Sala Magistral 2',
-    date: '2023-04-27T09:00:00',
+    date: '2023-04-27T09:00:00-05:00',
     image: 'assets/images/main/flisol_pereira.webp',
     absoluteUrl: 'https://flisol.info/FLISOL2023/Colombia/Pereira',
   },
@@ -49,7 +49,7 @@ export const EVENTS = [
     description:
       'Edición en la UTP con charlas sobre videojuegos open source y software libre aplicado a las neurociencias.',
     location: 'UTP 15C-S103',
-    date: '2023-10-10T08:00:00',
+    date: '2023-10-10T08:00:00-05:00',
     image: 'assets/images/main/sfd-2023.webp',
     absoluteUrl: 'https://www.youtube.com/live/b3xiS602YKY',
   },

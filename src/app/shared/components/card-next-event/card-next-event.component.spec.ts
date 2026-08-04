@@ -94,6 +94,22 @@ describe('CardNextEventComponent', () => {
     expect(actions?.classList).toContain('sm:flex-row');
   });
 
+  it('includes the event year in the compact date tag', () => {
+    fixture.componentRef.setInput('event', createEvent());
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.textContent).toMatch(/\/99 - /);
+  });
+
+  it('lazy-loads the event image', () => {
+    fixture.componentRef.setInput('event', createEvent());
+    fixture.detectChanges();
+
+    const image = fixture.nativeElement.querySelector('img') as HTMLImageElement;
+
+    expect(image.loading).toBe('lazy');
+  });
+
   it('should link to more details when a past event has an internal page', () => {
     fixture.componentRef.setInput(
       'event',
