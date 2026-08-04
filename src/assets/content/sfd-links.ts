@@ -1,23 +1,29 @@
 import { Footer } from 'src/app/shared/interfaces/footer.interface';
 import { Header } from 'src/app/shared/interfaces/header.interface';
 
+export const BACKBONE_INSTAGRAM_URL =
+  'https://www.instagram.com/backboneutp/';
+
+export const BACKBONE_WHATSAPP_COMMUNITY_URL =
+  'https://chat.whatsapp.com/KDcskFjyvFIHZ0sFM1ciTf';
+
 export const headerLinks: Header[] = [
   {
     title: 'Qué es',
     label: 'about',
-    url: '/events/software-freedom-day-2025/',
+    url: '/events/software-freedom-day-2024/',
     fragment: 'about',
   },
   {
     title: 'Agenda',
     label: 'agenda',
-    url: '/events/software-freedom-day-2025/',
+    url: '/events/software-freedom-day-2024/',
     fragment: 'agenda',
   },
   {
     title: 'Invitan',
     label: 'supporters',
-    url: '/events/software-freedom-day-2025/',
+    url: '/events/software-freedom-day-2024/',
     fragment: 'supporters',
   },
 ];
@@ -43,6 +49,27 @@ export const headerLinks25: Header[] = [
   },
 ];
 
+export const mainHeaderLinks: Header[] = [
+  {
+    title: 'Eventos',
+    label: 'event',
+    url: '/',
+    fragment: 'next-event',
+  },
+  {
+    title: 'Proyectos',
+    label: 'projects',
+    url: '/',
+    fragment: 'projects',
+  },
+  {
+    title: 'Miembros',
+    label: 'members',
+    url: '/',
+    fragment: 'members',
+  },
+];
+
 export const footerLinks: Footer[] = [
   {
     name: 'linkedin',
@@ -54,7 +81,7 @@ export const footerLinks: Footer[] = [
   },
   {
     name: 'instagram',
-    url: 'https://www.instagram.com/backboneutp/',
+    url: BACKBONE_INSTAGRAM_URL,
   },
   {
     name: 'youtube',

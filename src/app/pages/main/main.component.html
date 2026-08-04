@@ -1,26 +1,117 @@
-<section class="w-full flex gap-3">
-  <app-projects
-    [title]="'Proyecto Angular'"
-    [description]="'Descripcion del proyecto.'"
-    [imageUrl]="'assets/images/abstract_img.jpg'"
-    [status]="'Publicado'"
-    [link]="'https://github.com/Backbone-UTP/main-page'"
-  >
-  </app-projects>
-  <app-projects
-    [title]="'Proyecto Angular'"
-    [description]="'Descripcion del proyecto.'"
-    [imageUrl]="'assets/images/abstract_img.jpg'"
-    [status]="'En Desarrollo'"
-    [link]="'https://github.com/Backbone-UTP/main-page'"
-  >
-  </app-projects
-  ><app-projects
-    [title]="'Proyecto Angular'"
-    [description]="'Descripcion del proyecto.'"
-    [imageUrl]="'assets/images/abstract_img.jpg'"
-    [status]="'Próximamente'"
-    [link]="'https://github.com/Backbone-UTP/main-page'"
-  >
-  </app-projects>
-</section>
+<app-event-header
+  [useIcon]="true"
+  iconName="backbone-logo"
+  iconClass="h-4 mx-4 w-auto"
+  logoAlt="BackBone UTP"
+  [navItems]="headerLinks"
+  [showThemeToggle]="false"
+  themeMode="dark-only"
+></app-event-header>
+
+<main class="flex w-full flex-col items-center bg-dark px-5 pb-5 pt-20">
+  <!-- Hero Section -->
+  <section class="w-full max-w-[960px]">
+    <app-hero></app-hero>
+  </section>
+
+  <!-- Próximo Evento Section -->
+  <section id="next-event" class="w-full max-w-[960px] mt-5">
+    <div class="px-4 pb-3 pt-5">
+      <h2 class="font-bold text-[22px] leading-[28px] text-white">
+        Próximo Evento
+      </h2>
+    </div>
+    <app-card-next-event [event]="nextEvent() ?? null"></app-card-next-event>
+  </section>
+
+  <!-- Eventos Previos Section -->
+  <section id="past-events" class="w-full max-w-[960px] mt-5">
+    <div class="px-4 pb-3 pt-5">
+      <h2 class="font-bold text-[22px] leading-[28px] text-white">
+        Eventos Previos
+      </h2>
+    </div>
+    <div class="relative px-4 py-4">
+      @if (canScrollPrev) {
+        <button
+          type="button"
+          class="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-[#fac738] bg-[#07012a]/90 px-3 py-2 text-[#fac738] shadow-lg"
+          (click)="scrollPastEvents('prev')"
+          aria-label="Ver eventos anteriores"
+        >
+          <
+        </button>
+      }
+
+      <div
+        #pastEventsSlider
+        class="past-events-slider flex gap-3 overflow-x-auto scroll-smooth"
+        (scroll)="onPastEventsScroll()"
+      >
+        @for (event of pastEvents() ?? []; track event.title) {
+          <app-previous-event-card [event]="event"></app-previous-event-card>
+        }
+      </div>
+
+      @if (canScrollNext) {
+        <button
+          type="button"
+          class="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-[#fac738] bg-[#07012a]/90 px-3 py-2 text-[#fac738] shadow-lg"
+          (click)="scrollPastEvents('next')"
+          aria-label="Ver siguientes eventos"
+        >
+          >
+        </button>
+      }
+    </div>
+  </section>
+
+  <!-- Proyectos Section -->
+  <section id="projects" class="w-full max-w-[960px] mt-5">
+    <div class="px-4 pb-3 pt-5">
+      <h2 class="font-bold text-[22px] leading-[28px] text-white">Proyectos</h2>
+    </div>
+    <div class="relative p-4">
+      @if (canScrollProjectsPrev) {
+        <button
+          type="button"
+          class="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-[#fac738] bg-[#07012a]/90 px-3 py-2 text-[#fac738] shadow-lg"
+          (click)="scrollProjects('prev')"
+          aria-label="Ver proyectos anteriores"
+        >
+          <
+        </button>
+      }
+
+      <div
+        #projectsSlider
+        class="projects-slider flex gap-3 overflow-x-auto scroll-smooth"
+        (scroll)="onProjectsScroll()"
+      >
+        @for (project of projects(); track project.title) {
+          <app-projects [project]="project"></app-projects>
+        }
+      </div>
+
+      @if (canScrollProjectsNext) {
+        <button
+          type="button"
+          class="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full border border-[#fac738] bg-[#07012a]/90 px-3 py-2 text-[#fac738] shadow-lg"
+          (click)="scrollProjects('next')"
+          aria-label="Ver siguientes proyectos"
+        >
+          >
+        </button>
+      }
+    </div>
+  </section>
+
+  <!-- Miembros Section -->
+  <section id="members" class="w-full max-w-[960px] mt-5">
+    <app-members-section
+      [members]="members() ?? []"
+      [columns]="6"
+    ></app-members-section>
+  </section>
+  <app-footer></app-footer>
+</main>

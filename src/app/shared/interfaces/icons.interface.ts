@@ -11,4 +11,5 @@ export type Icon =
   | 'instagram'
   | 'youtube'
   | 'backbone-logo'
-  | 'github-logo';
+  | 'github-logo'
+  | 'copyleft';

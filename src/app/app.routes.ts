@@ -10,23 +10,31 @@ export const routes: Routes = [
     path: 'events/software-freedom-day-2024',
     loadComponent: () =>
       import('./pages/events/sfd-2024/sfd-2024.component').then(
-        (m) => m.SFD2024Component
+        (m) => m.SFD2024Component,
       ),
   },
   {
     path: 'events/software-freedom-day-2025',
     loadComponent: () =>
       import('./pages/events/sfd-2025/sfd-2025.component').then(
-        (m) => m.SFD2025Component
+        (m) => m.SFD2025Component,
       ),
   },
   {
-    path: 'main',
-    redirectTo: 'events/software-freedom-day-2025',
+    path: 'code-of-conduct',
+    loadComponent: () =>
+      import('./pages/code-of-conduct/code-of-conduct.component').then(
+        (m) => m.CodeOfConductComponent,
+      ),
   },
   {
     path: '',
-    redirectTo: 'events/software-freedom-day-2025',
+    loadComponent: () =>
+      import('./pages/main/main.component').then((m) => m.MainComponent),
+  },
+  {
+    path: '**',
+    redirectTo: '',
     pathMatch: 'full',
   },
 ];

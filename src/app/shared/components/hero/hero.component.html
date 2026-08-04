@@ -1,12 +1,37 @@
-<div class = "flex flex-col w-[960px] h-[512px] bg-[#07012A]">
-    <div class = "py-[85px] inline-flex items-start justify-between">
-        <div class="pl-4 w-[522px] gap-[15px]"> 
-            <h1 [innerHTML] = "spacesTitle" style = "font-family: 'Inter', sans-serif;" class = " mb-3 font-black text-5xl leading-[60px] tracking-[-1px] text-[#FFFFFF]"></h1>
-            <p [innerHTML] = "spacesSubtitle" style = "font-family: 'Inter', sans-serif;" class = "mb-4 font-normal text-base leading-[24px] text-[#FFFFFF]"></p>
-            <button style = "font-family: 'Inter', sans-serif;" class = "px-[18px] py-[12px] bg-[#FAC738] font-bold text-base rounded-3xl leading-[24px] text-[#241F0F] cursor-pointer transition-colors duration-300 hover:bg-[#fbc12d80] hover:text-[#FFFFFF] ">
-                {{ctaText}}
-            </button>                
-        </div> 
-        <img [src] = "imageUrl" alt = "Hero Image" class = "w-[438px] h-[328px] rounded-xl"/>
+<div
+  class="mx-auto flex w-full max-w-[960px] flex-col items-stretch gap-8 px-4 py-8 sm:px-6 lg:flex-row lg:items-center lg:gap-0 lg:p-4"
+>
+  <!-- Left content section -->
+  <div class="w-full min-w-0 lg:flex-1 lg:p-4">
+    <div class="flex min-h-0 flex-col justify-center gap-[15px] lg:min-h-[480px]">
+      <h1
+        class="text-[40px] font-black leading-[44px] tracking-[-2px] text-white sm:text-[48px] sm:leading-[60px]"
+      >
+        {{ title }}
+      </h1>
+      <p class="font-normal text-base leading-[24px] text-white">
+        {{ subTitle }}
+      </p>
+      <a
+        [href]="communityUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="bg-[#fac738] px-[18px] py-[12px] rounded-[24px] font-bold text-base leading-[24px] text-[#241f0f] cursor-pointer transition-all duration-300 hover:bg-[#e6b730] max-w-max"
+        aria-label="Unirse a la comunidad de WhatsApp de BackBone UTP (abre en una nueva pestaña)"
+      >
+        {{ ctaText }}
+      </a>
     </div>
+  </div>
+
+  <!-- Right image section -->
+  <div
+    class="mx-auto h-[260px] w-full max-w-[438px] shrink-0 overflow-hidden rounded-xl sm:h-[356px] lg:mx-0 lg:h-[356px] lg:w-[438px]"
+  >
+    <img
+      [src]="imageUrl"
+      alt="Backbone Community"
+      class="w-full h-full object-cover"
+    />
+  </div>
 </div>

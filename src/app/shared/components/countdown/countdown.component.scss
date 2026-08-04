@@ -14,4 +14,37 @@
   .time-separator {
     @apply text-3xl font-bold self-start mb-0.5 md:text-5xl xl:text-6xl;
   }
+
+  .countdown--compact {
+    column-gap: 0.25rem;
+
+    .time-unit {
+      min-width: 32px;
+
+      &-label {
+        margin-bottom: 0;
+        color: #1e1e1e;
+        font-size: 9px;
+      }
+
+      &-value {
+        font-size: 14px;
+      }
+    }
+
+    .time-separator {
+      font-size: 14px;
+    }
+
+    @media (min-width: 768px) {
+      .time-unit-label {
+        font-size: 10px;
+      }
+
+      .time-unit-value,
+      .time-separator {
+        font-size: 16px;
+      }
+    }
+  }
 }

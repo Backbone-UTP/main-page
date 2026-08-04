@@ -11,12 +11,10 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./speaker-card.component.scss']
 })
 export class SpeakerCardComponent {
-  @Input() name: string = 'Unknown Speaker';
-  @Input() role: string = 'Unknown Role';
-  @Input() image: string = 'assets/default-speaker.png';
-  @Input() description: string = 'No description available.';
-  @Input() index: number = 0;
+  @Input() name = 'Unknown Speaker';
+  @Input() role = 'Unknown Role';
+  @Input() image = 'assets/default-speaker.png';
+  @Input() description = 'No description available.';
+  @Input() index = 0;
   @Input() links: LinkItem[] = [];
-  constructor() { }
 }
-  

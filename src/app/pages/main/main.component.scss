@@ -1,0 +1,14 @@
+.past-events-slider,
+.projects-slider {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}
+
+.past-events-slider::-webkit-scrollbar,
+.projects-slider::-webkit-scrollbar {
+	display: none;
+}
+
+section[id] {
+  scroll-margin-top: 5rem;
+}

@@ -1,28 +1,57 @@
-<mat-card
-  class="project-card max-w-[400px] my-4 mx-auto rounded-xl overflow-hidden border border-[#e0e0e0]"
->
-  <div class="image-container relative">
+<article class="flex w-[301px] shrink-0 flex-col gap-3 rounded-lg pb-3">
+  <div class="relative h-[301px] rounded-xl overflow-hidden">
     <img
-      class="size-72 object-cover"
-      mat-card-image
-      [src]="imageUrl"
-      alt="{{ title }}"
+      [src]="project().imageUrl"
+      [alt]="project().title"
+      loading="lazy"
+      class="h-full w-full object-cover transition-transform duration-300 hover:scale-[1.02]"
     />
-    <span
-      [style.backgroundColor]="getStatusColor()"
-      class="status-badge absolute top-3 right-3 text-white text-xs py-1 px-2 font-semibold rounded-xl"
-      >{{ status }}</span
-    >
+    <div class="absolute top-2.5 right-2.5">
+      <div
+         class="h-[32px] rounded-[16px] px-3 flex items-center"
+         [style.backgroundColor]="getStatusColor()"
+         [style.color]="getStatusTextColor()"
+      >
+        <span
+          class="whitespace-nowrap text-sm font-medium leading-[21px]"
+          >{{ project().status }}</span
+        >
+      </div>
+    </div>
   </div>
 
-  <mat-card-content>
-    <h2 class="project-title">{{ title }}</h2>
-    <p class="project-description">{{ description }}</p>
-  </mat-card-content>
+  <div class="flex flex-1 flex-col">
+    <h3 class="font-medium text-base leading-[24px] text-white mb-1">
+      {{ project().title }}
+    </h3>
+    <p class="font-normal text-sm leading-[21px] text-[#ccbd8f]">
+      {{ project().description }}
+    </p>
+  </div>
 
-  @if(link){
-  <mat-card-actions>
-    <a mat-button color="primary" [href]="link" target="_blank">Ver Proyecto</a>
-  </mat-card-actions>
-  }
-</mat-card>
+  <div class="flex flex-wrap gap-2">
+    @for (repository of project().repositoryLinks; track repository.url) {
+      <a
+        [href]="repository.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        [attr.aria-label]="repository.label + ' (abre en una nueva pestaña)'"
+        class="rounded-full border border-[#fac738] px-3 py-2 text-sm font-medium text-[#fac738] transition-colors hover:bg-[#fac738] hover:text-[#07012a] focus:outline-none focus:ring-2 focus:ring-[#fac738]"
+      >
+        {{ repository.label }}
+      </a>
+    }
+
+    @if (project().liveUrl) {
+      <a
+        [href]="project().liveUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Ver proyecto (abre en una nueva pestaña)"
+        class="rounded-full bg-[#fac738] px-3 py-2 text-sm font-medium text-[#07012a] transition-colors hover:bg-[#e6b730] focus:outline-none focus:ring-2 focus:ring-[#fac738]"
+      >
+        Ver proyecto
+      </a>
+    }
+  </div>
+</article>

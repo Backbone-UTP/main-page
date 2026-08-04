@@ -1,0 +1,17 @@
+<div class="px-4 pb-3 pt-5">
+  <h2 class="text-[22px] font-bold leading-[28px] text-white">{{ title() }}</h2>
+</div>
+
+<div
+  class="member-grid gap-3 p-4"
+  [style.--member-columns]="columns()"
+>
+  @for (member of members(); track member.name) {
+    <app-member-card
+      [name]="member.name"
+      [role]="member.role"
+      [photoUrl]="member.photoUrl"
+      [socialLinks]="member.socialLinks"
+    ></app-member-card>
+  }
+</div>

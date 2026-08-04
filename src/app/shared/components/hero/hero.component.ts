@@ -1,23 +1,20 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { BACKBONE_WHATSAPP_COMMUNITY_URL } from 'src/assets/content/sfd-links';
 
 @Component({
-    selector: 'app-hero',
-    templateUrl: './hero.component.html',
-    styleUrls: ['./hero.component.scss'],
-
+  selector: 'app-hero',
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './hero.component.html',
+  styleUrls: ['./hero.component.scss'],
 })
+export class HeroComponent {
+  title = 'Semillero y Comunidad Backbone';
+  subTitle =
+    'Somos una comunidad y semillero de investigación dedicado a fomentar el aprendizaje, la colaboración y la innovación en tecnología.';
 
-export class HeroComponent{
-    spacesTitle = '';
-    spacesSubtitle = '';
-    title = 'Semillero y\nComunidad\nBackbone';
-    subTitle = 'Somos una comunidad y semillero de investigación dedicado a\nfomentar el aprendizaje, colaboración y la innovación en\ntecnología.';
-
-    constructor(){
-        this.spacesTitle = this.title.replace(/\n/g, '<br>');
-        this.spacesSubtitle = this.subTitle.replace(/\n/g, '<br>');
-    }
-
-    ctaText = 'Únete a la comunidad';
-    imageUrl = 'assets/images/plantilla-hero.png';
+  ctaText = 'Únete a la comunidad';
+  communityUrl = BACKBONE_WHATSAPP_COMMUNITY_URL;
+  imageUrl = 'assets/images/main-hero.webp';
 }

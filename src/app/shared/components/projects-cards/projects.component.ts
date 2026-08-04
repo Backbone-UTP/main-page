@@ -1,26 +1,17 @@
-import { Component, Input } from '@angular/core';
-import {
-  MatCard,
-  MatCardActions,
-  MatCardContent,
-} from '@angular/material/card';
+import { Component, input } from '@angular/core';
+import { Project } from '../../interfaces/data.models';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [MatCard, MatCardContent, MatCardActions],
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
 export class ProjectsComponent {
-  @Input() title!: string;
-  @Input() description!: string;
-  @Input() imageUrl!: string;
-  @Input() status!: 'En Desarrollo' | 'Publicado' | 'Próximamente';
-  @Input() link!: string;
+  project = input.required<Project>();
 
   getStatusColor(): string {
-    switch (this.status) {
+    switch (this.project().status) {
       case 'Publicado':
         return '#00922C'; // Green
       case 'En Desarrollo':
@@ -28,5 +19,9 @@ export class ProjectsComponent {
       case 'Próximamente':
         return '#CA9500'; // Yellow
     }
+  }
+
+  getStatusTextColor(): string {
+    return this.project().status === 'En Desarrollo' ? '#ffffff' : '#07012a';
   }
 }
